@@ -13,8 +13,8 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
-      title: "Form Gönderildi",
-      description: "Mesajınız başarıyla gönderildi. En kısa sürede size geri dönüş yapacağız.",
+      title: "Form Submitted",
+      description: "Your message has been successfully sent. We will get back to you as soon as possible.",
     });
   };
 
@@ -29,9 +29,9 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">İletişim</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Contact</h1>
             <p className="text-lg text-gray-600">
-              Sorularınız veya projeleriniz için bizimle iletişime geçin. Size yardımcı olmaktan mutluluk duyarız.
+              Get in touch with us for your questions or projects. We are happy to help you.
             </p>
           </motion.div>
         </div>
@@ -48,7 +48,7 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">İletişim Bilgilerimiz</h2>
+              <h2 className="text-2xl font-bold text-blue-900 mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
@@ -59,9 +59,9 @@ const Contact = () => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Adres</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Address</h3>
                         <p className="text-gray-600">
-                          Levent, İstanbul, Türkiye
+                          Levent, Istanbul, Turkey
                         </p>
                       </div>
                     </div>
@@ -77,7 +77,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Telefon</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Phone</h3>
                         <p className="text-gray-600">+90 212 123 4567</p>
                       </div>
                     </div>
@@ -93,7 +93,7 @@ const Contact = () => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">E-posta</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Email</h3>
                         <p className="text-gray-600">info@strivex.ai</p>
                       </div>
                     </div>
@@ -109,10 +109,10 @@ const Contact = () => {
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Çalışma Saatleri</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Working Hours</h3>
                         <p className="text-gray-600">
-                          Pazartesi - Cuma: 09:00 - 18:00<br />
-                          Hafta Sonu: Kapalı
+                          Monday - Friday: 09:00 - 18:00<br />
+                          Weekends: Closed
                         </p>
                       </div>
                     </div>
@@ -128,35 +128,35 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Bize Mesaj Gönderin</h2>
+              <h2 className="text-2xl font-bold text-blue-900 mb-6">Send Us a Message</h2>
               <Card>
                 <CardContent className="p-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
-                        <Label htmlFor="name">Adınız Soyadınız</Label>
-                        <Input id="name" placeholder="Adınız Soyadınız" required />
+                        <Label htmlFor="name">Full Name</Label>
+                        <Input id="name" placeholder="Your Full Name" required />
                       </div>
                       <div className="space-y-2">
-                        <Label htmlFor="email">E-posta Adresiniz</Label>
-                        <Input id="email" type="email" placeholder="ornek@sirket.com" required />
+                        <Label htmlFor="email">Email Address</Label>
+                        <Input id="email" type="email" placeholder="example@company.com" required />
                       </div>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="subject">Konu</Label>
-                      <Input id="subject" placeholder="Mesajınızın konusu" required />
+                      <Label htmlFor="subject">Subject</Label>
+                      <Input id="subject" placeholder="Subject of your message" required />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="message">Mesajınız</Label>
+                      <Label htmlFor="message">Message</Label>
                       <Textarea 
                         id="message" 
-                        placeholder="Mesajınızı buraya yazın..."
+                        placeholder="Write your message here..."
                         rows={5}
                         required
                       />
                     </div>
                     <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white">
-                      <Send className="mr-2 h-4 w-4" /> Mesaj Gönder
+                      <Send className="mr-2 h-4 w-4" /> Send Message
                     </Button>
                   </form>
                 </CardContent>

@@ -32,27 +32,27 @@ const Services = () => {
   const services = [
     {
       icon: <MessageSquare className="h-10 w-10 text-blue-500" />,
-      title: "AI Chatbot Çözümleri",
-      description: "Doğal dil işleme ile zenginleştirilmiş, 7/24 müşteri desteği sağlayan akıllı chatbot çözümleri.",
-      features: ["Çoklu dil desteği", "Kişiselleştirilmiş yanıtlar", "Doğal konuşma akışı", "Otomatik öğrenme"]
+      title: "AI Chatbot Solutions",
+      description: "Smart chatbot solutions providing 24/7 customer support, enhanced with natural language processing.",
+      features: ["Multi-language support", "Personalized responses", "Natural conversation flow", "Automatic learning"]
     },
     {
       icon: <Bot className="h-10 w-10 text-blue-500" />,
-      title: "Sanal Asistanlar",
-      description: "İş süreçlerinizi otomatikleştiren ve müşteri iletişimini iyileştiren gelişmiş sanal asistanlar.",
-      features: ["Görev otomasyonu", "Takvim yönetimi", "Sesli komut işleme", "Sistem entegrasyonları"]
+      title: "Virtual Assistants",
+      description: "Advanced virtual assistants that automate business processes and improve customer communication.",
+      features: ["Task automation", "Calendar management", "Voice command processing", "System integrations"]
     },
     {
       icon: <Zap className="h-10 w-10 text-blue-500" />,
-      title: "Anlık Yanıt Sistemleri",
-      description: "Müşteri sorularını anında anlayıp doğru yanıtları sunan yapay zeka destekli sistemler.",
-      features: ["Milisaniyelerde yanıt", "Doğruluk garantisi", "Bilgi tabanı entegrasyonu", "Sürekli iyileştirme"]
+      title: "Instant Response Systems",
+      description: "AI-powered systems that instantly understand customer questions and provide accurate answers.",
+      features: ["Millisecond responses", "Accuracy guarantee", "Knowledge base integration", "Continuous improvement"]
     },
     {
       icon: <BarChart3 className="h-10 w-10 text-blue-500" />,
-      title: "Müşteri Analitikleri",
-      description: "Müşteri davranışlarını analiz ederek iş stratejilerinizi geliştirmenize yardımcı olan çözümler.",
-      features: ["Davranış analizi", "Duygu analizi", "Trend raporlama", "Tahmine dayalı analitikler"]
+      title: "Customer Analytics",
+      description: "Solutions that analyze customer behavior to help you improve your business strategies.",
+      features: ["Behavior analysis", "Sentiment analysis", "Trend reporting", "Predictive analytics"]
     }
   ];
 
@@ -67,9 +67,9 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Hizmetlerimiz</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Our Services</h1>
             <p className="text-lg text-gray-600">
-              StriveX AI Solutions olarak, yapay zeka teknolojileri ile desteklenen çeşitli müşteri hizmetleri çözümleri sunuyoruz. Teknolojimiz, müşteri memnuniyetini artırırken operasyonel verimliliği de maksimize eder.
+              At StriveX AI Solutions, we offer various customer service solutions powered by artificial intelligence technologies. Our technology maximizes operational efficiency while increasing customer satisfaction.
             </p>
           </motion.div>
         </div>

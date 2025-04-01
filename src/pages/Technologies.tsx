@@ -41,9 +41,9 @@ const Technologies = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Teknolojilerimiz</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Our Technologies</h1>
             <p className="text-lg text-gray-600">
-              StriveX AI Solutions olarak en son teknolojileri kullanarak müşteri hizmetleri çözümleri geliştiriyoruz. İşte projelerimizde kullandığımız bazı teknolojiler.
+              At StriveX AI Solutions, we develop customer service solutions using the latest technologies. Here are some of the technologies we use in our projects.
             </p>
           </motion.div>
         </div>
@@ -75,20 +75,20 @@ const Technologies = () => {
                       <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
                         <Cpu className="h-6 w-6 text-blue-600" />
                       </div>
-                      <CardTitle>Yapay Zeka Modelleri</CardTitle>
+                      <CardTitle>AI Models</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600 mb-4">
-                        Doğal dil işleme ve anlama yetenekleri için en gelişmiş AI modelleri kullanıyoruz.
+                        We use the most advanced AI models for natural language processing and understanding capabilities.
                       </p>
                       <ul className="space-y-1">
                         <li className="flex items-center">
                           <div className="bg-blue-500 h-2 w-2 rounded-full mr-2"></div>
-                          <span className="text-gray-700">GPT ve BERT tabanlı modeller</span>
+                          <span className="text-gray-700">GPT and BERT-based models</span>
                         </li>
                         <li className="flex items-center">
                           <div className="bg-blue-500 h-2 w-2 rounded-full mr-2"></div>
-                          <span className="text-gray-700">Makine öğrenmesi algoritmaları</span>
+                          <span className="text-gray-700">Machine learning algorithms</span>
                         </li>
                       </ul>
                     </CardContent>
@@ -101,20 +101,20 @@ const Technologies = () => {
                       <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
                         <Database className="h-6 w-6 text-blue-600" />
                       </div>
-                      <CardTitle>Veri İşleme Sistemleri</CardTitle>
+                      <CardTitle>Data Processing Systems</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600 mb-4">
-                        Büyük veri kümelerini işlemek için gelişmiş veri işleme sistemleri kullanıyoruz.
+                        We use advanced data processing systems to process large datasets.
                       </p>
                       <ul className="space-y-1">
                         <li className="flex items-center">
                           <div className="bg-blue-500 h-2 w-2 rounded-full mr-2"></div>
-                          <span className="text-gray-700">Spark ve Hadoop</span>
+                          <span className="text-gray-700">Spark and Hadoop</span>
                         </li>
                         <li className="flex items-center">
                           <div className="bg-blue-500 h-2 w-2 rounded-full mr-2"></div>
-                          <span className="text-gray-700">TensorFlow ve PyTorch</span>
+                          <span className="text-gray-700">TensorFlow and PyTorch</span>
                         </li>
                       </ul>
                     </CardContent>
@@ -136,11 +136,11 @@ const Technologies = () => {
                       <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
                         <Code className="h-6 w-6 text-blue-600" />
                       </div>
-                      <CardTitle>Modern Frontend Teknolojileri</CardTitle>
+                      <CardTitle>Modern Frontend Technologies</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600">
-                        Kullanıcı arayüzlerimiz için modern web teknolojileri kullanıyoruz.
+                        We use modern web technologies for our user interfaces.
                       </p>
                     </CardContent>
                   </Card>
@@ -161,11 +161,11 @@ const Technologies = () => {
                       <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
                         <Layers className="h-6 w-6 text-blue-600" />
                       </div>
-                      <CardTitle>Güçlü Backend Çözümleri</CardTitle>
+                      <CardTitle>Powerful Backend Solutions</CardTitle>
                     </CardHeader>
                     <CardContent>
                       <p className="text-gray-600">
-                        Uygulamalarımızın arkasındaki güç için ölçeklenebilir backend teknolojileri kullanıyoruz.
+                        We use scalable backend technologies for the power behind our applications.
                       </p>
                     </CardContent>
                   </Card>
@@ -175,7 +175,7 @@ const Technologies = () => {
 
             <TabsContent value="devops">
               <div className="text-center py-8">
-                <p className="text-gray-600">DevOps teknolojilerimiz yakında...</p>
+                <p className="text-gray-600">DevOps technologies coming soon...</p>
               </div>
             </TabsContent>
           </Tabs>

@@ -45,19 +45,19 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/')}`}>
-              Ana Sayfa
+              Home
             </Link>
             <Link to="/services" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/services')}`}>
-              Hizmetlerimiz
+              Services
             </Link>
             <Link to="/technologies" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/technologies')}`}>
-              Teknolojiler
+              Technologies
             </Link>
             <Link to="/about" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/about')}`}>
-              Hakkımızda
+              About Us
             </Link>
             <Link to="/contact" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/contact')}`}>
-              İletişim
+              Contact
             </Link>
           </div>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
           <button 
             className="md:hidden text-blue-800 focus:outline-none" 
             onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Menüyü Kapat" : "Menüyü Aç"}
+            aria-label={isOpen ? "Close Menu" : "Open Menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -81,19 +81,19 @@ const Navbar = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">
             <Link to="/" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/')}`}>
-              Ana Sayfa
+              Home
             </Link>
             <Link to="/services" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/services')}`}>
-              Hizmetlerimiz
+              Services
             </Link>
             <Link to="/technologies" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/technologies')}`}>
-              Teknolojiler
+              Technologies
             </Link>
             <Link to="/about" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/about')}`}>
-              Hakkımızda
+              About Us
             </Link>
             <Link to="/contact" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/contact')}`}>
-              İletişim
+              Contact
             </Link>
           </div>
         </div>
