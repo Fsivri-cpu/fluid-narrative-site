@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <img 
-                src="/lovable-uploads/d9fd22f5-eb13-4a17-995a-776eedb75701.png" 
+                src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" 
                 alt="StriveX Logo" 
                 className="h-12 bg-white p-1 rounded-md"
               />
