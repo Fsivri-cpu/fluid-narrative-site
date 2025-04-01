@@ -29,7 +29,7 @@ const Contact = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-strivex-blue mb-4">İletişim</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">İletişim</h1>
             <p className="text-lg text-gray-600">
               Sorularınız veya projeleriniz için bizimle iletişime geçin. Size yardımcı olmaktan mutluluk duyarız.
             </p>
@@ -48,18 +48,18 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-2xl font-bold text-strivex-blue mb-6">İletişim Bilgilerimiz</h2>
+              <h2 className="text-2xl font-bold text-blue-900 mb-6">İletişim Bilgilerimiz</h2>
               <div className="space-y-6">
-                <Card className="overflow-hidden hover-scale">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
                         <div className="bg-blue-50 p-3 rounded-full">
-                          <MapPin className="h-6 w-6 text-strivex-blue" />
+                          <MapPin className="h-6 w-6 text-blue-600" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-strivex-blue mb-1">Adres</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Adres</h3>
                         <p className="text-gray-600">
                           Levent, İstanbul, Türkiye
                         </p>
@@ -68,48 +68,48 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden hover-scale">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
                         <div className="bg-blue-50 p-3 rounded-full">
-                          <Phone className="h-6 w-6 text-strivex-blue" />
+                          <Phone className="h-6 w-6 text-blue-600" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-strivex-blue mb-1">Telefon</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Telefon</h3>
                         <p className="text-gray-600">+90 212 123 4567</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden hover-scale">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
                         <div className="bg-blue-50 p-3 rounded-full">
-                          <Mail className="h-6 w-6 text-strivex-blue" />
+                          <Mail className="h-6 w-6 text-blue-600" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-strivex-blue mb-1">E-posta</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">E-posta</h3>
                         <p className="text-gray-600">info@strivex.ai</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden hover-scale">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
                         <div className="bg-blue-50 p-3 rounded-full">
-                          <Clock className="h-6 w-6 text-strivex-blue" />
+                          <Clock className="h-6 w-6 text-blue-600" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-strivex-blue mb-1">Çalışma Saatleri</h3>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Çalışma Saatleri</h3>
                         <p className="text-gray-600">
                           Pazartesi - Cuma: 09:00 - 18:00<br />
                           Hafta Sonu: Kapalı
@@ -128,7 +128,7 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <h2 className="text-2xl font-bold text-strivex-blue mb-6">Bize Mesaj Gönderin</h2>
+              <h2 className="text-2xl font-bold text-blue-900 mb-6">Bize Mesaj Gönderin</h2>
               <Card>
                 <CardContent className="p-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
@@ -140,14 +140,6 @@ const Contact = () => {
                       <div className="space-y-2">
                         <Label htmlFor="email">E-posta Adresiniz</Label>
                         <Input id="email" type="email" placeholder="ornek@sirket.com" required />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="phone">Telefon Numaranız</Label>
-                        <Input id="phone" placeholder="+90 555 123 4567" />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="company">Şirket Adı</Label>
-                        <Input id="company" placeholder="Şirket Adınız (opsiyonel)" />
                       </div>
                     </div>
                     <div className="space-y-2">
@@ -163,7 +155,7 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    <Button type="submit" className="bg-strivex-blue hover:bg-strivex-blue/90 text-white w-full md:w-auto">
+                    <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white">
                       <Send className="mr-2 h-4 w-4" /> Mesaj Gönder
                     </Button>
                   </form>
@@ -171,29 +163,6 @@ const Contact = () => {
               </Card>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="w-full h-96 bg-gray-200 rounded-lg overflow-hidden shadow-md"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48162.70540168123!2d29.000013672265626!3d41.06756529134626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7a2a2c3b969%3A0x7671d1b9031a3fbe!2sLevent%2C%20Beşiktaş%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1655125098402!5m2!1str!2str" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }}
-              allowFullScreen={false}
-              loading="lazy"
-              title="StriveX AI Solutions Konum"
-            ></iframe>
-          </motion.div>
         </div>
       </section>
     </div>
