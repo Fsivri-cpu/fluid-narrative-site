@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,4 +99,33 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Section transitions */
+.section-transition {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Smooth section scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+/* Add a slight pause between sections */
+section {
+  scroll-snap-align: start;
+  scroll-margin-top: 1rem;
+}
+
+/* Add a slight deceleration when scrolling between sections */
+.min-h-screen {
+  scroll-snap-type: y proximity;
 }
