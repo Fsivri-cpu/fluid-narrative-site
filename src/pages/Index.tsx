@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Cpu, Headphones, BarChart, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const Index = () => {
   // Animation variants for staggered animations
@@ -77,84 +78,40 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-16 md:py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
-        <div className="container mx-auto px-4">
-          <motion.div 
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 20 }}
+      {/* Giselle Virtual Assistant Section */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <img 
+            src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" 
+            alt="Giselle Virtual Assistant" 
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/60"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="max-w-4xl mx-auto px-4"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 dark:text-blue-100 mb-4">Why StriveX AI Solutions?</h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Our solutions powered by the latest AI technologies increase customer satisfaction while reducing your operational costs.
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
+              Meet Giselle, Your Virtual Customer Support Assistant
+            </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-10">
+              Available 24/7, with the knowledge and empathy to handle all your customer inquiries.
             </p>
-          </motion.div>
-
-          <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-                <CardHeader>
-                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
-                    <Cpu className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <CardTitle className="dark:text-white">Advanced AI Technology</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300">Natural language processing and understanding capabilities with state-of-the-art artificial intelligence models.</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-                <CardHeader>
-                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
-                    <Headphones className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <CardTitle className="dark:text-white">24/7 Customer Support</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300">Provide uninterrupted support to your customers with our AI-powered solutions.</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-                <CardHeader>
-                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
-                    <BarChart className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <CardTitle className="dark:text-white">Detailed Analytics</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300">Make better decisions by analyzing customer behaviors and interactions.</p>
-                </CardContent>
-              </Card>
-            </motion.div>
-
-            <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
-                <CardHeader>
-                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
-                    <Shield className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <CardTitle className="dark:text-white">Secure Integration</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-gray-600 dark:text-gray-300">Safe and easy integration with your existing systems.</p>
-                </CardContent>
-              </Card>
-            </motion.div>
+            <Button 
+              variant="default" 
+              size="lg" 
+              className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
+            >
+              Get Started
+            </Button>
           </motion.div>
         </div>
       </section>
