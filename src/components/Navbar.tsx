@@ -22,10 +22,6 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
-  const isActive = (path: string) => {
-    return location.pathname === path ? 'active' : '';
-  };
-
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -44,20 +40,8 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/')}`}>
+            <Link to="/" className="nav-link text-blue-800 hover:text-blue-600 font-medium">
               Home
-            </Link>
-            <Link to="/services" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/services')}`}>
-              Services
-            </Link>
-            <Link to="/technologies" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/technologies')}`}>
-              Technologies
-            </Link>
-            <Link to="/about" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/about')}`}>
-              About Us
-            </Link>
-            <Link to="/contact" className={`nav-link text-blue-800 hover:text-blue-600 font-medium ${isActive('/contact')}`}>
-              Contact
             </Link>
           </div>
 
@@ -80,20 +64,8 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">
-            <Link to="/" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/')}`}>
+            <Link to="/" className="text-blue-800 hover:text-blue-600 font-medium py-2">
               Home
-            </Link>
-            <Link to="/services" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/services')}`}>
-              Services
-            </Link>
-            <Link to="/technologies" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/technologies')}`}>
-              Technologies
-            </Link>
-            <Link to="/about" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/about')}`}>
-              About Us
-            </Link>
-            <Link to="/contact" className={`text-blue-800 hover:text-blue-600 font-medium py-2 ${isActive('/contact')}`}>
-              Contact
             </Link>
           </div>
         </div>
