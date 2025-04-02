@@ -20,7 +20,7 @@ const ThemeToggle = () => {
             aria-label="Toggle theme"
           >
             {theme === 'light' ? (
-              <Moon className="h-5 w-5 text-blue-800 dark:text-white transition-colors" />
+              <Moon className="h-5 w-5 text-blue-800 dark:text-[#fdfefe] transition-colors" />
             ) : (
               <Sun className="h-5 w-5 text-yellow-400 transition-colors" />
             )}
