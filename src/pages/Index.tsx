@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
+import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Cpu, Headphones, BarChart, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -31,8 +31,49 @@ const Index = () => {
     }
   };
 
+  // Smooth scrolling setup
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 30,
+    damping: 30,
+    restDelta: 0.001
+  });
+
+  // Add smooth scrolling behavior
+  useEffect(() => {
+    // Add smooth scroll behavior to html
+    document.documentElement.style.scrollBehavior = 'smooth';
+    
+    // Create intersection observer for section transitions
+    const sections = document.querySelectorAll('section');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('section-visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -100px 0px" });
+    
+    sections.forEach(section => {
+      observer.observe(section);
+      section.classList.add('section-transition');
+    });
+    
+    return () => {
+      sections.forEach(section => observer.unobserve(section));
+      document.documentElement.style.scrollBehavior = 'auto';
+    };
+  }, []);
+
   return (
     <div className="min-h-screen dark:bg-gray-900 transition-colors duration-300">
+      {/* Progress indicator */}
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-50 origin-left"
+        style={{ scaleX }}
+      />
+
       {/* Video Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Video Background */}
