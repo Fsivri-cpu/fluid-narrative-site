@@ -32,48 +32,48 @@ const Index = () => {
 
   return (
     <div className="min-h-screen dark:bg-gray-900 transition-colors duration-300">
-      {/* Hero Section */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center">
-            <motion.div 
-              className="md:w-1/2 mb-10 md:mb-0"
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 dark:text-blue-100 leading-tight mb-6">
-                Transform <span className="text-blue-500 dark:text-blue-400">Customer Experience</span> with AI
-              </h1>
-              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                Take your business one step ahead with intelligent, fast, and personalized customer service solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/contact">
-                  <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                    Contact Us
-                  </button>
-                </Link>
-                <Link to="/services">
-                  <button className="bg-transparent border border-blue-400 dark:border-blue-500 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-md font-medium hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors flex items-center">
-                    Our Services <ChevronRight className="ml-1 h-4 w-4" />
-                  </button>
-                </Link>
-              </div>
-            </motion.div>
-            <motion.div 
-              className="md:w-1/2"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt="AI Technology" 
-                className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
-              />
-            </motion.div>
-          </div>
+      {/* Video Hero Section */}
+      <section className="relative h-screen w-full overflow-hidden">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full bg-black/40 z-10"></div>
+        <video 
+          className="absolute inset-0 w-full h-full object-cover" 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+        >
+          <source src="/lovable-uploads/virtual-employee.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        
+        {/* Caption */}
+        <div className="relative z-20 flex items-center justify-center h-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-center"
+          >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight">
+              Virtual Workforce
+            </h1>
+            <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8">
+              Take your business one step ahead with intelligent, fast, and personalized customer service solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
+                  Contact Us
+                </button>
+              </Link>
+              <Link to="/services">
+                <button className="bg-transparent border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white/10 transition-colors flex items-center">
+                  Our Services <ChevronRight className="ml-1 h-4 w-4" />
+                </button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
