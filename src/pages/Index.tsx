@@ -31,9 +31,9 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-white to-blue-50">
+      <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-br from-white to-blue-50 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center">
             <motion.div 
@@ -42,20 +42,20 @@ const Index = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 leading-tight mb-6">
-                Transform <span className="text-blue-500">Customer Experience</span> with AI
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-blue-900 dark:text-blue-100 leading-tight mb-6">
+                Transform <span className="text-blue-500 dark:text-blue-400">Customer Experience</span> with AI
               </h1>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                 Take your business one step ahead with intelligent, fast, and personalized customer service solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link to="/contact">
-                  <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors">
+                  <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
                     Contact Us
                   </button>
                 </Link>
                 <Link to="/services">
-                  <button className="bg-transparent border border-blue-400 text-blue-600 px-6 py-3 rounded-md font-medium hover:bg-blue-50 transition-colors flex items-center">
+                  <button className="bg-transparent border border-blue-400 dark:border-blue-500 text-blue-600 dark:text-blue-400 px-6 py-3 rounded-md font-medium hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-colors flex items-center">
                     Our Services <ChevronRight className="ml-1 h-4 w-4" />
                   </button>
                 </Link>
@@ -78,7 +78,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-16"
@@ -87,8 +87,8 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Why StriveX AI Solutions?</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-blue-900 dark:text-blue-100 mb-4">Why StriveX AI Solutions?</h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Our solutions powered by the latest AI technologies increase customer satisfaction while reducing your operational costs.
             </p>
           </motion.div>
@@ -101,57 +101,57 @@ const Index = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
-                  <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
-                    <Cpu className="h-6 w-6 text-blue-600" />
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
+                    <Cpu className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <CardTitle>Advanced AI Technology</CardTitle>
+                  <CardTitle className="dark:text-white">Advanced AI Technology</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">Natural language processing and understanding capabilities with state-of-the-art artificial intelligence models.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Natural language processing and understanding capabilities with state-of-the-art artificial intelligence models.</p>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
-                  <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
-                    <Headphones className="h-6 w-6 text-blue-600" />
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
+                    <Headphones className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <CardTitle>24/7 Customer Support</CardTitle>
+                  <CardTitle className="dark:text-white">24/7 Customer Support</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">Provide uninterrupted support to your customers with our AI-powered solutions.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Provide uninterrupted support to your customers with our AI-powered solutions.</p>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
-                  <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
-                    <BarChart className="h-6 w-6 text-blue-600" />
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
+                    <BarChart className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <CardTitle>Detailed Analytics</CardTitle>
+                  <CardTitle className="dark:text-white">Detailed Analytics</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">Make better decisions by analyzing customer behaviors and interactions.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Make better decisions by analyzing customer behaviors and interactions.</p>
                 </CardContent>
               </Card>
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 dark:bg-gray-800 dark:border-gray-700">
                 <CardHeader>
-                  <div className="bg-blue-50 p-3 rounded-full w-fit mb-4">
-                    <Shield className="h-6 w-6 text-blue-600" />
+                  <div className="bg-blue-50 dark:bg-blue-900/30 p-3 rounded-full w-fit mb-4">
+                    <Shield className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                   </div>
-                  <CardTitle>Secure Integration</CardTitle>
+                  <CardTitle className="dark:text-white">Secure Integration</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">Safe and easy integration with your existing systems.</p>
+                  <p className="text-gray-600 dark:text-gray-300">Safe and easy integration with your existing systems.</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -160,7 +160,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-900 text-white">
+      <section className="py-16 bg-blue-900 dark:bg-blue-800 text-white transition-colors duration-300">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center"
@@ -174,7 +174,7 @@ const Index = () => {
               Contact us now to transform your customer services and gain a competitive advantage.
             </p>
             <Link to="/contact">
-              <button className="bg-white hover:bg-gray-100 text-blue-900 px-8 py-3 rounded-md font-medium transition-colors text-lg">
+              <button className="bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white text-blue-900 px-8 py-3 rounded-md font-medium transition-colors text-lg">
                 Request a Free Demo
               </button>
             </Link>
