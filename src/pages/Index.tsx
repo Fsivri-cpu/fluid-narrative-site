@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -141,13 +140,6 @@ const Index = () => {
             <p className="text-xl md:text-2xl text-white/90 mb-10">
               Available 24/7, with the knowledge and empathy to handle all your customer inquiries.
             </p>
-            <Button 
-              variant="default" 
-              size="lg" 
-              className="text-lg px-10 py-6 rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300"
-            >
-              Get Started
-            </Button>
           </motion.div>
         </div>
       </section>
