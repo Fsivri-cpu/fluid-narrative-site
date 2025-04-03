@@ -104,14 +104,9 @@ const Index = () => {
               Take your business one step ahead with intelligent, fast, and personalized customer service solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact">
-                <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors">
-                  Contact Us
-                </button>
-              </Link>
               <Link to="/services">
-                <button className="bg-transparent border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white/10 transition-colors flex items-center">
-                  Our Services <ChevronRight className="ml-1 h-4 w-4" />
+                <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center">
+                  Get Started <ChevronRight className="ml-1 h-4 w-4" />
                 </button>
               </Link>
             </div>
