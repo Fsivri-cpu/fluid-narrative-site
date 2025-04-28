@@ -74,7 +74,7 @@ const Statistic: React.FC<StatisticProps> = ({
       </div>
       <div className="space-y-2">
         <Progress value={value} className="h-2" />
-        <p className="text-sm text-white/60 text-right">{value.toFixed(1)}%</p>
+        <p className="text-sm text-white/60 text-right">{percentage.toFixed(1)}%</p>
       </div>
     </motion.div>;
 };
