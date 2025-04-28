@@ -2,6 +2,7 @@
 import React from 'react';
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 import { Slider } from "@/components/ui/slider";
 import { Upload } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,14 @@ export const AssistantSettings = ({
                 <span className="text-sm text-gray-400">Drag & drop files here or click to browse</span>
               </Button>
             </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label className="text-gray-300">Instructions for Assistant</Label>
+            <Textarea 
+              placeholder="Enter your instructions for the AI assistant here..."
+              className="min-h-[100px] bg-gray-800/50 border-gray-700 text-white placeholder:text-gray-400"
+            />
           </div>
 
           <div className="space-y-4">
