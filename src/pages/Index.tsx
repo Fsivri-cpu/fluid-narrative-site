@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -179,7 +180,7 @@ const Index = () => {
       </section>
 
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-black to-black backdrop-blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-900/40 to-black backdrop-blur-3xl"></div>
         <motion.div 
           className="container mx-auto px-4 relative z-10"
           initial={{ opacity: 0 }}
