@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Cpu, Headphones, BarChart, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { ChatInterface } from '@/components/chat/ChatInterface';
 
 const Index = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  
   // Animation variants for staggered animations
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -154,18 +157,24 @@ const Index = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Are You Ready to Discover the Power of AI?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Giselle in Action</h2>
             <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
-              Contact us now to transform your customer services and gain a competitive advantage.
+              Try our AI assistant now and see how it can transform your customer service experience.
             </p>
-            <Link to="/contact">
-              <button className="bg-white hover:bg-blue-50 text-blue-900 px-8 py-3 rounded-md font-medium transition-colors text-lg">
-                Request a Free Demo
-              </button>
-            </Link>
+            <Button 
+              onClick={() => setIsChatOpen(true)}
+              className="bg-white hover:bg-blue-50 text-blue-900 px-8 py-6 rounded-md font-medium transition-colors text-lg"
+            >
+              Try Giselle Now
+            </Button>
           </motion.div>
         </div>
       </section>
+
+      <ChatInterface 
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
     </div>
   );
 };
