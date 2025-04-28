@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import HeroSection from '@/components/sections/HeroSection';
 import VirtualAssistantSection from '@/components/sections/VirtualAssistantSection';
+import StatisticsSection from '@/components/sections/StatisticsSection';
 import CaseStudiesSection from '@/components/sections/CaseStudiesSection';
 import ExperienceSection from '@/components/sections/ExperienceSection';
 import FAQ from '@/components/FAQ';
@@ -51,6 +52,7 @@ const Index = () => {
       
       <HeroSection />
       <VirtualAssistantSection />
+      <StatisticsSection />
       <CaseStudiesSection />
       <ExperienceSection 
         maxTokens={maxTokens}
@@ -64,3 +66,4 @@ const Index = () => {
 };
 
 export default Index;
+
