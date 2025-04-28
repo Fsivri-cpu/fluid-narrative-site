@@ -6,31 +6,32 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChatInterface } from '@/components/chat/ChatInterface';
 import { AssistantSettings } from '@/components/chat/AssistantSettings';
+import { LottiePlayer } from '@/components/ui/lottie-player';
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 10
+    }
+  }
+};
 
 const Index = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 10
-      }
-    }
-  };
-
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 30,
@@ -127,6 +128,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto px-4"
           >
+            <div className="flex justify-center mb-8">
+              {/* Lottie animation will go here - Example: */}
+              {/* <LottiePlayer animationData={yourAnimationData} className="w-64 h-64" /> */}
+            </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight">
               Meet Giselle, Your Virtual Customer Support Assistant
             </h2>
