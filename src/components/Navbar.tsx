@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
@@ -49,9 +50,18 @@ const Navbar = () => {
     }
   };
 
+  const handleContactClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const footerSection = document.querySelector('footer');
+    if (location.pathname !== '/') {
+      navigate('/#footer');
+    } else {
+      footerSection?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleLanguageChange = (value: string) => {
     setLanguage(value as 'en' | 'nl');
-    // Here you can add logic to change the language throughout the app
   };
 
   const navItems = [
@@ -59,7 +69,7 @@ const Navbar = () => {
     { path: '/about', label: 'About Us' },
     { path: '#experience-section', label: 'Get Started', onClick: handleGetStartedClick },
     { path: '#faq-section', label: 'FAQ', onClick: handleFAQClick },
-    { path: '/contact', label: 'Contact' }
+    { path: '#footer', label: 'Contact', onClick: handleContactClick }
   ];
 
   return (
