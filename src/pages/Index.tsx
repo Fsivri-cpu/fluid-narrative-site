@@ -76,7 +76,7 @@ const Index = () => {
       {/* Video Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
         {/* Video Background */}
-        <div className="absolute inset-0 w-full h-full bg-black/40 z-10"></div>
+        <div className="absolute inset-0 w-full h-full bg-black/60 z-10"></div>
         <video 
           className="absolute inset-0 w-full h-full object-cover" 
           autoPlay 
@@ -122,7 +122,7 @@ const Index = () => {
             alt="Giselle Virtual Assistant" 
             className="w-full h-full object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 to-blue-900/80"></div>
         </div>
         
         {/* Content */}
@@ -145,7 +145,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-blue-900 dark:bg-blue-800 text-white transition-colors duration-300">
+      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white transition-colors duration-300">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center"
@@ -159,7 +159,7 @@ const Index = () => {
               Contact us now to transform your customer services and gain a competitive advantage.
             </p>
             <Link to="/contact">
-              <button className="bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-white text-blue-900 px-8 py-3 rounded-md font-medium transition-colors text-lg">
+              <button className="bg-white hover:bg-blue-50 text-blue-900 px-8 py-3 rounded-md font-medium transition-colors text-lg">
                 Request a Free Demo
               </button>
             </Link>
