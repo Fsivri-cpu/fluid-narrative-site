@@ -1,9 +1,8 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ChevronRight, MessageSquare, Star, Award } from 'lucide-react';
-import { Card, CardContent } from "@/components/ui/card";
+import { ChevronRight, MessageSquare, Star, Award, Car, Utensils, Globe } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardFooter, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChatInterface } from '@/components/chat/ChatInterface';
 import { AssistantSettings } from '@/components/chat/AssistantSettings';
@@ -15,6 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import FAQ from '@/components/FAQ';
 
 const containerVariants = {
@@ -40,27 +40,36 @@ const itemVariants = {
   }
 };
 
-const testimonials = [
+const caseStudies = [
   {
-    name: "Sarah Johnson",
-    role: "Customer Service Manager",
-    company: "TechCorp Solutions",
-    content: "Giselle has transformed how we handle customer inquiries. The response accuracy and speed are remarkable.",
-    rating: 5
+    name: "Premium Auto Group",
+    industry: "Automotive Dealership",
+    challenge: "Needed to handle customer inquiries about vehicle inventory efficiently",
+    solution: "Implemented StriveX AI assistant with their vehicle inventory and specifications as the knowledge base",
+    result: "Now customers can get instant answers about vehicles and schedule test drives, allowing sales staff to focus only on serious buyers",
+    icon: Car,
+    color: "blue-500",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
   },
   {
-    name: "Michael Chen",
-    role: "E-commerce Director",
-    company: "GlobalMart",
-    content: "Our customer satisfaction rates increased by 40% since implementing Giselle. It's been a game-changer for us.",
-    rating: 5
+    name: "Flavor Haven",
+    industry: "Restaurant Owner",
+    challenge: "Struggling to handle repetitive customer questions about menu, ingredients, and business hours",
+    solution: "Uploaded menu items and ingredient information to StriveX knowledge base",
+    result: "Customers now get immediate answers about the menu and restaurant details, freeing up staff to focus on improving the dining experience",
+    icon: Utensils,
+    color: "amber-500",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
   },
   {
-    name: "Emma Rodriguez",
-    role: "Support Team Lead",
-    company: "CloudServe Inc",
-    content: "The natural language processing capabilities are impressive. Our customers often can't tell they're talking to an AI.",
-    rating: 5
+    name: "GlobalReach Solutions",
+    industry: "Dutch Solo Entrepreneur",
+    challenge: "Language barriers limited their customer base to Dutch-speaking clients only",
+    solution: "Implemented StriveX to communicate with international customers",
+    result: "Now offers support in 29+ languages, expanding their potential market and capturing leads they would have previously missed",
+    icon: Globe,
+    color: "green-500",
+    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?ixlib=rb-1.2.1&auto=format&fit=crop&q=80"
   }
 ];
 
@@ -74,6 +83,7 @@ const Index = () => {
 
   const [maxTokens, setMaxTokens] = useState(1000);
   const [temperature, setTemperature] = useState(0.7);
+  const [activeTab, setActiveTab] = useState("all");
 
   useEffect(() => {
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -205,46 +215,191 @@ const Index = () => {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              See how Giselle is transforming customer support across industries
+              See how StriveX is transforming customer support across industries
             </motion.p>
           </div>
 
-          <Carousel className="max-w-5xl mx-auto">
-            <CarouselContent>
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <motion.div 
-                    className="h-full"
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex items-center gap-1 mb-4">
-                          {[...Array(testimonial.rating)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 text-blue-400" fill="currentColor" />
-                          ))}
-                        </div>
-                        <p className="text-blue-100 mb-6 text-lg leading-relaxed">"{testimonial.content}"</p>
-                        <div className="flex items-center gap-3">
-                          <Award className="text-blue-400 w-8 h-8" />
-                          <div>
-                            <p className="font-semibold text-white">{testimonial.name}</p>
-                            <p className="text-sm text-blue-300">{testimonial.role}</p>
-                            <p className="text-sm text-blue-400">{testimonial.company}</p>
+          <div className="md:hidden">
+            <Carousel className="w-full">
+              <CarouselContent>
+                {caseStudies.map((study, index) => (
+                  <CarouselItem key={index}>
+                    <motion.div 
+                      className="h-full"
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                    >
+                      <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
+                        <CardHeader>
+                          <div className="flex items-center justify-between mb-2">
+                            <div className="flex items-center gap-3">
+                              <div className={`p-2 rounded-full bg-${study.color}/20 text-${study.color}`}>
+                                <study.icon className="h-6 w-6" />
+                              </div>
+                              <CardTitle className="text-white text-xl">{study.name}</CardTitle>
+                            </div>
                           </div>
+                          <CardDescription className="text-blue-200 font-medium">{study.industry}</CardDescription>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                          <div>
+                            <h4 className="font-semibold text-blue-100 mb-1">Challenge:</h4>
+                            <p className="text-blue-200/90">{study.challenge}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-blue-100 mb-1">Solution:</h4>
+                            <p className="text-blue-200/90">{study.solution}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-blue-100 mb-1">Result:</h4>
+                            <p className="text-blue-200/90">{study.result}</p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <div className="flex justify-center gap-1 mt-4">
+                {caseStudies.map((_, index) => (
+                  <div 
+                    key={index}
+                    className="h-1.5 w-1.5 rounded-full bg-blue-300/50"
+                  />
+                ))}
+              </div>
+            </Carousel>
+          </div>
+          
+          <div className="hidden md:block">
+            <Tabs defaultValue="all" className="w-full" onValueChange={setActiveTab}>
+              <div className="flex justify-center mb-8">
+                <TabsList className="bg-white/10 border border-white/10">
+                  <TabsTrigger value="all" className="text-blue-200 data-[state=active]:text-white data-[state=active]:bg-blue-600/40">
+                    All Industries
+                  </TabsTrigger>
+                  {caseStudies.map((study, index) => (
+                    <TabsTrigger 
+                      key={index} 
+                      value={study.industry.toLowerCase().replace(/\s+/g, '-')}
+                      className="text-blue-200 data-[state=active]:text-white data-[state=active]:bg-blue-600/40"
+                    >
+                      {study.industry}
+                    </TabsTrigger>
+                  ))}
+                </TabsList>
+              </div>
+              
+              <TabsContent value="all" className="mt-0">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                  {caseStudies.map((study, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      viewport={{ once: true }}
+                      whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                    >
+                      <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 overflow-hidden group">
+                        <div className="h-32 overflow-hidden">
+                          <img 
+                            src={study.image} 
+                            alt={study.name} 
+                            className="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-700"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent h-32"></div>
                         </div>
-                      </CardContent>
+                        <CardHeader className="relative -mt-14 pt-14">
+                          <div className="flex items-center gap-3">
+                            <div className="p-2 rounded-full bg-white/10 text-white backdrop-blur-md">
+                              <study.icon className="h-6 w-6" />
+                            </div>
+                            <div>
+                              <CardTitle className="text-white">{study.name}</CardTitle>
+                              <CardDescription className="text-blue-200">{study.industry}</CardDescription>
+                            </div>
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                          <div>
+                            <h4 className="font-semibold text-blue-100 mb-1">Challenge:</h4>
+                            <p className="text-blue-200/90">{study.challenge}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-blue-100 mb-1">Solution:</h4>
+                            <p className="text-blue-200/90">{study.solution}</p>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-blue-100 mb-1">Result:</h4>
+                            <p className="text-blue-200/90">{study.result}</p>
+                          </div>
+                        </CardContent>
+                        <CardFooter>
+                          <Button variant="outline" className="w-full bg-white/5 hover:bg-white/10 border-white/10 text-blue-200 hover:text-white">
+                            Read Full Case Study
+                          </Button>
+                        </CardFooter>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </TabsContent>
+
+              {caseStudies.map((study, index) => (
+                <TabsContent key={index} value={study.industry.toLowerCase().replace(/\s+/g, '-')} className="mt-0">
+                  <div className="max-w-4xl mx-auto">
+                    <Card className="bg-white/5 backdrop-blur-lg border-white/10">
+                      <div className="lg:flex">
+                        <div className="lg:w-1/3 h-64 lg:h-auto relative overflow-hidden">
+                          <img 
+                            src={study.image} 
+                            alt={study.name} 
+                            className="w-full h-full object-cover object-center"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+                        </div>
+                        <div className="lg:w-2/3">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-2">
+                              <div className="p-3 rounded-full bg-white/10 text-white backdrop-blur-md">
+                                <study.icon className="h-8 w-8" />
+                              </div>
+                              <div>
+                                <CardTitle className="text-2xl text-white">{study.name}</CardTitle>
+                                <CardDescription className="text-blue-200 text-lg">{study.industry}</CardDescription>
+                              </div>
+                            </div>
+                          </CardHeader>
+                          <CardContent className="space-y-6">
+                            <div>
+                              <h4 className="font-semibold text-blue-100 text-lg mb-2">Challenge:</h4>
+                              <p className="text-blue-200/90 text-lg">{study.challenge}</p>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-blue-100 text-lg mb-2">Solution:</h4>
+                              <p className="text-blue-200/90 text-lg">{study.solution}</p>
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-blue-100 text-lg mb-2">Results:</h4>
+                              <p className="text-blue-200/90 text-lg">{study.result}</p>
+                            </div>
+                            <div className="pt-4">
+                              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+                                Read Full Case Study
+                              </Button>
+                            </div>
+                          </CardContent>
+                        </div>
+                      </div>
                     </Card>
-                  </motion.div>
-                </CarouselItem>
+                  </div>
+                </TabsContent>
               ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden md:flex text-blue-200 hover:text-blue-100 bg-white/5 hover:bg-white/10 border-white/10" />
-            <CarouselNext className="hidden md:flex text-blue-200 hover:text-blue-100 bg-white/5 hover:bg-white/10 border-white/10" />
-          </Carousel>
+            </Tabs>
+          </div>
         </motion.div>
       </section>
 
