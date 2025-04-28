@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Accordion,
@@ -49,7 +48,7 @@ const faqData = [
 
 const FAQ = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-black to-blue-900">
+    <section id="faq-section" className="py-16 bg-gradient-to-b from-black to-blue-900">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

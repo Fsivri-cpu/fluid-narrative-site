@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
@@ -29,18 +28,28 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
-  const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
-    { path: '/get-started', label: 'Get Started' },
-    { path: '/faq', label: 'FAQ' },
-    { path: '/contact', label: 'Contact' }
-  ];
+  const handleFAQClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const faqSection = document.querySelector('#faq-section');
+    if (location.pathname !== '/') {
+      window.location.href = '/#faq-section';
+    } else {
+      faqSection?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const handleLanguageChange = (value: string) => {
     setLanguage(value as 'en' | 'nl');
     // Here you can add logic to change the language throughout the app
   };
+
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About Us' },
+    { path: '/get-started', label: 'Get Started' },
+    { path: '#faq-section', label: 'FAQ', onClick: handleFAQClick },
+    { path: '/contact', label: 'Contact' }
+  ];
 
   return (
     <nav 
@@ -67,6 +76,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={item.onClick}
                 className="nav-link text-blue-200 hover:text-blue-300 font-medium"
               >
                 {item.label}
@@ -117,6 +127,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
+                onClick={item.onClick}
                 className="text-blue-200 hover:text-blue-300 font-medium py-2"
               >
                 {item.label}
