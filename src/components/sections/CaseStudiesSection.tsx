@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Car, Utensils, Globe, CircleUser, Clock, Package, Star } from 'lucide-react';
@@ -35,9 +36,12 @@ const Statistic: React.FC<StatisticProps> = ({
         const animateValue = (timestamp: number) => {
           if (!startTime) startTime = timestamp;
           const elapsed = timestamp - startTime;
-          const progress = Math.min(elapsed / duration, 1);
           
-          setValue(percentage * progress);
+          // Using easeOutCubic easing function for smoother animation that slows down at the end
+          const progress = Math.min(elapsed / duration, 1);
+          const easedProgress = 1 - Math.pow(1 - progress, 3);
+          
+          setValue(percentage * easedProgress);
           
           if (progress < 1) {
             requestAnimationFrame(animateValue);
