@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -196,4 +195,8 @@ section {
   filter: blur(8px);
   opacity: 0.6;
   animation: flow-animation 8s linear infinite;
+}
+
+.text-gradient-blue {
+  @apply bg-gradient-to-r from-blue-300 via-blue-200 to-blue-300 bg-clip-text text-transparent;
 }
