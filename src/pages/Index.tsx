@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -148,7 +147,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-black text-white">
+      <section id="experience-section" className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -185,4 +184,3 @@ const Index = () => {
 };
 
 export default Index;
-

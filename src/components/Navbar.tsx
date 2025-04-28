@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
 import {
   Select,
@@ -14,6 +14,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [language, setLanguage] = useState<'en' | 'nl'>('en');
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +39,16 @@ const Navbar = () => {
     }
   };
 
+  const handleGetStartedClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const experienceSection = document.querySelector('#experience-section');
+    if (location.pathname !== '/') {
+      navigate('/#experience-section');
+    } else {
+      experienceSection?.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleLanguageChange = (value: string) => {
     setLanguage(value as 'en' | 'nl');
     // Here you can add logic to change the language throughout the app
@@ -46,7 +57,7 @@ const Navbar = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Us' },
-    { path: '/get-started', label: 'Get Started' },
+    { path: '#experience-section', label: 'Get Started', onClick: handleGetStartedClick },
     { path: '#faq-section', label: 'FAQ', onClick: handleFAQClick },
     { path: '/contact', label: 'Contact' }
   ];
