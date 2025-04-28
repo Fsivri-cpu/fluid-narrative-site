@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Cpu, Headphones, BarChart, Shield } from 'lucide-react';
@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/button";
 import { ChatInterface } from '@/components/chat/ChatInterface';
 
 const Index = () => {
-  const [isChatOpen, setIsChatOpen] = useState(false);
-  
   // Animation variants for staggered animations
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -147,11 +145,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white transition-colors duration-300">
+      {/* Experience Giselle Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4">
           <motion.div 
-            className="text-center"
+            className="text-center mb-12"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -161,20 +159,13 @@ const Index = () => {
             <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
               Try our AI assistant now and see how it can transform your customer service experience.
             </p>
-            <Button 
-              onClick={() => setIsChatOpen(true)}
-              className="bg-white hover:bg-blue-50 text-blue-900 px-8 py-6 rounded-md font-medium transition-colors text-lg"
-            >
-              Try Giselle Now
-            </Button>
           </motion.div>
+          
+          <div className="max-w-2xl mx-auto">
+            <ChatInterface />
+          </div>
         </div>
       </section>
-
-      <ChatInterface 
-        isOpen={isChatOpen}
-        onClose={() => setIsChatOpen(false)}
-      />
     </div>
   );
 };
