@@ -1,7 +1,16 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
+
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const section = document.querySelector(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return <footer id="footer" className="bg-blue-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -20,7 +29,38 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4 text-blue-300">Quick Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+                <Link to="/" className="text-gray-300 hover:text-white transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-gray-300 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/#experience-section" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('#experience-section');
+                  }}
+                >
+                  Get Started
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/#faq-section" 
+                  className="text-gray-300 hover:text-white transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    scrollToSection('#faq-section');
+                  }}
+                >
+                  FAQ
+                </Link>
               </li>
             </ul>
           </div>
@@ -67,4 +107,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
