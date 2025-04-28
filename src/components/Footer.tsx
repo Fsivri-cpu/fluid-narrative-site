@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
+
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.querySelector(sectionId);
@@ -76,16 +77,25 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 text-blue-300">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white transition-colors" aria-label="Facebook">
-                <Facebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
+              <a href="https://x.com/strivex_ai" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="text-gray-300 hover:text-white transition-colors" 
+                 aria-label="Twitter">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/strivex.ai.solutions/" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="text-gray-300 hover:text-white transition-colors" 
+                 aria-label="Instagram">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/strivex-ai-solutions/" 
+                 target="_blank" 
+                 rel="noopener noreferrer" 
+                 className="text-gray-300 hover:text-white transition-colors" 
+                 aria-label="LinkedIn">
                 <Linkedin className="h-6 w-6" />
               </a>
             </div>
@@ -98,4 +108,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
