@@ -1,21 +1,14 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
-
 const Footer = () => {
-  return (
-    <footer className="bg-blue-900 text-white pt-12 pb-6">
+  return <footer className="bg-blue-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img 
-                src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" 
-                alt="StriveX Logo" 
-                className="h-12 bg-white p-1 rounded-md"
-              />
+              <img src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" alt="StriveX Logo" className="h-12 bg-white p-1 rounded-md" />
             </Link>
             <p className="text-gray-300 text-sm">
               At StriveX AI Solutions, we're bringing your business into the future with AI-powered customer service solutions.
@@ -38,14 +31,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mt-1 mr-2 h-5 w-5 text-blue-300 flex-shrink-0" />
-                <span className="text-gray-300">
-                  Levent, Istanbul, Turkey
-                </span>
+                <span className="text-gray-300">Vinkenburgstraat 2A, 3512 AB - Utrecht / The Netherlands</span>
               </li>
-              <li className="flex items-center">
-                <Phone className="mr-2 h-5 w-5 text-blue-300 flex-shrink-0" />
-                <span className="text-gray-300">+90 212 123 4567</span>
-              </li>
+              
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-blue-300 flex-shrink-0" />
                 <span className="text-gray-300">info@strivex.ai</span>
@@ -77,8 +65,6 @@ const Footer = () => {
           <p>&copy; 2023 StriveX AI Solutions. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
