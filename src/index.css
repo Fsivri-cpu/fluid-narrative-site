@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -112,6 +113,27 @@
   }
 }
 
+@keyframes flow-animation {
+  0% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+  25% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+  }
+  50% {
+    background-position: 100% 50%;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.7);
+  }
+  75% {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+  }
+  100% {
+    background-position: 0% 50%;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+  }
+}
+
 /* Section transitions */
 .section-transition {
   opacity: 0;
@@ -139,4 +161,39 @@ section {
 /* Add a slight deceleration when scrolling between sections */
 .min-h-screen {
   scroll-snap-type: y proximity;
+}
+
+.chat-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.chat-container::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  padding: 2px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+  background-size: 200% 200%;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: flow-animation 8s linear infinite;
+}
+
+.chat-glow-effect {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: linear-gradient(90deg, #3b82f680, #60a5fa80, #3b82f680);
+  background-size: 200% 200%;
+  filter: blur(8px);
+  opacity: 0.6;
+  animation: flow-animation 8s linear infinite;
 }

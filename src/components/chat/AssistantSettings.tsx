@@ -20,11 +20,9 @@ export const AssistantSettings = ({
   temperature
 }: AssistantSettingsProps) => {
   return (
-    <div className="h-[600px] space-y-4 p-4 bg-gray-50/5 backdrop-blur-xl rounded-lg border border-gray-700/30 relative">
-      {/* Glowing effect */}
-      <div className="absolute -bottom-8 left-0 right-0 h-16 bg-gradient-to-r from-blue-600/20 via-blue-400/20 to-blue-500/20 blur-xl" />
-      
-      <div className="relative z-10">
+    <div className="h-[600px] chat-container">
+      <div className="chat-glow-effect"></div>
+      <div className="h-full space-y-4 p-4 bg-gray-900/95 backdrop-blur-xl rounded-lg border border-blue-500/20 relative z-10">
         <h2 className="text-xl font-semibold text-white mb-4">Assistant Settings</h2>
         
         <div className="space-y-6">
