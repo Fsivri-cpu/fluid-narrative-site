@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Accordion,
@@ -10,39 +11,39 @@ import { motion } from 'framer-motion';
 const faqData = [
   {
     question: "Who can use StriveX?",
-    answer: "Any business that wants to automate customer support and collect customer data — from restaurants to e-commerce to service providers."
+    answer: "Any business looking to automate customer support and capture customer data — from restaurants and e-commerce stores to service providers."
   },
   {
     question: "What makes StriveX different?",
-    answer: "StriveX offers fast setup, a private knowledge base, real-time live chat notifications, and strong data privacy."
+    answer: "StriveX offers ultra-fast setup, a private knowledge base, real-time live chat notifications, and strong data privacy — all designed to help you operate more efficiently."
   },
   {
     question: "How does StriveX work?",
-    answer: "You upload your business documents (FAQs, product catalogs, menus), and StriveX uses AI to create a smart assistant that answers customer questions and collects data."
+    answer: "Simply upload your business documents (such as FAQs, product catalogs, or menus), and StriveX will create an AI-powered assistant that can answer customer questions and collect valuable insights for you."
   },
   {
-    question: "Vakit alan gündelik işleri otomasyon ile halledin.",
-    answer: "Vakit alan işlerinizi sanal asistanınıza yaptırın. Sadece insan müdahalesine gerek olan durumlarda haberdar olun."
+    question: "How can StriveX save me time?",
+    answer: "Automate your repetitive daily tasks with your virtual assistant. You'll only be notified when human intervention is truly necessary — letting you focus on what matters most."
   },
   {
     question: "How can I set up StriveX?",
-    answer: "StriveX can be integrated into your website within minutes. You can also simply share a link with your customers to start using it immediately."
+    answer: "StriveX can be integrated into your website within minutes. Alternatively, you can share a dedicated link with your customers for instant access."
   },
   {
     question: "How do customers interact with my assistant?",
-    answer: "Müşterileriniz web sitenize entegre edilmiş bir chatbox'dan ya da tercihinize göre, asistanınıza özel üretilmiş linke tıklayarak web üzerinden erişilebilir."
+    answer: "Your customers can either chat with your assistant directly through an embedded chatbox on your website, or access it via a personalized link — whichever you prefer."
   },
   {
     question: "Is there a free trial?",
-    answer: "Yes, every new user gets a 14-day free trial with full access to all features."
+    answer: "Yes! Every new user receives a 14-day free trial with full access to all features — no credit card required."
   },
   {
-    question: "How can I get support if needed?",
-    answer: "You can reach us through 24/7 live chat, email at support@strivex.com, or by phone."
+    question: "How can I get support if I need help?",
+    answer: "You can reach us 24/7 via live chat, email us at support@strivex.com, or call our support line. We're always here to help."
   },
   {
     question: "Can StriveX be customized for my business needs?",
-    answer: "Yes, we offer custom solutions and integrations for Enterprise clients. Contact our sales team for more details."
+    answer: "Absolutely. We offer tailored solutions and custom integrations for Enterprise clients. Please contact our sales team for more information."
   }
 ];
 
