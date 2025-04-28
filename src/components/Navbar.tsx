@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X, Globe } from 'lucide-react';
@@ -104,26 +103,26 @@ const Navbar = () => {
               </Link>
             ))}
             <Select value={language} onValueChange={handleLanguageChange}>
-              <SelectTrigger className="w-[100px] bg-transparent border-white/20">
-                <Globe className="mr-2 h-4 w-4" />
-                <SelectValue placeholder="Language" />
+              <SelectTrigger className="w-[100px] bg-white/5 border-white/10 hover:bg-white/10 transition-colors duration-200">
+                <Globe className="mr-2 h-4 w-4 text-blue-200" />
+                <SelectValue placeholder="Language" className="text-blue-200" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="en">EN</SelectItem>
-                <SelectItem value="nl">NL</SelectItem>
+              <SelectContent className="bg-gray-900/95 border-white/10">
+                <SelectItem value="en" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">EN</SelectItem>
+                <SelectItem value="nl" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">NL</SelectItem>
               </SelectContent>
             </Select>
           </div>
 
           <div className="md:hidden flex items-center space-x-4">
             <Select value={language} onValueChange={handleLanguageChange}>
-              <SelectTrigger className="w-[80px] bg-transparent border-white/20">
-                <Globe className="mr-2 h-4 w-4" />
-                <SelectValue placeholder="Lang" />
+              <SelectTrigger className="w-[80px] bg-white/5 border-white/10 hover:bg-white/10 transition-colors duration-200">
+                <Globe className="mr-2 h-4 w-4 text-blue-200" />
+                <SelectValue placeholder="Lang" className="text-blue-200" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="en">EN</SelectItem>
-                <SelectItem value="nl">NL</SelectItem>
+              <SelectContent className="bg-gray-900/95 border-white/10">
+                <SelectItem value="en" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">EN</SelectItem>
+                <SelectItem value="nl" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">NL</SelectItem>
               </SelectContent>
             </Select>
             <button 
