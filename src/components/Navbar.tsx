@@ -1,12 +1,19 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
-import ThemeToggle from './ThemeToggle';
+import { Menu, X, Globe } from 'lucide-react';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [language, setLanguage] = useState<'en' | 'nl'>('en');
   const location = useLocation();
 
   useEffect(() => {
@@ -30,18 +37,23 @@ const Navbar = () => {
     { path: '/contact', label: 'Contact' }
   ];
 
+  const handleLanguageChange = (value: string) => {
+    setLanguage(value as 'en' | 'nl');
+    // Here you can add logic to change the language throughout the app
+  };
+
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/95 dark:bg-gray-900/95 shadow-md backdrop-blur-sm py-2' 
+          ? 'bg-gray-900/95 shadow-md backdrop-blur-sm py-2' 
           : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <div className="p-2 rounded-lg bg-white backdrop-blur-sm hover:bg-white/90 transition-all duration-300 shadow-sm">
+            <div className="p-2 rounded-lg bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-300 shadow-sm">
               <img 
                 src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" 
                 alt="StriveX Logo" 
@@ -55,18 +67,36 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="nav-link text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-300 font-medium"
+                className="nav-link text-blue-200 hover:text-blue-300 font-medium"
               >
                 {item.label}
               </Link>
             ))}
-            <ThemeToggle />
+            <Select value={language} onValueChange={handleLanguageChange}>
+              <SelectTrigger className="w-[100px] bg-transparent border-white/20">
+                <Globe className="mr-2 h-4 w-4" />
+                <SelectValue placeholder="Language" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="en">EN</SelectItem>
+                <SelectItem value="nl">NL</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
 
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+          <div className="md:hidden flex items-center space-x-4">
+            <Select value={language} onValueChange={handleLanguageChange}>
+              <SelectTrigger className="w-[80px] bg-transparent border-white/20">
+                <Globe className="mr-2 h-4 w-4" />
+                <SelectValue placeholder="Lang" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="en">EN</SelectItem>
+                <SelectItem value="nl">NL</SelectItem>
+              </SelectContent>
+            </Select>
             <button 
-              className="text-blue-800 dark:text-blue-200 focus:outline-none" 
+              className="text-blue-200 focus:outline-none" 
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? "Close Menu" : "Open Menu"}
             >
@@ -77,7 +107,7 @@ const Navbar = () => {
       </div>
 
       <div 
-        className={`md:hidden bg-white dark:bg-gray-900 absolute w-full left-0 transition-all duration-300 ease-in-out ${
+        className={`md:hidden bg-gray-900 absolute w-full left-0 transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-96 shadow-md' : 'max-h-0 overflow-hidden'
         }`}
       >
@@ -87,7 +117,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-300 font-medium py-2"
+                className="text-blue-200 hover:text-blue-300 font-medium py-2"
               >
                 {item.label}
               </Link>
