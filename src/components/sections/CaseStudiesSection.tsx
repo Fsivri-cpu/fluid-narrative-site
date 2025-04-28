@@ -110,33 +110,8 @@ const CaseStudiesSection = () => {
         </div>
 
         <div className="text-center mb-16">
-          <motion.h3 className="text-3xl md:text-4xl font-bold mb-6 text-white" initial={{
-          y: 20,
-          opacity: 0
-        }} whileInView={{
-          y: 0,
-          opacity: 1
-        }} transition={{
-          duration: 0.6
-        }} viewport={{
-          once: true
-        }}>
-            Success Stories
-          </motion.h3>
-          <motion.p className="text-xl text-blue-200/90 max-w-2xl mx-auto" initial={{
-          y: 20,
-          opacity: 0
-        }} whileInView={{
-          y: 0,
-          opacity: 1
-        }} transition={{
-          duration: 0.6,
-          delay: 0.2
-        }} viewport={{
-          once: true
-        }}>
-            See how StriveX is transforming customer support across industries
-          </motion.p>
+          
+          
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
