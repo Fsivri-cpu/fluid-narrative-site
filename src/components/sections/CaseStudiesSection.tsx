@@ -1,6 +1,6 @@
 
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { Car, Utensils, Globe, CircleUser, Clock, Package, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
@@ -12,15 +12,23 @@ interface StatisticProps {
 }
 
 const Statistic: React.FC<StatisticProps> = ({ icon: Icon, percentage, description }) => {
-  const [value, setValue] = React.useState(0);
-
-  React.useEffect(() => {
-    const timer = setTimeout(() => setValue(percentage), 100);
-    return () => clearTimeout(timer);
-  }, [percentage]);
+  const [value, setValue] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
+  
+  useEffect(() => {
+    if (isInView) {
+      const timer = setTimeout(() => {
+        setValue(percentage);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+    return undefined;
+  }, [isInView, percentage]);
 
   return (
     <motion.div 
+      ref={ref}
       className="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -91,14 +99,14 @@ const CaseStudiesSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-900/40 to-black backdrop-blur-3xl"></div>
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
-          className="text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            What Consumers Say
+            Trusted by Industry Leaders
           </h2>
           <p className="text-xl text-blue-200/90 max-w-2xl mx-auto">
             Real statistics showing how AI assistants are transforming customer service
@@ -112,15 +120,15 @@ const CaseStudiesSection = () => {
         </div>
 
         <div className="text-center mb-16">
-          <motion.h2 
-            className="text-4xl md:text-5xl font-bold mb-6 text-white"
+          <motion.h3 
+            className="text-3xl md:text-4xl font-bold mb-6 text-white"
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            Trusted by Industry Leaders
-          </motion.h2>
+            Success Stories
+          </motion.h3>
           <motion.p 
             className="text-xl text-blue-200/90 max-w-2xl mx-auto"
             initial={{ y: 20, opacity: 0 }}
