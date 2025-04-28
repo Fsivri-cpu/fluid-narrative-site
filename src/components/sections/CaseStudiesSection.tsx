@@ -3,11 +3,13 @@ import { motion, useInView } from 'framer-motion';
 import { Car, Utensils, Globe, CircleUser, Clock, Package, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+
 interface StatisticProps {
   icon: React.ElementType;
   percentage: number;
   description: string;
 }
+
 const Statistic: React.FC<StatisticProps> = ({
   icon: Icon,
   percentage,
@@ -16,18 +18,43 @@ const Statistic: React.FC<StatisticProps> = ({
   const [value, setValue] = useState(0);
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    once: true,
+    once: false,
     margin: "-100px 0px"
   });
+
   useEffect(() => {
+    let animationTimer: NodeJS.Timeout;
+    
     if (isInView) {
-      const timer = setTimeout(() => {
-        setValue(percentage);
+      setValue(0);
+      
+      animationTimer = setTimeout(() => {
+        let startTime: number;
+        const duration = 3000;
+        
+        const animateValue = (timestamp: number) => {
+          if (!startTime) startTime = timestamp;
+          const elapsed = timestamp - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          
+          setValue(percentage * progress);
+          
+          if (progress < 1) {
+            requestAnimationFrame(animateValue);
+          }
+        };
+        
+        requestAnimationFrame(animateValue);
       }, 300);
-      return () => clearTimeout(timer);
+    } else {
+      setValue(0);
     }
-    return undefined;
+    
+    return () => {
+      if (animationTimer) clearTimeout(animationTimer);
+    };
   }, [isInView, percentage]);
+
   return <motion.div ref={ref} className="p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10" initial={{
     opacity: 0,
     y: 20
@@ -35,7 +62,7 @@ const Statistic: React.FC<StatisticProps> = ({
     opacity: 1,
     y: 0
   }} viewport={{
-    once: true
+    once: false
   }} transition={{
     duration: 0.5
   }}>
@@ -51,6 +78,7 @@ const Statistic: React.FC<StatisticProps> = ({
       </div>
     </motion.div>;
 };
+
 const statistics = [{
   icon: CircleUser,
   percentage: 87.2,
@@ -68,6 +96,7 @@ const statistics = [{
   percentage: 69,
   description: "Consumers express satisfaction with their most recent chatbot interaction"
 }];
+
 const caseStudies = [{
   industry: "Automotive Dealership",
   description: "An automotive dealership improved customer service by implementing an AI assistant with vehicle inventory knowledge, enabling instant answers about vehicles and test drive scheduling. This allowed sales staff to focus on serious buyers, increasing efficiency and customer satisfaction.",
@@ -84,6 +113,7 @@ const caseStudies = [{
   icon: Globe,
   color: "green-500"
 }];
+
 const CaseStudiesSection = () => {
   return <section className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 via-blue-900/40 to-black backdrop-blur-3xl"></div>
@@ -97,7 +127,7 @@ const CaseStudiesSection = () => {
       }} transition={{
         duration: 0.6
       }} viewport={{
-        once: true
+        once: false
       }}>
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Trusted by Industry Leaders
@@ -125,7 +155,7 @@ const CaseStudiesSection = () => {
           duration: 0.5,
           delay: index * 0.1
         }} viewport={{
-          once: true
+          once: false
         }}>
               <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
@@ -145,4 +175,5 @@ const CaseStudiesSection = () => {
       </div>
     </section>;
 };
+
 export default CaseStudiesSection;
