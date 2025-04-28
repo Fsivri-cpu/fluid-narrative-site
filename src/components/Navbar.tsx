@@ -22,6 +22,14 @@ const Navbar = () => {
     setIsOpen(false);
   }, [location]);
 
+  const navItems = [
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About Us' },
+    { path: '/get-started', label: 'Get Started' },
+    { path: '/faq', label: 'FAQ' },
+    { path: '/contact', label: 'Contact' }
+  ];
+
   return (
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
@@ -43,9 +51,15 @@ const Navbar = () => {
           </Link>
 
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="nav-link text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-300 font-medium">
-              Home
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="nav-link text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-300 font-medium"
+              >
+                {item.label}
+              </Link>
+            ))}
             <ThemeToggle />
           </div>
 
@@ -69,9 +83,15 @@ const Navbar = () => {
       >
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col space-y-4">
-            <Link to="/" className="text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-300 font-medium py-2">
-              Home
-            </Link>
+            {navItems.map((item) => (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-300 font-medium py-2"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

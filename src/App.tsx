@@ -7,6 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Layout from "./components/Layout";
 import Index from "./pages/Index";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Services from "./pages/Services";
+import Technologies from "./pages/Technologies";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +25,10 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Index />} />
+              <Route path="about" element={<About />} />
+              <Route path="get-started" element={<Services />} />
+              <Route path="faq" element={<Technologies />} />
+              <Route path="contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
