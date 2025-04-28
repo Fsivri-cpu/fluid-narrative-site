@@ -1,16 +1,15 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, MapPin } from 'lucide-react';
-
 const Footer = () => {
   const scrollToSection = (sectionId: string) => {
     const section = document.querySelector(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
+      section.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
   return <footer id="footer" className="bg-blue-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -39,26 +38,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/#experience-section" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection('#experience-section');
-                  }}
-                >
+                <Link to="/#experience-section" className="text-gray-300 hover:text-white transition-colors" onClick={e => {
+                e.preventDefault();
+                scrollToSection('#experience-section');
+              }}>
                   Get Started
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/#faq-section" 
-                  className="text-gray-300 hover:text-white transition-colors"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    scrollToSection('#faq-section');
-                  }}
-                >
+                <Link to="/#faq-section" className="text-gray-300 hover:text-white transition-colors" onClick={e => {
+                e.preventDefault();
+                scrollToSection('#faq-section');
+              }}>
                   FAQ
                 </Link>
               </li>
@@ -102,10 +93,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-6 text-sm text-gray-400 text-center">
-          <p>&copy; 2023 StriveX AI Solutions. All rights reserved.</p>
+          <p>© 2025 StriveX AI Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>;
 };
-
 export default Footer;
