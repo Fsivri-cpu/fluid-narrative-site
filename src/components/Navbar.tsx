@@ -98,19 +98,19 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 onClick={item.onClick}
-                className="nav-link text-blue-200 hover:text-blue-300 font-medium"
+                className="nav-link text-white hover:text-white/80 font-medium"
               >
                 {item.label}
               </Link>
             ))}
             <Select value={language} onValueChange={handleLanguageChange}>
               <SelectTrigger className="w-[100px] bg-white/5 border-white/10 hover:bg-white/10 transition-colors duration-200">
-                <Globe className="mr-2 h-4 w-4 text-blue-200" />
-                <SelectValue placeholder="Language" className="text-blue-200" />
+                <Globe className="mr-2 h-4 w-4 text-white" />
+                <SelectValue placeholder="Language" className="text-white" />
               </SelectTrigger>
               <SelectContent className="bg-gray-900/95 border-white/10">
-                <SelectItem value="en" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">EN</SelectItem>
-                <SelectItem value="nl" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">NL</SelectItem>
+                <SelectItem value="en" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">EN</SelectItem>
+                <SelectItem value="nl" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">NL</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -118,16 +118,16 @@ const Navbar = () => {
           <div className="md:hidden flex items-center space-x-4">
             <Select value={language} onValueChange={handleLanguageChange}>
               <SelectTrigger className="w-[80px] bg-white/5 border-white/10 hover:bg-white/10 transition-colors duration-200">
-                <Globe className="mr-2 h-4 w-4 text-blue-200" />
-                <SelectValue placeholder="Lang" className="text-blue-200" />
+                <Globe className="mr-2 h-4 w-4 text-white" />
+                <SelectValue placeholder="Lang" className="text-white" />
               </SelectTrigger>
               <SelectContent className="bg-gray-900/95 border-white/10">
-                <SelectItem value="en" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">EN</SelectItem>
-                <SelectItem value="nl" className="text-blue-200 hover:text-blue-300 focus:text-blue-300 focus:bg-white/5">NL</SelectItem>
+                <SelectItem value="en" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">EN</SelectItem>
+                <SelectItem value="nl" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">NL</SelectItem>
               </SelectContent>
             </Select>
             <button 
-              className="text-blue-200 focus:outline-none" 
+              className="text-white focus:outline-none" 
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? "Close Menu" : "Open Menu"}
             >
@@ -149,7 +149,7 @@ const Navbar = () => {
                 key={item.path}
                 to={item.path}
                 onClick={item.onClick}
-                className="text-blue-200 hover:text-blue-300 font-medium py-2"
+                className="text-white hover:text-white/80 font-medium py-2"
               >
                 {item.label}
               </Link>
