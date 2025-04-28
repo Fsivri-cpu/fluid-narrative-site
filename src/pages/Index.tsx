@@ -95,8 +95,12 @@ const Index = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-center"
           >
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-              Virtual Workforce
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight drop-shadow-[0_0_35px_rgba(255,255,255,0.5)] relative">
+              <span className="relative inline-block">
+                Virtual Workforce
+                <div className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent blur-sm"></div>
+                <div className="absolute -bottom-4 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-white to-transparent blur-md"></div>
+              </span>
             </h1>
             <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
               Take your business one step ahead with intelligent, fast, and personalized customer service solutions.
