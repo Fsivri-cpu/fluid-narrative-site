@@ -1,14 +1,13 @@
-
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ChevronRight, Cpu, Headphones, BarChart, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChatInterface } from '@/components/chat/ChatInterface';
+import { AssistantSettings } from '@/components/chat/AssistantSettings';
 
 const Index = () => {
-  // Animation variants for staggered animations
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -32,7 +31,6 @@ const Index = () => {
     }
   };
 
-  // Smooth scrolling setup
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 30,
@@ -40,12 +38,12 @@ const Index = () => {
     restDelta: 0.001
   });
 
-  // Add smooth scrolling behavior
+  const [maxTokens, setMaxTokens] = useState(1000);
+  const [temperature, setTemperature] = useState(0.7);
+
   useEffect(() => {
-    // Add smooth scroll behavior to html
     document.documentElement.style.scrollBehavior = 'smooth';
     
-    // Create intersection observer for section transitions
     const sections = document.querySelectorAll('section');
     
     const observer = new IntersectionObserver((entries) => {
@@ -69,15 +67,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen dark:bg-gray-900 transition-colors duration-300">
-      {/* Progress indicator */}
       <motion.div
         className="fixed top-0 left-0 right-0 h-1 bg-blue-600 z-50 origin-left"
         style={{ scaleX }}
       />
 
-      {/* Video Hero Section */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Video Background */}
         <div className="absolute inset-0 w-full h-full bg-black/60 z-10"></div>
         <video 
           className="absolute inset-0 w-full h-full object-cover" 
@@ -90,7 +85,6 @@ const Index = () => {
           Your browser does not support the video tag.
         </video>
         
-        {/* Caption */}
         <div className="relative z-20 flex items-center justify-center h-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -115,9 +109,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Giselle Virtual Assistant Section */}
       <section className="relative h-screen w-full overflow-hidden">
-        {/* Background Image */}
         <div className="absolute inset-0 w-full h-full">
           <img 
             src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-1.2.1&auto=format&fit=crop&q=80" 
@@ -127,7 +119,6 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-blue-900/80 to-blue-900/80"></div>
         </div>
         
-        {/* Content */}
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -146,7 +137,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Experience Giselle Section */}
       <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4">
           <motion.div 
@@ -158,12 +148,22 @@ const Index = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Giselle in Action</h2>
             <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
-              Try our AI assistant now and see how it can transform your customer service experience.
+              Try our AI assistant now and customize its behavior to match your needs.
             </p>
           </motion.div>
           
-          <div className="max-w-2xl mx-auto">
-            <ChatInterface />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <div className="w-full">
+              <ChatInterface maxTokens={maxTokens} temperature={temperature} />
+            </div>
+            <div className="w-full">
+              <AssistantSettings
+                maxTokens={maxTokens}
+                temperature={temperature}
+                onMaxTokensChange={setMaxTokens}
+                onTemperatureChange={setTemperature}
+              />
+            </div>
           </div>
         </div>
       </section>

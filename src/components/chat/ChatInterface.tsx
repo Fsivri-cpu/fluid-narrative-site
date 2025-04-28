@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
@@ -10,7 +9,12 @@ interface Message {
   id: number;
 }
 
-export const ChatInterface = () => {
+interface ChatInterfaceProps {
+  maxTokens: number;
+  temperature: number;
+}
+
+export const ChatInterface = ({ maxTokens, temperature }: ChatInterfaceProps) => {
   const [messages, setMessages] = useState<Message[]>([
     { text: "Hi! I'm Giselle, your AI assistant. How can I help you today?", isBot: true, id: 1 }
   ]);
