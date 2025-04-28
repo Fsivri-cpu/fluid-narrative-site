@@ -179,7 +179,7 @@ const Index = () => {
       </section>
 
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-blue-900/20 backdrop-blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-900 via-black to-black backdrop-blur-3xl"></div>
         <motion.div 
           className="container mx-auto px-4 relative z-10"
           initial={{ opacity: 0 }}
