@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { ChatInterface } from '@/components/chat/ChatInterface';
 import { AssistantSettings } from '@/components/chat/AssistantSettings';
 import { LottiePlayer } from '@/components/ui/lottie-player';
+import FAQ from '@/components/FAQ';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -172,6 +173,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <FAQ />
     </div>
   );
 };
