@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
@@ -94,7 +93,7 @@ const Contact = () => {
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold text-blue-900 mb-1">Email</h3>
-                        <p className="text-gray-600">info@strivex.ai</p>
+                        <p className="text-gray-600">infor@strivexai.co</p>
                       </div>
                     </div>
                   </CardContent>

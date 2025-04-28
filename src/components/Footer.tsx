@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, Mail, Phone, MapPin } from 'lucide-react';
+
 const Footer = () => {
   return <footer className="bg-blue-900 text-white pt-12 pb-6">
       <div className="container mx-auto px-4">
@@ -36,7 +37,7 @@ const Footer = () => {
               
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-blue-300 flex-shrink-0" />
-                <span className="text-gray-300">info@strivex.ai</span>
+                <span className="text-gray-300">infor@strivexai.co</span>
               </li>
             </ul>
           </div>
@@ -67,4 +68,5 @@ const Footer = () => {
       </div>
     </footer>;
 };
+
 export default Footer;
