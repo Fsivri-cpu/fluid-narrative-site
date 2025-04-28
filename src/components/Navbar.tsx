@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -32,11 +33,11 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <div className="p-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300">
+            <div className="p-2 rounded-lg bg-white backdrop-blur-sm hover:bg-white/90 transition-all duration-300 shadow-sm">
               <img 
                 src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" 
                 alt="StriveX Logo" 
-                className="h-10 md:h-12 drop-shadow-[0_2px_2px_rgba(255,255,255,0.1)]"
+                className="h-10 md:h-12"
               />
             </div>
           </Link>
