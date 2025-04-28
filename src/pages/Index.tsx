@@ -137,7 +137,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-r from-blue-900 to-blue-800 text-white">
+      <section className="py-16 bg-black text-white">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
