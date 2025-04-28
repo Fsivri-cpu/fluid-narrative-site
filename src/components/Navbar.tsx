@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
@@ -19,7 +18,6 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    // Close mobile menu when route changes
     setIsOpen(false);
   }, [location]);
 
@@ -34,14 +32,15 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <img 
-              src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" 
-              alt="StriveX Logo" 
-              className="h-10 md:h-12"
-            />
+            <div className="p-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/15 transition-all duration-300">
+              <img 
+                src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" 
+                alt="StriveX Logo" 
+                className="h-10 md:h-12 drop-shadow-[0_2px_2px_rgba(255,255,255,0.1)]"
+              />
+            </div>
           </Link>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="nav-link text-blue-800 dark:text-blue-200 hover:text-blue-600 dark:hover:text-blue-300 font-medium">
               Home
@@ -49,7 +48,6 @@ const Navbar = () => {
             <ThemeToggle />
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <button 
@@ -63,7 +61,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div 
         className={`md:hidden bg-white dark:bg-gray-900 absolute w-full left-0 transition-all duration-300 ease-in-out ${
           isOpen ? 'max-h-96 shadow-md' : 'max-h-0 overflow-hidden'
