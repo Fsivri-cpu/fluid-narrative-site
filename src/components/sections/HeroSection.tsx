@@ -2,9 +2,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
+  const scrollToExperience = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const experienceSection = document.querySelector('#experience-section');
+    experienceSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
       <div className="absolute inset-0 w-full h-full bg-black/80 z-10"></div>
@@ -36,12 +41,13 @@ const HeroSection = () => {
           <p className="text-xl md:text-2xl text-white/90 max-w-2xl mx-auto mb-8 drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
             Take your business one step ahead with intelligent, fast, and personalized customer service solutions.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/services">
-              <button className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center shadow-[0_0_15px_rgba(59,130,246,0.3)]">
-                Get Started <ChevronRight className="ml-1 h-4 w-4" />
-              </button>
-            </Link>
+          <div className="flex justify-center">
+            <button 
+              onClick={scrollToExperience}
+              className="bg-blue-600 hover:bg-blue-700 dark:bg-blue-700 dark:hover:bg-blue-600 text-white px-6 py-3 rounded-md font-medium transition-colors flex items-center shadow-[0_0_15px_rgba(59,130,246,0.3)]"
+            >
+              Get Started <ChevronRight className="ml-1 h-4 w-4" />
+            </button>
           </div>
         </motion.div>
       </div>

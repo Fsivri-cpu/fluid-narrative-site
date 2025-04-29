@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Accordion,
@@ -31,10 +32,6 @@ const faqData = [
   {
     question: "How do customers interact with my assistant?",
     answer: "Your customers can either chat with your assistant directly through an embedded chatbox on your website, or access it via a personalized link — whichever you prefer."
-  },
-  {
-    question: "Is there a free trial?",
-    answer: "Yes! Every new user receives a 14-day free trial with full access to all features — no credit card required."
   },
   {
     question: "How can I get support if I need help?",

@@ -112,8 +112,8 @@ const caseStudies = [{
   icon: Utensils,
   color: "amber-500"
 }, {
-  industry: "International Business",
-  description: "A Dutch entrepreneur broke through language barriers by implementing an AI assistant that communicates in 29+ languages. This expansion enabled reaching international customers and capturing previously missed opportunities in the global market.",
+  industry: "Solo-Entrepreneur",
+  description: "A solo-entrepreneur broke through language barriers by implementing an AI assistant that communicates in 29+ languages. This expansion enabled reaching international customers and capturing previously missed opportunities in the global market.",
   icon: Globe,
   color: "green-500"
 }];
