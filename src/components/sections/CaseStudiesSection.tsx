@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Car, Utensils, Globe, CircleUser, Clock, Package, Star } from 'lucide-react';
@@ -83,23 +82,25 @@ const Statistic: React.FC<StatisticProps> = ({
     </motion.div>;
 };
 
-const statistics = [{
-  icon: CircleUser,
-  percentage: 87.2,
-  description: "Consumers report neutral or positive experiences with chatbots"
-}, {
-  icon: Clock,
-  percentage: 62,
-  description: "Consumers prefer using a chatbot rather than waiting for a human representative"
-}, {
-  icon: Package,
-  percentage: 71,
-  description: "Consumers prefer chatting with a chatbot when checking order status"
-}, {
-  icon: Star,
-  percentage: 69,
-  description: "Consumers express satisfaction with their most recent chatbot interaction"
-}];
+const statistics = [
+  {
+    icon: CircleUser,
+    percentage: 87.2,
+    description: "Consumers report neutral or positive experiences with chatbots"
+  }, {
+    icon: Clock,
+    percentage: 62,
+    description: "Consumers prefer using a chatbot rather than waiting for a human representative"
+  }, {
+    icon: Package,
+    percentage: 71,
+    description: "Consumers prefer chatting with a chatbot when checking order status"
+  }, {
+    icon: Star,
+    percentage: 69,
+    description: "Consumers express satisfaction with their most recent chatbot interaction"
+  }
+];
 
 const caseStudies = [{
   industry: "Automotive Dealership",
