@@ -9,13 +9,14 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [language, setLanguage] = useState<'en' | 'nl'>('en');
   const location = useLocation();
   const navigate = useNavigate();
+  const { language, setLanguage, t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,11 +66,11 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
-    { path: '#experience-section', label: 'Get Started', onClick: handleGetStartedClick },
-    { path: '#faq-section', label: 'FAQ', onClick: handleFAQClick },
-    { path: '#footer', label: 'Contact', onClick: handleContactClick }
+    { path: '/', label: t('nav.home') },
+    { path: '/about', label: t('nav.about') },
+    { path: '#experience-section', label: t('nav.getStarted'), onClick: handleGetStartedClick },
+    { path: '#faq-section', label: t('nav.faq'), onClick: handleFAQClick },
+    { path: '#footer', label: t('nav.contact'), onClick: handleContactClick }
   ];
 
   return (

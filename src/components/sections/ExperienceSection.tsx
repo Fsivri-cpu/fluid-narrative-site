@@ -3,6 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChatInterface } from '@/components/chat/ChatInterface';
 import { AssistantSettings } from '@/components/chat/AssistantSettings';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ExperienceSectionProps {
   maxTokens: number;
@@ -17,6 +18,8 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
   onMaxTokensChange,
   onTemperatureChange
 }) => {
+  const { t } = useLanguage();
+  
   return (
     <section id="experience-section" className="py-16 bg-black text-white">
       <div className="container mx-auto px-4">
@@ -27,9 +30,9 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience Giselle in Action</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('exp.title')}</h2>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-8">
-            Try our AI assistant now and customize its behavior to match your needs.
+            {t('exp.subtitle')}
           </p>
         </motion.div>
         

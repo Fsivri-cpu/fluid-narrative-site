@@ -7,43 +7,46 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { motion } from 'framer-motion';
-
-const faqData = [
-  {
-    question: "Who can use StriveX?",
-    answer: "Any business looking to automate customer support and capture customer data — from restaurants and e-commerce stores to service providers."
-  },
-  {
-    question: "What makes StriveX different?",
-    answer: "StriveX offers ultra-fast setup, a private knowledge base, real-time live chat notifications, and strong data privacy — all designed to help you operate more efficiently."
-  },
-  {
-    question: "How does StriveX work?",
-    answer: "Simply upload your business documents (such as FAQs, product catalogs, or menus), and StriveX will create an AI-powered assistant that can answer customer questions and collect valuable insights for you."
-  },
-  {
-    question: "How can StriveX save me time?",
-    answer: "Automate your repetitive daily tasks with your virtual assistant. You'll only be notified when human intervention is truly necessary — letting you focus on what matters most."
-  },
-  {
-    question: "How can I set up StriveX?",
-    answer: "StriveX can be integrated into your website within minutes. Alternatively, you can share a dedicated link with your customers for instant access."
-  },
-  {
-    question: "How do customers interact with my assistant?",
-    answer: "Your customers can either chat with your assistant directly through an embedded chatbox on your website, or access it via a personalized link — whichever you prefer."
-  },
-  {
-    question: "How can I get support if I need help?",
-    answer: "You can reach us 24/7 via live chat, email us at support@strivex.com, or call our support line. We're always here to help."
-  },
-  {
-    question: "Can StriveX be customized for my business needs?",
-    answer: "Absolutely. We offer tailored solutions and custom integrations for Enterprise clients. Please contact our sales team for more information."
-  }
-];
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const FAQ = () => {
+  const { t } = useLanguage();
+  
+  const faqData = [
+    {
+      question: t('faq.q1'),
+      answer: t('faq.a1')
+    },
+    {
+      question: t('faq.q2'),
+      answer: t('faq.a2')
+    },
+    {
+      question: t('faq.q3'),
+      answer: t('faq.a3')
+    },
+    {
+      question: t('faq.q4'),
+      answer: t('faq.a4')
+    },
+    {
+      question: t('faq.q5'),
+      answer: t('faq.a5')
+    },
+    {
+      question: t('faq.q6'),
+      answer: t('faq.a6')
+    },
+    {
+      question: t('faq.q7'),
+      answer: t('faq.a7')
+    },
+    {
+      question: t('faq.q8'),
+      answer: t('faq.a8')
+    }
+  ];
+
   return (
     <section id="faq-section" className="py-16 bg-gradient-to-b from-black to-blue-900">
       <div className="container mx-auto px-4">
@@ -55,10 +58,10 @@ const FAQ = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Frequently Asked Questions
+            {t('faq.title')}
           </h2>
           <p className="text-lg text-blue-200 max-w-2xl mx-auto">
-            Find answers to common questions about StriveX and how it can help your business.
+            {t('faq.subtitle')}
           </p>
         </motion.div>
 

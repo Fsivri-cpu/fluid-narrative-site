@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface Message {
   text: string;
@@ -16,8 +17,9 @@ interface ChatInterfaceProps {
 }
 
 export const ChatInterface = ({ maxTokens, temperature }: ChatInterfaceProps) => {
+  const { t } = useLanguage();
   const [messages, setMessages] = useState<Message[]>([
-    { text: "Hi! I'm Giselle, your AI assistant. How can I help you today?", isBot: true, id: 1 }
+    { text: t('chat.greeting'), isBot: true, id: 1 }
   ]);
   const [newMessage, setNewMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -33,7 +35,7 @@ export const ChatInterface = ({ maxTokens, temperature }: ChatInterfaceProps) =>
     // Simulate bot typing
     setIsTyping(true);
     setTimeout(() => {
-      const botResponse = "Thank you for your message. I'm a demo version of Giselle, designed to showcase our AI capabilities. Would you like to learn more about our full-featured solution?";
+      const botResponse = t('chat.response');
       setMessages(prev => [...prev, { text: botResponse, isBot: true, id: userMessageId + 1 }]);
       setIsTyping(false);
     }, 1500);
@@ -45,8 +47,8 @@ export const ChatInterface = ({ maxTokens, temperature }: ChatInterfaceProps) =>
       <div className="relative h-full rounded-lg overflow-hidden bg-gray-900/95 backdrop-blur-xl border border-blue-500/20 z-10">
         {/* Chat Header */}
         <div className="p-4 border-b border-gray-700/20 bg-gray-900/90">
-          <h2 className="text-xl font-semibold text-white">Chat with Giselle</h2>
-          <p className="text-gray-300/80 text-sm">Experience our AI assistant in action</p>
+          <h2 className="text-xl font-semibold text-white">{t('chat.title')}</h2>
+          <p className="text-gray-300/80 text-sm">{t('chat.subtitle')}</p>
         </div>
 
         {/* Messages Container */}
@@ -87,7 +89,7 @@ export const ChatInterface = ({ maxTokens, temperature }: ChatInterfaceProps) =>
               value={newMessage}
               onChange={(e) => setNewMessage(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-              placeholder="Type your message..."
+              placeholder={t('chat.placeholder')}
               className="flex-1 bg-gray-800/60 border-gray-700/30 text-white placeholder:text-gray-400"
             />
             <Button
