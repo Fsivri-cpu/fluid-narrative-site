@@ -38,7 +38,7 @@ export const translations = {
     'va.feature2.title': 'Multi-language Support',
     'va.feature2.desc': 'Communicate with customers in their preferred language',
     'va.feature3.title': 'Custom Branding',
-    'va.feature3.desc': 'Match your brand's look and feel',
+    'va.feature3.desc': "Match your brand's look and feel",
     'va.feature4.title': 'Analytics & Insights',
     'va.feature4.desc': 'Understand customer needs and behaviors',
     
