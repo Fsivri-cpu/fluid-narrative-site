@@ -24,8 +24,20 @@ const FAQ = () => {
       icon: CreditCard,
       items: [
         {
-          question: "What subscription options are available, and how can I upgrade, switch, or cancel?",
-          answer: "We offer Weekly (billed every 7 days) and Lifetime (one-time payment) plans. You can upgrade from Weekly to Lifetime anytime—just cancel the Weekly subscription in your store settings and purchase Lifetime. To cancel any plan, open your device's subscription settings, find GLP-1 Shot Tracker, and tap Cancel."
+          question: "What subscription plans are available?",
+          answer: "We offer two paid tiers in addition to the free core experience: Weekly (billed every 7 days) and Lifetime (one-time payment, all future updates included). Pricing is shown in your local currency at checkout."
+        },
+        {
+          question: "What does the Lifetime plan include?",
+          answer: "Lifetime unlocks every premium feature—multi-device sync, advanced analytics, custom themes and priority support—forever, with no recurring fees."
+        },
+        {
+          question: "Can I switch from Weekly to Lifetime?",
+          answer: "Yes. Cancel your Weekly plan in the store's subscription settings, then purchase the Lifetime option. Any unused portion of your Weekly period will remain active until it expires."
+        },
+        {
+          question: "How do I cancel my subscription?",
+          answer: "Open your device's subscription settings, find GLP-1 Shot Tracker, and tap Cancel. You can also manage subscriptions through your Apple ID or Google Account settings."
         }
       ]
     },
