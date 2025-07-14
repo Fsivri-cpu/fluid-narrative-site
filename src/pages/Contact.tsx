@@ -70,11 +70,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-0">
-                    
-                  </CardContent>
-                </Card>
+                
 
                 <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
