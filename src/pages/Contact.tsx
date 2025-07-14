@@ -60,7 +60,7 @@ const Contact = () => {
                       <div>
                         <h3 className="text-lg font-semibold text-blue-900 mb-1">Address</h3>
                         <p className="text-gray-600">
-                          Levent, Istanbul, Turkey
+                          Vinkenburgstraat 2A, 3512 AB - Utrecht / The Netherlands
                         </p>
                       </div>
                     </div>
