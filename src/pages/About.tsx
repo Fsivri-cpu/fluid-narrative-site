@@ -156,7 +156,7 @@ const About = () => {
                   <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
                     <Users className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-white">Collaboration</CardTitle>
+                  <CardTitle className="text-white">Seamless Design</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300">
