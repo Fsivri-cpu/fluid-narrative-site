@@ -134,9 +134,6 @@ const FAQ = () => {
               <div className="text-muted-foreground">
                 <strong>Email:</strong> support@strivex.ai
               </div>
-              <div className="text-muted-foreground">
-                <strong>Phone:</strong> +1 (555) 123-4567
-              </div>
             </div>
           </motion.div>
         </div>
