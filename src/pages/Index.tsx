@@ -117,7 +117,7 @@ const Index = () => {
                     <div className="flex items-start justify-between mb-4">
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center`}>
                         {app.icon ? (
-                          <img src={app.icon} alt={app.name} className="w-10 h-10 object-contain" />
+                          <img src={app.icon} alt={app.name} className="w-full h-full object-cover rounded-2xl" />
                         ) : (
                           <Smartphone className="w-8 h-8 text-white" />
                         )}
