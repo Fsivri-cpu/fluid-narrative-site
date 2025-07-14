@@ -16,7 +16,7 @@
     --primary: 224 71% 20%;
     --primary-foreground: 0 0% 85%;
 
-    --secondary: 0 0% 75%;
+    --secondary: 0 0% 85%;
     --secondary-foreground: 224 71% 20%;
 
     --muted: 0 0% 92%;
@@ -168,7 +168,7 @@ section {
   inset: 0;
   padding: 2px;
   border-radius: 12px;
-  background: linear-gradient(90deg, hsl(224 71% 35%), hsl(0 0% 75%), hsl(224 71% 35%));
+  background: linear-gradient(90deg, hsl(224 71% 35%), hsl(0 0% 85%), hsl(224 71% 35%));
   background-size: 200% 200%;
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
@@ -184,7 +184,7 @@ section {
   left: 0;
   right: 0;
   height: 15px;
-  background: linear-gradient(90deg, hsl(224 71% 35% / 0.5), hsl(0 0% 75% / 0.5), hsl(224 71% 35% / 0.5));
+  background: linear-gradient(90deg, hsl(224 71% 35% / 0.5), hsl(0 0% 85% / 0.5), hsl(224 71% 35% / 0.5));
   background-size: 200% 200%;
   filter: blur(8px);
   opacity: 0.6;
