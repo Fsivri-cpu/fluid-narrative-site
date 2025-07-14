@@ -44,9 +44,9 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-24">
+    <div className="min-h-screen pt-24 bg-gradient-to-br from-slate-900 to-black text-white">
       {/* Header */}
-      <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center max-w-3xl mx-auto"
@@ -54,8 +54,8 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">About Us</h1>
-            <p className="text-lg text-gray-600">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">About Us</h1>
+            <p className="text-lg text-gray-300">
               StriveX AI Solutions is an innovative technology company that aims to transform customer experience with AI-powered customer service solutions.
             </p>
           </motion.div>
@@ -73,8 +73,8 @@ const About = () => {
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl font-bold text-blue-900 mb-6">Our Story</h2>
-              <div className="space-y-4 text-gray-600">
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Our Story</h2>
+              <div className="space-y-4 text-gray-300">
                 <p>
                   StriveX AI Solutions was founded in 2020 with the vision of adding value to businesses by using the power of artificial intelligence technologies in customer service.
                 </p>
@@ -101,7 +101,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-blue-50">
+      <section className="py-16 bg-white/5">
         <div className="container mx-auto px-4">
           <motion.div 
             className="text-center mb-12"
@@ -110,8 +110,8 @@ const About = () => {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold text-blue-900 mb-4">Our Values</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Our Values</h2>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               At StriveX AI Solutions, we have core values that guide us in all our work.
             </p>
           </motion.div>
@@ -124,15 +124,15 @@ const About = () => {
             viewport={{ once: true }}
           >
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
-                  <div className="bg-blue-100 p-3 rounded-full w-fit mb-4">
-                    <Award className="h-6 w-6 text-blue-600" />
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
+                    <Award className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle>Excellence</CardTitle>
+                  <CardTitle className="text-white">Excellence</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-gray-300">
                     We continuously develop ourselves and follow best practices to deliver the highest quality in every project.
                   </p>
                 </CardContent>
@@ -140,15 +140,15 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
-                  <div className="bg-blue-100 p-3 rounded-full w-fit mb-4">
-                    <Zap className="h-6 w-6 text-blue-600" />
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
+                    <Zap className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle>Innovation</CardTitle>
+                  <CardTitle className="text-white">Innovation</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-gray-300">
                     We continuously explore new technologies and improve our solutions to better serve our customers.
                   </p>
                 </CardContent>
@@ -156,15 +156,15 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
-                  <div className="bg-blue-100 p-3 rounded-full w-fit mb-4">
-                    <Users className="h-6 w-6 text-blue-600" />
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
+                    <Users className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle>Collaboration</CardTitle>
+                  <CardTitle className="text-white">Collaboration</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-gray-300">
                     We work closely with our customers and team members to achieve the best results.
                   </p>
                 </CardContent>
@@ -172,15 +172,15 @@ const About = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+              <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
-                  <div className="bg-blue-100 p-3 rounded-full w-fit mb-4">
-                    <Target className="h-6 w-6 text-blue-600" />
+                  <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
+                    <Target className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle>Result-Focused</CardTitle>
+                  <CardTitle className="text-white">Result-Focused</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">
+                  <p className="text-gray-300">
                     We always focus on producing tangible results that will help our customers achieve their business goals.
                   </p>
                 </CardContent>

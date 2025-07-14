@@ -15,9 +15,9 @@ const Contact = () => {
       description: "Your message has been successfully sent. We will get back to you as soon as possible."
     });
   };
-  return <div className="min-h-screen pt-24">
+  return <div className="min-h-screen pt-24 bg-gradient-to-br from-slate-900 to-black text-white">
       {/* Header */}
-      <section className="py-12 bg-gradient-to-b from-blue-50 to-white">
+      <section className="py-12">
         <div className="container mx-auto px-4">
           <motion.div className="text-center max-w-3xl mx-auto" initial={{
           opacity: 0,
@@ -28,8 +28,8 @@ const Contact = () => {
         }} transition={{
           duration: 0.5
         }}>
-            <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">Contact</h1>
-            <p className="text-lg text-gray-600">
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Contact</h1>
+            <p className="text-lg text-gray-300">
               Get in touch with us for your questions or projects. We are happy to help you.
             </p>
           </motion.div>
@@ -50,19 +50,19 @@ const Contact = () => {
           }} transition={{
             duration: 0.5
           }}>
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Contact Information</h2>
               <div className="space-y-6">
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card className="overflow-hidden bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
-                        <div className="bg-blue-50 p-3 rounded-full">
-                          <MapPin className="h-6 w-6 text-blue-600" />
+                        <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full">
+                          <MapPin className="h-6 w-6 text-white" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Address</h3>
-                        <p className="text-gray-600">
+                        <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
+                        <p className="text-gray-300">
                           Vinkenburgstraat 2A, 3512 AB - Utrecht / The Netherlands
                         </p>
                       </div>
@@ -70,49 +70,49 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card className="overflow-hidden bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
-                        <div className="bg-blue-50 p-3 rounded-full">
-                          <Phone className="h-6 w-6 text-blue-600" />
+                        <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full">
+                          <Phone className="h-6 w-6 text-white" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Phone</h3>
-                        <p className="text-gray-600">+31 6 27 21 1105</p>
+                        <h3 className="text-lg font-semibold text-white mb-1">Phone</h3>
+                        <p className="text-gray-300">+31 6 27 21 1105</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card className="overflow-hidden bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
-                        <div className="bg-blue-50 p-3 rounded-full">
-                          <Mail className="h-6 w-6 text-blue-600" />
+                        <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full">
+                          <Mail className="h-6 w-6 text-white" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Email</h3>
-                        <p className="text-gray-600">info@strivexai.co</p>
+                        <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
+                        <p className="text-gray-300">info@strivexai.co</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                <Card className="overflow-hidden bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardContent className="p-0">
                     <div className="p-6 flex">
                       <div className="mr-4">
-                        <div className="bg-blue-50 p-3 rounded-full">
-                          <Clock className="h-6 w-6 text-blue-600" />
+                        <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full">
+                          <Clock className="h-6 w-6 text-white" />
                         </div>
                       </div>
                       <div>
-                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Working Hours</h3>
-                        <p className="text-gray-600">
+                        <h3 className="text-lg font-semibold text-white mb-1">Working Hours</h3>
+                        <p className="text-gray-300">
                           Monday - Friday: 09:00 - 18:00<br />
                           Weekends: Closed
                         </p>
@@ -134,8 +134,8 @@ const Contact = () => {
             duration: 0.5,
             delay: 0.2
           }}>
-              <h2 className="text-2xl font-bold text-blue-900 mb-6">Send Us a Message</h2>
-              <Card>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Send Us a Message</h2>
+              <Card className="bg-white/5 backdrop-blur-lg border-white/10">
                 <CardContent className="p-6">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -156,7 +156,7 @@ const Contact = () => {
                       <Label htmlFor="message">Message</Label>
                       <Textarea id="message" placeholder="Write your message here..." rows={5} required />
                     </div>
-                    <Button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white">
+                    <Button type="submit" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white">
                       <Send className="mr-2 h-4 w-4" /> Send Message
                     </Button>
                   </form>
