@@ -42,7 +42,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4">
+      <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
@@ -195,7 +195,7 @@ const Index = () => {
       </section>
 
       {/* Why Choose StriveX */}
-      <section className="py-20 px-4 bg-white/5">
+      <section className="py-24 px-4 bg-white/5">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
