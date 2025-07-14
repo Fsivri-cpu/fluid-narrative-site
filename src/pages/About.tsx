@@ -145,9 +145,7 @@ const About = () => {
                   <CardTitle className="text-white">Innovation</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300">
-                    We continuously explore new technologies and improve our solutions to better serve our customers.
-                  </p>
+                  <p className="text-gray-300">We push the boundaries of AI and mobile tech, turning bold ideas into practical, day-to-day tools.</p>
                 </CardContent>
               </Card>
             </motion.div>
