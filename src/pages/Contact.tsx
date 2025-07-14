@@ -70,11 +70,7 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                <Card className="overflow-hidden bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
-                  <CardContent className="p-0">
-                    
-                  </CardContent>
-                </Card>
+                
 
                 <Card className="overflow-hidden bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardContent className="p-0">
