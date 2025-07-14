@@ -66,11 +66,11 @@ const Navbar = () => {
   };
 
   const navItems = [
-    { path: '/', label: t('nav.home') },
-    { path: '/about', label: t('nav.about') },
-    { path: '#experience-section', label: t('nav.getStarted'), onClick: handleGetStartedClick },
-    { path: '#faq-section', label: t('nav.faq'), onClick: handleFAQClick },
-    { path: '#footer', label: t('nav.contact'), onClick: handleContactClick }
+    { path: '/', label: 'Home' },
+    { path: '/products', label: 'Apps' },
+    { path: '/ai_assistant_app', label: 'AI Assistant' },
+    { path: '/about', label: 'About' },
+    { path: '/contact', label: 'Contact' }
   ];
 
   return (
@@ -98,7 +98,6 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                onClick={item.onClick}
                 className="nav-link text-white hover:text-white/80 font-medium"
               >
                 {item.label}
@@ -149,7 +148,6 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                onClick={item.onClick}
                 className="text-white hover:text-white/80 font-medium py-2"
               >
                 {item.label}
