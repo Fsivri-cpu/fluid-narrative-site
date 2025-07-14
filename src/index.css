@@ -16,7 +16,7 @@
     --primary: 224 71% 20%;
     --primary-foreground: 0 0% 85%;
 
-    --secondary: 0 0% 70%;
+    --secondary: 45 100% 60%;
     --secondary-foreground: 224 71% 10%;
 
     --muted: 0 0% 92%;
@@ -57,7 +57,7 @@
     --primary: 0 0% 90%;
     --primary-foreground: 224 71% 10%;
 
-    --secondary: 0 0% 70%;
+    --secondary: 45 100% 55%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 224 30% 18%;
@@ -168,7 +168,7 @@ section {
   inset: 0;
   padding: 2px;
   border-radius: 12px;
-  background: linear-gradient(90deg, hsl(224 71% 35%), hsl(0 0% 70%), hsl(224 71% 35%));
+  background: linear-gradient(90deg, hsl(224 71% 35%), hsl(45 100% 60%), hsl(224 71% 35%));
   background-size: 200% 200%;
   -webkit-mask: 
     linear-gradient(#fff 0 0) content-box, 
@@ -184,7 +184,7 @@ section {
   left: 0;
   right: 0;
   height: 15px;
-  background: linear-gradient(90deg, hsl(224 71% 35% / 0.5), hsl(0 0% 70% / 0.5), hsl(224 71% 35% / 0.5));
+  background: linear-gradient(90deg, hsl(224 71% 35% / 0.5), hsl(45 100% 60% / 0.5), hsl(224 71% 35% / 0.5));
   background-size: 200% 200%;
   filter: blur(8px);
   opacity: 0.6;
