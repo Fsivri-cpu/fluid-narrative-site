@@ -61,7 +61,7 @@ const Index = () => {
               Powering Life, One App at a Time
             </p>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-              From health to productivity, StriveX delivers AI-driven apps that fit every need.
+              At StriveX AI Solutions, we're bringing your business into the future with AI-powered customer service solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link to="/apps">
