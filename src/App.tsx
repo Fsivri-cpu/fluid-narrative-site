@@ -29,7 +29,7 @@ const App = () => (
               <Route path="/" element={<Layout />}>
                 <Route index element={<Index />} />
                 <Route path="about" element={<About />} />
-                <Route path="products" element={<Products />} />
+                <Route path="apps" element={<Products />} />
                 <Route path="ai_assistant_app" element={<AIAssistantApp />} />
                 <Route path="get-started" element={<Services />} />
                 <Route path="contact" element={<Contact />} />
