@@ -50,7 +50,8 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent relative">
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-2xl -z-10"></span>
               StriveX
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Future-Ready Apps, Crafted for You</p>
