@@ -128,7 +128,7 @@ const About = () => {
                   <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
                     <Award className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-white">Excellence</CardTitle>
+                  <CardTitle className="text-white">People-First Impact</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300">
