@@ -79,7 +79,7 @@ const Index = () => {
                   size="lg" 
                   className="min-h-[44px] px-8 py-4 text-lg rounded-full transition-transform hover:scale-[1.03] focus:ring-2 focus:ring-offset-2"
                   style={{
-                    background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
+                    background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))',
                     color: 'hsl(var(--clr-white))'
                   }}
                 >
@@ -156,7 +156,7 @@ const Index = () => {
                 >
                   <CardHeader className="pb-4">
                     <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 p-2"
-                         style={{background: 'linear-gradient(135deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))'}}>
+                         style={{background: 'linear-gradient(135deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))'}}>
                       {app.icon ? (
                         <img src={app.icon} alt={app.name} className="w-full h-full object-cover rounded-lg" />
                       ) : (
@@ -182,8 +182,8 @@ const Index = () => {
                       variant="outline" 
                       className="text-xs w-fit border"
                       style={{
-                        borderColor: 'rgba(192,192,192,0.12)',
-                        color: 'hsl(var(--clr-silver))'
+                        borderColor: 'rgba(192,192,192,0.20)',
+                        color: 'hsl(var(--clr-silver-500))'
                       }}
                     >
                       {app.category}
@@ -216,7 +216,7 @@ const Index = () => {
                       style={{
                         background: app.comingSoon 
                           ? 'hsl(var(--clr-silver-700))' 
-                          : 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
+                          : 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))',
                         color: 'hsl(var(--clr-white))'
                       }}
                     >
@@ -235,8 +235,8 @@ const Index = () => {
                 size="lg" 
                 className="min-h-[44px] border transition-colors hover:bg-opacity-5 focus:ring-2 focus:ring-offset-2"
                 style={{
-                  borderColor: 'hsl(var(--clr-silver))',
-                  color: 'hsl(var(--clr-silver))'
+                  borderColor: 'hsl(var(--clr-silver-500))',
+                  color: 'hsl(var(--clr-silver-500))'
                 }}
               >
                 View All Apps
@@ -346,7 +346,7 @@ const Index = () => {
                   size="lg" 
                   className="min-h-[44px] px-8 py-4 text-lg rounded-full transition-transform hover:scale-[1.03] focus:ring-2 focus:ring-offset-2"
                   style={{
-                    background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
+                    background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))',
                     color: 'hsl(var(--clr-white))'
                   }}
                 >
@@ -360,8 +360,8 @@ const Index = () => {
                   size="lg" 
                   className="min-h-[44px] px-8 py-4 text-lg border transition-colors hover:bg-opacity-5 focus:ring-2 focus:ring-offset-2"
                   style={{
-                    borderColor: 'hsl(var(--clr-silver))',
-                    color: 'hsl(var(--clr-silver))'
+                    borderColor: 'hsl(var(--clr-silver-500))',
+                    color: 'hsl(var(--clr-silver-500))'
                   }}
                 >
                   Get in Touch

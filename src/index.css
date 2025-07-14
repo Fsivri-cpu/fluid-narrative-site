@@ -8,8 +8,9 @@
     --clr-navy-900: 210 74% 14%;
     --clr-navy-700: 210 68% 21%;
     --clr-navy-950: 210 78% 8%;
-    --clr-silver: 0 0% 75%;
-    --clr-silver-700: 0 0% 62%;
+    --clr-silver: 0 0% 80%;
+    --clr-silver-700: 0 0% 68%;
+    --clr-silver-500: 0 0% 85%;
     
     /* Accents */
     --clr-accent-1: 225 100% 50%;
@@ -26,7 +27,7 @@
     --popover-foreground: var(--clr-white);
     --primary: var(--clr-accent-1);
     --primary-foreground: var(--clr-white);
-    --secondary: var(--clr-silver);
+    --secondary: var(--clr-silver-500);
     --secondary-foreground: var(--clr-navy-900);
     --muted: var(--clr-navy-700);
     --muted-foreground: var(--clr-silver-700);
@@ -34,7 +35,7 @@
     --accent-foreground: var(--clr-navy-900);
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: var(--clr-white);
-    --border: 0 0% 75% / 12%;
+    --border: 0 0% 80% / 15%;
     --input: var(--clr-navy-700);
     --ring: var(--clr-accent-2);
     --radius: 0.75rem;
@@ -44,7 +45,7 @@
     --sidebar-primary-foreground: var(--clr-white);
     --sidebar-accent: var(--clr-navy-900);
     --sidebar-accent-foreground: var(--clr-silver);
-    --sidebar-border: 0 0% 75% / 12%;
+    --sidebar-border: 0 0% 80% / 15%;
     --sidebar-ring: var(--clr-accent-2);
   }
 
