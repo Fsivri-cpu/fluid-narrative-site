@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Zap, Users, Target } from 'lucide-react';
+import { Heart, Lightbulb, Palette, Shield } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 const About = () => {
   // Animation variants
@@ -126,7 +126,7 @@ const About = () => {
               <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
                   <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
-                    <Award className="h-6 w-6 text-white" />
+                    <Heart className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-white">People-First Impact</CardTitle>
                 </CardHeader>
@@ -140,7 +140,7 @@ const About = () => {
               <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
                   <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
-                    <Zap className="h-6 w-6 text-white" />
+                    <Lightbulb className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-white">Innovation</CardTitle>
                 </CardHeader>
@@ -154,7 +154,7 @@ const About = () => {
               <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
                   <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
-                    <Users className="h-6 w-6 text-white" />
+                    <Palette className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-white">Seamless Design</CardTitle>
                 </CardHeader>
@@ -168,7 +168,7 @@ const About = () => {
               <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                 <CardHeader>
                   <div className="bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-full w-fit mb-4">
-                    <Target className="h-6 w-6 text-white" />
+                    <Shield className="h-6 w-6 text-white" />
                   </div>
                   <CardTitle className="text-white">Privacy & Trust</CardTitle>
                 </CardHeader>
