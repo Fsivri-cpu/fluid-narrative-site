@@ -58,9 +58,7 @@ const Index = () => {
               StriveX
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Future-Ready Apps, Made Simple</p>
-            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-              At StriveX AI Solutions, we're bringing your business into the future with AI-powered customer service solutions.
-            </p>
+            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">Meet StriveX AI Solutions—the multi-app studio that turns cutting-edge AI into beautifully intuitive mobile tools. From wellness wins to productivity boosts, our apps help you live, work, and thrive smarter. Download once. Level up every day.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link to="/apps">
                 <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
@@ -131,7 +129,7 @@ const Index = () => {
                 <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                   <CardHeader className="pb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${app.gradient} flex items-center justify-center mb-4 p-2`}>
-                      {app.icon ? <img src={app.icon} alt={app.name} className="w-full h-full object-contain" /> : <Smartphone className="w-6 h-6 text-white" />}
+                      {app.icon ? <img src={app.icon} alt={app.name} className="w-full h-full object-fill" /> : <Smartphone className="w-6 h-6 text-white" />}
                     </div>
                     <CardTitle className="text-lg text-white mb-2">{app.name}</CardTitle>
                     <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
