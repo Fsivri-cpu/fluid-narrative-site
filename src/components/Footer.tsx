@@ -20,7 +20,7 @@ const Footer = () => {
               <img src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" alt="StriveX Logo" className="h-12 bg-white p-1 rounded-md" />
             </Link>
             <p className="text-gray-300 text-sm">
-              At StriveX AI Solutions, we're bringing your business into the future with AI-powered customer service solutions.
+              From health to productivity, StriveX delivers AI-driven apps that fit every need.
             </p>
           </div>
 
