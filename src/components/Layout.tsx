@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import ScrollToTop from './ScrollToTop';
+import CookieConsent from './CookieConsent';
 
 const Layout = () => {
   return (
@@ -17,6 +18,7 @@ const Layout = () => {
         </AnimatePresence>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   );
 };
