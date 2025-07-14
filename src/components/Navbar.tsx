@@ -74,7 +74,7 @@ const Navbar = () => {
 
   return (
     <nav 
-      className="fixed top-0 left-0 w-full z-50 transition-all duration-300 backdrop-blur-md bg-white/5 border-b border-white/10"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'backdrop-blur-md bg-white/5 border-b border-white/10' : 'bg-transparent'}`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
@@ -97,29 +97,9 @@ const Navbar = () => {
                 {item.label}
               </Link>
             ))}
-            <Select value={language} onValueChange={handleLanguageChange}>
-              <SelectTrigger className="w-[100px] bg-white/5 border-white/10 hover:bg-white/10 transition-colors duration-200">
-                <Globe className="mr-2 h-4 w-4 text-white" />
-                <SelectValue placeholder="Language" className="text-white" />
-              </SelectTrigger>
-              <SelectContent className="bg-gray-900/95 border-white/10">
-                <SelectItem value="en" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">EN</SelectItem>
-                <SelectItem value="nl" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">NL</SelectItem>
-              </SelectContent>
-            </Select>
           </div>
 
-          <div className="md:hidden flex items-center space-x-4">
-            <Select value={language} onValueChange={handleLanguageChange}>
-              <SelectTrigger className="w-[80px] bg-white/5 border-white/10 hover:bg-white/10 transition-colors duration-200">
-                <Globe className="mr-2 h-4 w-4 text-white" />
-                <SelectValue placeholder="Lang" className="text-white" />
-              </SelectTrigger>
-              <SelectContent className="bg-gray-900/95 border-white/10">
-                <SelectItem value="en" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">EN</SelectItem>
-                <SelectItem value="nl" className="text-white hover:text-white/80 focus:text-white/80 focus:bg-white/5">NL</SelectItem>
-              </SelectContent>
-            </Select>
+          <div className="md:hidden flex items-center">
             <button 
               className="text-white focus:outline-none" 
               onClick={() => setIsOpen(!isOpen)}
