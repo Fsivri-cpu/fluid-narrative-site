@@ -173,9 +173,7 @@ const About = () => {
                   <CardTitle className="text-white">Privacy & Trust</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300">
-                    We always focus on producing tangible results that will help our customers achieve their business goals.
-                  </p>
+                  <p className="text-gray-300">We safeguard user data through rigorous security and transparent practices, earning confidence with every release.</p>
                 </CardContent>
               </Card>
             </motion.div>
