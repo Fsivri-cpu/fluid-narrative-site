@@ -131,9 +131,7 @@ const About = () => {
                   <CardTitle className="text-white">People-First Impact</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300">
-                    We continuously develop ourselves and follow best practices to deliver the highest quality in every project.
-                  </p>
+                  <p className="text-gray-300">We build products that genuinely improve everyday life, empowering users to live smarter and happier.</p>
                 </CardContent>
               </Card>
             </motion.div>
