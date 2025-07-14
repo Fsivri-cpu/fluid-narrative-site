@@ -11,6 +11,7 @@ const Index = () => {
     {
       name: "GLP-1 Shot Tracker",
       description: "Track every GLP-1 shot, weight change and macro in one place. Smart dashboard for Ozempic®, Wegovy®, Mounjaro® & more.",
+      features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Privacy First"],
       downloads: "2025",
       rating: null,
       category: "Health",
@@ -21,6 +22,7 @@ const Index = () => {
     {
       name: "Professional AI Assistant App",
       description: "24/7 customer service AI that understands your business",
+      features: ["Smart Conversations", "Knowledge Base", "24/7 Available"],
       downloads: "Try Demo",
       rating: 4.9,
       category: "Business",
@@ -31,7 +33,7 @@ const Index = () => {
   ];
 
   const stats = [
-    { label: "GLP-1 App Launch", value: "2025" },
+    { label: "App Launch", value: "2025" },
     { label: "AI Assistant", value: "Available" },
     { label: "More Apps", value: "Soon" },
     { label: "Global Reach", value: "25+" }
@@ -56,7 +58,7 @@ const Index = () => {
               Powering Life, One App at a Time
             </p>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
-              We're a multi-app mobile studio building innovative applications across different categories to enhance your digital lifestyle.
+              From health to productivity, StriveX delivers AI-driven apps that fit every need.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link to="/apps">
@@ -120,9 +122,9 @@ const Index = () => {
               >
                 <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                   <CardHeader className="pb-4">
-                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${app.gradient} flex items-center justify-center mb-4`}>
+                    <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${app.gradient} flex items-center justify-center mb-4 p-2`}>
                       {app.icon ? (
-                        <img src={app.icon} alt={app.name} className="w-8 h-8 object-contain" />
+                        <img src={app.icon} alt={app.name} className="w-full h-full object-contain" />
                       ) : (
                         <Smartphone className="w-6 h-6 text-white" />
                       )}
@@ -148,6 +150,19 @@ const Index = () => {
                     <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {app.description}
                     </p>
+                    {app.features && (
+                      <div className="mb-4">
+                        <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Key Features</h4>
+                        <div className="space-y-1">
+                          {app.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
+                              <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
+                              {feature}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                     <Button 
                       size="sm" 
                       className={`w-full bg-gradient-to-r ${app.gradient} hover:opacity-90 transition-opacity`}
