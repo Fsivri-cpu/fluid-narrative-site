@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img src="/lovable-uploads/90d92b1a-efa5-47b0-aa6f-a5cf43f90e59.png" alt="StriveX Logo" className="h-12 bg-white p-1 rounded-md" />
+              <img src="/lovable-uploads/ae9979cf-01be-41d9-a0d6-ec0fcbe768bd.png" alt="StriveX Logo" className="h-12 bg-white p-1 rounded-md" />
             </Link>
             <p className="text-gray-300 text-sm">
               From health to productivity, StriveX delivers AI-driven apps that fit every need.
