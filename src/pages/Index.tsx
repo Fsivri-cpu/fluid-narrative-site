@@ -88,31 +88,27 @@ const Index = () => {
                 </Button>
               </Link>
             </div>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <motion.div 
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-[800] mb-2" style={{color: 'hsl(var(--clr-white))'}}>
+                    {stat.value}
+                  </div>
+                  <div className="text-sm md:text-base" style={{color: 'hsl(var(--clr-silver-700))'}}>
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Bar */}
-      <section className="py-12 px-4" style={{background: 'hsl(var(--clr-navy-700))'}}>
-        <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div 
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-3xl md:text-4xl font-[800] mb-2" style={{color: 'hsl(var(--clr-white))'}}>
-                  {stat.value}
-                </div>
-                <div className="text-sm md:text-base" style={{color: 'hsl(var(--clr-silver-700))'}}>
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
