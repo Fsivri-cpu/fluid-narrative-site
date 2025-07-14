@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 const GLP1TrackerTerms = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-8 pt-24">
 
         {/* Main heading */}
         <motion.div
