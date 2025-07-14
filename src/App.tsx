@@ -10,7 +10,6 @@ import Layout from "./components/Layout";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Services from "./pages/Services";
 import Products from "./pages/Products";
 import AIAssistantApp from "./pages/AIAssistantApp";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -34,7 +33,6 @@ const App = () => (
                 <Route path="about" element={<About />} />
                 <Route path="apps" element={<Products />} />
                 <Route path="ai_assistant_app" element={<AIAssistantApp />} />
-                <Route path="get-started" element={<Services />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
                 <Route path="terms-conditions" element={<TermsConditions />} />
