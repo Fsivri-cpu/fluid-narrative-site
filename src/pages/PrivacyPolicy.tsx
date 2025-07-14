@@ -32,9 +32,12 @@ const PrivacyPolicy = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Privacy Policy – GLP-1 Shot Tracker – Tirzepatide
+          <h1 className="text-4xl md:text-5xl font-bold mb-2">
+            Privacy Policy
           </h1>
+          <h2 className="text-xl md:text-2xl text-muted-foreground mb-4">
+            GLP-1 Shot Tracker – Tirzepatide
+          </h2>
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
             <span><strong>Effective Date:</strong> 14 Jul 2025</span>
             <span><strong>Last Updated:</strong> 14 Jul 2025</span>
