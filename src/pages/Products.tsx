@@ -11,17 +11,18 @@ const Products = () => {
       id: 1,
       name: "GLP-1 Shot Tracker",
       subtitle: "Tirzepatide",
-      description: "Never miss a dose, track progress scientifically with your GLP-1 medication management.",
-      features: ["Dose Reminders", "Progress Tracking", "Medical Reports", "Side Effect Monitor"],
+      description: "Track every GLP-1 shot, weight change and macro in one place. Whether your doctor prescribed Ozempic®, Wegovy®, Mounjaro®, Zepbound®, compounded Semaglutide or Tirzepatide, our smart dashboard keeps your weekly dose on schedule and your progress crystal-clear.",
+      features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Protein & Nutrition Monitor", "Side-Effect Journal", "Privacy First"],
       category: "Health & Fitness",
-      downloads: "Soon",
+      downloads: "2025",
       rating: null,
       comingSoon: true,
-      primaryColor: "from-blue-500 to-blue-600"
+      primaryColor: "from-blue-500 to-blue-600",
+      icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png"
     },
     {
       id: 2,
-      name: "AI Assistant App",
+      name: "Professional AI Assistant App",
       subtitle: "Virtual Support",
       description: "24/7 AI-powered customer service assistant that understands your business needs.",
       features: ["Smart Conversations", "Knowledge Base", "Multi-language", "24/7 Available"],
@@ -31,30 +32,6 @@ const Products = () => {
       comingSoon: false,
       primaryColor: "from-purple-500 to-violet-600",
       isDemo: true
-    },
-    {
-      id: 3,
-      name: "Calorie Tracker",
-      subtitle: "Smart Nutrition",
-      description: "AI-powered nutrition tracking and meal planning for a healthier lifestyle.",
-      features: ["AI Food Recognition", "Macro Tracking", "Recipe Suggestions", "Meal Planning"],
-      category: "Health & Fitness",
-      downloads: "Soon",
-      rating: null,
-      comingSoon: true,
-      primaryColor: "from-green-500 to-emerald-600"
-    },
-    {
-      id: 4,
-      name: "Sun Exposure Tracker",
-      subtitle: "Safe Tanning",
-      description: "Smart tanning with real-time UV alerts and vitamin D insights for safe sun exposure.",
-      features: ["UV Index Alerts", "Vitamin D Tracking", "Skin Type Analysis", "Tan Planning"],
-      category: "Health & Fitness",
-      downloads: "Soon",
-      rating: null,
-      comingSoon: true,
-      primaryColor: "from-orange-500 to-amber-600"
     }
   ];
 
@@ -109,9 +86,13 @@ const Products = () => {
                 <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between mb-4">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center mb-4`}>
-                        <Smartphone className="w-8 h-8 text-white" />
-                      </div>
+                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center mb-4`}>
+                         {app.icon ? (
+                           <img src={app.icon} alt={app.name} className="w-10 h-10 object-contain" />
+                         ) : (
+                           <Smartphone className="w-8 h-8 text-white" />
+                         )}
+                       </div>
                       {app.comingSoon && (
                         <Badge className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
                           Coming Soon
