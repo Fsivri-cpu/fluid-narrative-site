@@ -57,16 +57,16 @@ const CookieConsent = () => {
                 <Cookie className="w-6 h-6 text-amber-500 mt-0.5 flex-shrink-0" />
                 <div className="text-sm">
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
-                    <strong>Bu site cookies kullanır</strong>
+                    <strong>This site uses cookies</strong>
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 text-xs leading-relaxed">
-                    Web sitemizde size en iyi deneyimi sunabilmek için çerezleri kullanıyoruz. 
-                    Siteyi kullanmaya devam ederseniz çerez kullanımını kabul etmiş sayılırsınız.{' '}
+                    We use cookies to provide you with the best experience on our website. 
+                    By continuing to use the site, you agree to our use of cookies.{' '}
                     <Link 
                       to="/privacy-policy" 
                       className="text-blue-600 dark:text-blue-400 hover:underline"
                     >
-                      Daha fazla bilgi
+                      Learn more
                     </Link>
                   </p>
                 </div>
@@ -79,14 +79,14 @@ const CookieConsent = () => {
                   onClick={handleReject}
                   className="text-xs px-3 py-1 h-8"
                 >
-                  Reddet
+                  Reject
                 </Button>
                 <Button
                   size="sm"
                   onClick={handleAccept}
                   className="bg-blue-600 hover:bg-blue-700 text-white text-xs px-4 py-1 h-8"
                 >
-                  Kabul Et
+                  Accept
                 </Button>
                 <Button
                   variant="ghost"
