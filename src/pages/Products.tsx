@@ -138,14 +138,9 @@ const Products = () => {
                         disabled={app.comingSoon && !app.isDemo}
                         onClick={() => handleAppClick(app)}
                       >
-                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Try Demo' : 'Download App'}
+                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Learn More' : 'Download App'}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
-                      {!app.comingSoon && (
-                        <Button variant="outline" className="border-gray-600 text-white hover:bg-white/5 hover:text-white">
-                          Learn More
-                        </Button>
-                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -170,13 +165,6 @@ const Products = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               We're constantly expanding our app ecosystem. Stay tuned for exciting new applications across different categories.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-3"
-            >
-              Join Our Newsletter
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
           </motion.div>
         </div>
       </section>

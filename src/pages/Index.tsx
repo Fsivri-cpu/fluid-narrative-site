@@ -23,8 +23,8 @@ const Index = () => {
       name: "Professional AI Assistant App",
       description: "24/7 customer service AI that understands your business",
       features: ["Smart Conversations", "Knowledge Base", "24/7 Available"],
-      downloads: "Try Demo",
-      rating: 4.9,
+      downloads: "Available",
+      rating: null,
       category: "Business",
       comingSoon: false,
       primaryColor: "from-purple-500 to-violet-600",
@@ -168,7 +168,7 @@ const Index = () => {
                       disabled={app.comingSoon && !app.isDemo}
                       onClick={() => app.isDemo && (window.location.href = '/ai_assistant_app')}
                     >
-                      {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Try Demo' : 'Download'}
+                      {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Learn More' : 'Download'}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </CardContent>
