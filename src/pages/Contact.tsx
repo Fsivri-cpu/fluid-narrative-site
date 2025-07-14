@@ -70,7 +70,21 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <CardContent className="p-0">
+                    <div className="p-6 flex">
+                      <div className="mr-4">
+                        <div className="bg-blue-50 p-3 rounded-full">
+                          <Phone className="h-6 w-6 text-blue-600" />
+                        </div>
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold text-blue-900 mb-1">Phone</h3>
+                        <p className="text-gray-600">+31 6 27 21 1105</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
 
                 <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
