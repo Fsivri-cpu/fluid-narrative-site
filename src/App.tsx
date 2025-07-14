@@ -14,6 +14,8 @@ import Products from "./pages/Products";
 import AIAssistantApp from "./pages/AIAssistantApp";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
+import GLP1TrackerPrivacy from "./pages/privacy/GLP1Tracker";
+import GLP1TrackerTerms from "./pages/terms/GLP1Tracker";
 import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
@@ -35,7 +37,9 @@ const App = () => (
                 <Route path="ai_assistant_app" element={<AIAssistantApp />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="privacy-policy/:appSlug" element={<GLP1TrackerPrivacy />} />
                 <Route path="terms-conditions" element={<TermsConditions />} />
+                <Route path="terms-conditions/:appSlug" element={<GLP1TrackerTerms />} />
                 <Route path="faq" element={<FAQ />} />
                 <Route path="*" element={<NotFound />} />
               </Route>

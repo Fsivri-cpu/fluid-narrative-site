@@ -1,123 +1,95 @@
 import { motion } from 'framer-motion';
-import { FileText, AlertTriangle, Scale, Users } from 'lucide-react';
+import { FileText, Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const TermsConditions = () => {
-  const sections = [
+  const apps = [
     {
-      title: "Acceptance of Terms",
-      icon: FileText,
-      content: [
-        "By accessing and using StriveX AI solutions, you accept and agree to be bound by these terms",
-        "If you do not agree to these terms, you may not use our services",
-        "We reserve the right to modify these terms at any time with notice",
-        "Continued use of our services constitutes acceptance of updated terms"
-      ]
-    },
-    {
-      title: "Use of Services",
-      icon: Users,
-      content: [
-        "You must be at least 18 years old to use our services",
-        "You are responsible for maintaining the confidentiality of your account",
-        "You agree to use our services only for lawful purposes",
-        "You may not reverse engineer, copy, or redistribute our AI solutions"
-      ]
-    },
-    {
-      title: "Intellectual Property",
-      icon: Scale,
-      content: [
-        "All content and technology provided by StriveX remains our intellectual property",
-        "You retain ownership of any data you input into our systems",
-        "Our AI models and algorithms are proprietary and protected by law",
-        "Any feedback or suggestions you provide may be used to improve our services"
-      ]
-    },
-    {
-      title: "Limitations and Disclaimers",
-      icon: AlertTriangle,
-      content: [
-        "Our services are provided 'as is' without warranties of any kind",
-        "We do not guarantee uninterrupted or error-free service",
-        "You use our AI solutions at your own risk and discretion",
-        "We are not liable for any indirect, incidental, or consequential damages"
-      ]
+      name: "GLP-1 Shot Tracker – Tirzepatide",
+      description: "Comprehensive terms covering app usage, medical disclaimers, and subscription policies.",
+      icon: Smartphone,
+      slug: "glp-1-tracker"
     }
   ];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-20">
+        {/* Main heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Terms & Conditions
-          </h1>
+          <div className="flex items-center justify-center mb-6">
+            <FileText className="w-12 h-12 text-primary mr-4" />
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              Terms & Conditions
+            </h1>
+          </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Please read these terms carefully before using our AI solutions and services.
-          </p>
-          <p className="text-sm text-muted-foreground mt-4">
-            Last updated: {new Date().toLocaleDateString()}
+            Clear and comprehensive terms that govern the use of our applications. We believe in transparency and want you to understand your rights and responsibilities when using our services.
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto space-y-12">
-          {sections.map((section, index) => (
-            <motion.div
-              key={section.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-card rounded-lg p-8 border border-border"
-            >
-              <div className="flex items-center mb-6">
-                <section.icon className="w-8 h-8 text-primary mr-4" />
-                <h2 className="text-2xl font-semibold">{section.title}</h2>
-              </div>
-              <ul className="space-y-3">
-                {section.content.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start">
-                    <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0" />
-                    <span className="text-muted-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </motion.div>
-          ))}
-
+        {/* Apps List */}
+        <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="bg-card rounded-lg p-8 border border-border"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="space-y-6"
           >
-            <h2 className="text-2xl font-semibold mb-6">Termination</h2>
-            <p className="text-muted-foreground mb-4">
-              We may terminate or suspend your access to our services immediately, without prior notice, for any reason whatsoever, including without limitation if you breach the Terms.
-            </p>
-            <p className="text-muted-foreground">
-              Upon termination, your right to use the service will cease immediately. All provisions of the Terms which by their nature should survive termination shall survive.
-            </p>
+            {apps.map((app, index) => (
+              <div key={app.slug} className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-all duration-300">
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <app.icon className="w-12 h-12 text-primary" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-2xl font-semibold mb-3">{app.name}</h3>
+                    <p className="text-muted-foreground mb-6">{app.description}</p>
+                    <Link
+                      to={`/terms-conditions/${app.slug}`}
+                      className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                    >
+                      <FileText className="w-4 h-4" />
+                      View Terms & Conditions
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
           </motion.div>
 
+          {/* General Terms Information */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="bg-card rounded-lg p-8 border border-border"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mt-16 bg-muted/30 rounded-lg p-8 border border-border"
           >
-            <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
-            <p className="text-muted-foreground mb-4">
-              If you have any questions about these Terms & Conditions, please contact us:
-            </p>
-            <div className="space-y-2 text-muted-foreground">
-              <p>Email: legal@strivex.com</p>
-              <p>Address: 123 Innovation Street, Tech City, TC 12345</p>
-              <p>Phone: +1 (555) 123-4567</p>
+            <h2 className="text-2xl font-semibold mb-6">Key Principles</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-lg font-medium mb-3">Fair Usage</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• Clear and understandable terms</li>
+                  <li>• Reasonable usage restrictions</li>
+                  <li>• Protection of user rights</li>
+                  <li>• Transparent policy changes</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-lg font-medium mb-3">Legal Compliance</h3>
+                <ul className="space-y-2 text-muted-foreground">
+                  <li>• GDPR and privacy law compliance</li>
+                  <li>• Medical disclaimer coverage</li>
+                  <li>• Intellectual property protection</li>
+                  <li>• Dispute resolution procedures</li>
+                </ul>
+              </div>
             </div>
           </motion.div>
         </div>
