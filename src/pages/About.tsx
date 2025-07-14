@@ -55,9 +55,7 @@ const About = () => {
           duration: 0.5
         }}>
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">About Us</h1>
-            <p className="text-lg text-gray-300">
-              StriveX AI Solutions is an innovative technology company that aims to transform customer experience with AI-powered customer service solutions.
-            </p>
+            <p className="text-lg text-gray-300">StriveX AI Solutions is an innovative multi-app studio that turns cutting-edge AI into intuitive mobile experiences—simplifying life, boosting productivity, and delighting users one intelligent app at a time.</p>
           </motion.div>
         </div>
       </section>
