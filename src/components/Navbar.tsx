@@ -86,7 +86,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/82501207-98f2-44a5-a3c3-cea7453ec5d2.png" 
               alt="StriveX Logo" 
-              className="h-20 md:h-24 w-auto object-contain"
+              className="h-12 md:h-14 w-auto object-cover"
             />
           </Link>
 
