@@ -22,8 +22,7 @@ const PrivacyPolicy = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="flex items-center justify-center mb-6">
-            <img src="/lovable-uploads/strivex-logo-transparent.png" alt="StriveX Logo" className="w-12 h-12 mr-4" />
+          <div className="text-center mb-6">
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               Privacy Policies
             </h1>
