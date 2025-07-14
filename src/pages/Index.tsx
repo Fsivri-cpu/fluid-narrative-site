@@ -40,7 +40,7 @@ const Index = () => {
     label: "Global Reach",
     value: "25+"
   }];
-  return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-800 via-slate-700 to-slate-800 text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-gray-500/20 backdrop-blur-3xl"></div>
@@ -84,7 +84,7 @@ const Index = () => {
               delay: 0.2 + index * 0.1
             }} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-2">{stat.value}</div>
-                  <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
+                  <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
                 </motion.div>)}
             </div>
           </motion.div>
@@ -108,7 +108,7 @@ const Index = () => {
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Our Flagship Apps
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-3xl mx-auto">
               Discover our most popular mobile applications, each designed to solve real-world problems and enhance your daily life.
             </p>
           </motion.div>
@@ -132,7 +132,7 @@ const Index = () => {
                       {app.icon ? <img src={app.icon} alt={app.name} className="w-full h-full object-cover rounded-lg" /> : <Smartphone className="w-6 h-6 text-white" />}
                     </div>
                     <CardTitle className="text-lg text-white mb-2">{app.name}</CardTitle>
-                    <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
+                    <div className="flex items-center gap-3 text-sm text-gray-300 mb-3">
                       {app.rating && <span className="flex items-center gap-1">
                           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                           {app.rating}
@@ -142,18 +142,18 @@ const Index = () => {
                         {app.downloads}
                       </span>
                     </div>
-                    <Badge variant="outline" className="text-xs border-gray-600 text-gray-300 w-fit">
+                    <Badge variant="outline" className="text-xs border-gray-500 text-gray-200 w-fit">
                       {app.category}
                     </Badge>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                    <p className="text-gray-200 text-sm mb-4 leading-relaxed">
                       {app.description}
                     </p>
                     {app.features && <div className="mb-4">
-                        <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Key Features</h4>
+                        <h4 className="text-xs font-medium text-gray-300 uppercase tracking-wider mb-2">Key Features</h4>
                         <div className="space-y-1">
-                          {app.features.map((feature, idx) => <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
+                          {app.features.map((feature, idx) => <div key={idx} className="flex items-center gap-2 text-xs text-gray-200">
                               <div className="w-1 h-1 bg-gray-500 rounded-full"></div>
                               {feature}
                             </div>)}
