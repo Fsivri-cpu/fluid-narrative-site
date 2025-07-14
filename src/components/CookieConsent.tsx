@@ -63,7 +63,7 @@ const CookieConsent = () => {
                     We use cookies to provide you with the best experience on our website. 
                     By continuing to use the site, you agree to our use of cookies.{' '}
                     <Link 
-                      to="/privacy-policy" 
+                      to="/cookies" 
                       className="text-blue-600 dark:text-blue-400 hover:underline"
                     >
                       Learn more
