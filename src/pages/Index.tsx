@@ -13,7 +13,7 @@ const Index = () => {
     downloads: "2025",
     rating: null,
     category: "Health",
-    gradient: "from-blue-500 to-blue-600",
+    gradient: "from-blue-900 to-gray-500",
     comingSoon: true,
     icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png"
   }, {
@@ -23,7 +23,7 @@ const Index = () => {
     downloads: "Try Demo",
     rating: 4.9,
     category: "Business",
-    gradient: "from-purple-500 to-violet-600",
+    gradient: "from-blue-800 to-gray-600",
     comingSoon: false,
     isDemo: true
   }];
@@ -40,10 +40,10 @@ const Index = () => {
     label: "Global Reach",
     value: "25+"
   }];
-  return <div className="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white">
+  return <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20 backdrop-blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-gray-400/20 backdrop-blur-3xl"></div>
         <div className="container mx-auto max-w-6xl relative z-10">
           <motion.div initial={{
           opacity: 0,
@@ -54,14 +54,14 @@ const Index = () => {
         }} transition={{
           duration: 0.8
         }} className="text-center">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-900 via-gray-400 to-blue-900 bg-clip-text text-transparent">
               StriveX
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Future-Ready Apps, Crafted for You</p>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed text-center md:text-2xl">StriveX blends cutting-edge AI with elegant design to elevate health, productivity, and every moment in between.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link to="/apps">
-                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
+                <Button size="lg" className="bg-gradient-to-r from-blue-900 to-gray-500 hover:from-blue-800 hover:to-gray-400 text-white px-8 py-4 text-lg">
                   Explore Our Apps
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -83,7 +83,7 @@ const Index = () => {
               duration: 0.6,
               delay: 0.2 + index * 0.1
             }} className="text-center">
-                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-900 mb-2">{stat.value}</div>
                   <div className="text-gray-400 text-sm md:text-base">{stat.label}</div>
                 </motion.div>)}
             </div>
@@ -154,7 +154,7 @@ const Index = () => {
                         <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Key Features</h4>
                         <div className="space-y-1">
                           {app.features.map((feature, idx) => <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
-                              <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
+                              <div className="w-1 h-1 bg-gray-400 rounded-full"></div>
                               {feature}
                             </div>)}
                         </div>
@@ -225,7 +225,7 @@ const Index = () => {
           }} viewport={{
             once: true
           }} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-900 to-gray-500 rounded-2xl flex items-center justify-center">
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
@@ -257,7 +257,7 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/apps">
-                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
+                <Button size="lg" className="bg-gradient-to-r from-blue-900 to-gray-500 hover:from-blue-800 hover:to-gray-400 text-white px-8 py-4 text-lg">
                   Explore Our Apps
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
