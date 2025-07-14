@@ -57,9 +57,7 @@ const Index = () => {
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
               StriveX
             </h1>
-            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">
-              Powering Life, One App at a Time
-            </p>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Future-Ready Apps, Made Simple</p>
             <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
               At StriveX AI Solutions, we're bringing your business into the future with AI-powered customer service solutions.
             </p>
