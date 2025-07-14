@@ -62,7 +62,7 @@ const Products = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               {categories.map((category) => (
-                <Badge key={category} variant="outline" className="px-4 py-2 text-lg border-gray-500 text-gray-300">
+                <Badge key={category} variant="outline" className="px-4 py-2 text-lg border-gray-500 text-white">
                   {category}
                 </Badge>
               ))}
@@ -134,7 +134,7 @@ const Products = () => {
                     </div>
                     <div className="flex gap-3">
                       <Button 
-                        className={`flex-1 bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity`}
+                        className={`flex-1 bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon && !app.isDemo ? 'text-gray-400' : 'text-white'}`}
                         disabled={app.comingSoon && !app.isDemo}
                         onClick={() => handleAppClick(app)}
                       >
@@ -142,7 +142,7 @@ const Products = () => {
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                       {!app.comingSoon && (
-                        <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/5">
+                        <Button variant="outline" className="border-gray-600 text-white hover:bg-white/5 hover:text-white">
                           Learn More
                         </Button>
                       )}
