@@ -78,11 +78,12 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <Link to="/" className="flex items-center">
+          <Link to="/" className="flex items-center relative">
+            <div className="absolute inset-0 bg-white/10 blur-lg rounded-full scale-110 -z-10"></div>
             <img 
               src="/lovable-uploads/ae9979cf-01be-41d9-a0d6-ec0fcbe768bd.png" 
               alt="StriveX Logo" 
-              className="h-12 md:h-14 w-auto object-contain"
+              className="h-12 md:h-14 w-auto object-contain relative z-10"
             />
           </Link>
 
