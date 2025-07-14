@@ -7,7 +7,7 @@ const TermsConditions = () => {
     {
       name: "GLP-1 Shot Tracker – Tirzepatide",
       description: "Comprehensive terms covering app usage, medical disclaimers, and subscription policies.",
-      icon: Smartphone,
+      icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png",
       slug: "glp-1-tracker"
     }
   ];
@@ -45,7 +45,7 @@ const TermsConditions = () => {
               <div key={app.slug} className="bg-card rounded-lg p-8 border border-border hover:shadow-lg transition-all duration-300">
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <app.icon className="w-12 h-12 text-primary" />
+                    <img src={app.icon} alt={`${app.name} Logo`} className="w-12 h-12 rounded-lg" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-3">{app.name}</h3>
