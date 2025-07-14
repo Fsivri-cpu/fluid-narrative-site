@@ -84,7 +84,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center">
             <img 
-              src="/lovable-uploads/strivex-logo.png" 
+              src="/lovable-uploads/fd556742-5070-458d-9d20-7187ac6d5d67.png" 
               alt="StriveX Logo" 
               className="h-12 md:h-14 w-auto object-contain"
             />
