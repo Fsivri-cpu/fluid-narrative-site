@@ -84,17 +84,22 @@ const PrivacyPolicy = () => {
                 <tbody className="text-muted-foreground">
                   <tr>
                     <td className="border border-border p-3 font-semibold">Health & Wellness</td>
-                    <td className="border border-border p-3">GLP-1 injection logs (date, medication, dosage, NDC), symptoms & side-effects, weight, water intake, age, height, Apple Health / Google Health Connect activity, calorie intake*</td>
+                    <td className="border border-border p-3">GLP-1 injection logs (date, medication, dosage, NDC); symptoms & side-effects; weight; water intake; age; height; Apple Health / Google Health Connect activity; calorie intake*</td>
                     <td className="border border-border p-3">Core tracking & analytics</td>
                   </tr>
                   <tr>
+                    <td className="border border-border p-3 font-semibold">Meal Photos (Opt-in)</td>
+                    <td className="border border-border p-3"><strong>User-taken images of food</strong> analysed via OpenAI Image API</td>
+                    <td className="border border-border p-3">Visual food logging & calorie estimation</td>
+                  </tr>
+                  <tr>
                     <td className="border border-border p-3 font-semibold">User-Provided</td>
-                    <td className="border border-border p-3">One shot or symptom per day (Free), unlimited entries + food logs (Premium), transformation photos</td>
+                    <td className="border border-border p-3">1 shot or symptom per day (Free); unlimited entries & food logs (Premium); transformation photos</td>
                     <td className="border border-border p-3">Personalised features</td>
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Authentication</td>
-                    <td className="border border-border p-3">Apple ID (optional, iOS) or Google Sign-In (required, Android)</td>
+                    <td className="border border-border p-3">Apple ID (optional, iOS) / Google Sign-In (required, Android)</td>
                     <td className="border border-border p-3">Sync & recovery</td>
                   </tr>
                   <tr>
@@ -104,14 +109,14 @@ const PrivacyPolicy = () => {
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Marketing</td>
-                    <td className="border border-border p-3">Push-notification token (OneSignal)</td>
-                    <td className="border border-border p-3">Reminders & limited promotions</td>
+                    <td className="border border-border p-3">Push-token (OneSignal)</td>
+                    <td className="border border-border p-3">Reminders & limited promos</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
-              * Calorie intake is an optional premium feature.
+              * Calorie intake logging is a Premium feature.
             </p>
             <p className="text-muted-foreground mt-4">
               We <strong>do not</strong> collect GPS, contacts, or government-ID numbers.
@@ -122,7 +127,7 @@ const PrivacyPolicy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">4. Collection Methods</h2>
             <p className="text-muted-foreground">
-              Manual input • Photo uploads • Apple Health / Health Connect (opt-in) • Pharmacy integrations (with consent) • Automatic telemetry
+              • Manual input • Photo uploads (camera / gallery, user permission) • Apple Health / Health Connect (opt-in) • Pharmacy integrations (with consent) • Automatic telemetry
               <br />
               All traffic is encrypted with TLS 1.2+.
             </p>
@@ -135,18 +140,73 @@ const PrivacyPolicy = () => {
               <li>• Deliver and improve core tracking features</li>
               <li>• Send dosage reminders and motivational or promotional push messages</li>
               <li>• Unlock Premium tiers (Weekly / Lifetime / Yearly) via RevenueCat & Superwall</li>
-              <li>• Product analytics via Firebase, Mixpanel, Statsig</li>
-              <li>• Internal research using <strong>de-identified, aggregated statistics</strong> (never re-identifiable, never sold)</li>
+              <li>• Perform product analytics (Firebase, Mixpanel, Statsig)</li>
+              <li>• <strong>Process meal photos with OpenAI Image API</strong> to estimate nutritional content (images are sent to OpenAI servers, processed transiently, and not stored by OpenAI)</li>
+              <li>• Internal research using de-identified, aggregated statistics (never re-identifiable, never sold)</li>
             </ul>
           </section>
 
           {/* Third-Party Services */}
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">6. Third-Party Services</h2>
-            <p className="text-muted-foreground">
-              Firebase + Crashlytics • RevenueCat • Supabase • Statsig • Mixpanel • AppsFlyer • Superwall • OneSignal • Apple Health • Google Health Connect • Google Analytics (web)
-              <br />
-              All vendors are contractually prohibited from re-identifying or selling data.
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-border">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="border border-border p-3 text-left">Service</th>
+                    <th className="border border-border p-3 text-left">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted-foreground">
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Firebase + Crashlytics</td>
+                    <td className="border border-border p-3">Back-end, auth, crash reports</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">RevenueCat</td>
+                    <td className="border border-border p-3">Subscriptions & payments</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Supabase</td>
+                    <td className="border border-border p-3">Data caching & edge functions</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Statsig</td>
+                    <td className="border border-border p-3">Feature flags & experimentation</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Mixpanel</td>
+                    <td className="border border-border p-3">Product analytics (non-health)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">AppsFlyer</td>
+                    <td className="border border-border p-3">Attribution analytics</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Superwall</td>
+                    <td className="border border-border p-3">Paywall management</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">OneSignal</td>
+                    <td className="border border-border p-3">Push notifications</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Apple Health / Google Health Connect</td>
+                    <td className="border border-border p-3">Optional data import</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold"><strong>OpenAI Image API</strong></td>
+                    <td className="border border-border p-3"><strong>Food-photo recognition & nutrition estimation</strong></td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Google Analytics (web)</td>
+                    <td className="border border-border p-3">Basic site traffic</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-muted-foreground mt-4">
+              All vendors are bound by contracts that forbid selling or re-identifying data.
             </p>
           </section>
 
@@ -172,6 +232,11 @@ const PrivacyPolicy = () => {
                     <td className="border border-border p-3 font-semibold">Android</td>
                     <td className="border border-border p-3">Firebase</td>
                     <td className="border border-border p-3">United States</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Meal Photos</td>
+                    <td className="border border-border p-3">Encrypted in same store as other app data; <strong>OpenAI sees only transient copies</strong></td>
+                    <td className="border border-border p-3">—</td>
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Web</td>
