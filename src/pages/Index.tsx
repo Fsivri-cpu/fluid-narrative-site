@@ -16,6 +16,7 @@ const Index = () => {
       rating: null,
       category: "Health",
       comingSoon: true,
+      primaryColor: "from-blue-500 to-blue-600",
       icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png"
     },
     {
@@ -26,6 +27,7 @@ const Index = () => {
       rating: 4.9,
       category: "Business",
       comingSoon: false,
+      primaryColor: "from-purple-500 to-violet-600",
       isDemo: true
     }
   ];
@@ -38,7 +40,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen font-inter" style={{background: 'radial-gradient(ellipse at center, hsl(var(--clr-navy-950)), hsl(var(--clr-navy-900)))'}}>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className="container mx-auto max-w-6xl relative z-10">
@@ -48,41 +50,16 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="text-center"
           >
-            <h1 
-              className="text-6xl md:text-8xl font-[800] mb-6"
-              style={{
-                background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}
-            >
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               StriveX
             </h1>
-            <h2 
-              className="text-3xl md:text-4xl font-[800] mb-4"
-              style={{
-                background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}
-            >
-              Future-Ready Apps, Crafted for You
-            </h2>
-            <p className="text-lg max-w-[640px] mx-auto mb-12 leading-relaxed text-center" style={{color: 'hsl(var(--clr-silver))'}}>
+            <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Future-Ready Apps, Crafted for You</p>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed text-center md:text-2xl">
               StriveX blends cutting-edge AI with elegant design to elevate health, productivity, and every moment in between.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link to="/apps">
-                <Button 
-                  size="lg" 
-                  className="min-h-[44px] px-8 py-4 text-lg rounded-full transition-transform hover:scale-[1.03] focus:ring-2 focus:ring-offset-2"
-                  style={{
-                    background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))',
-                    color: 'hsl(var(--clr-white))'
-                  }}
-                >
+                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
                   Explore Our Apps
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
@@ -99,12 +76,8 @@ const Index = () => {
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="text-3xl md:text-4xl font-[800] mb-2" style={{color: 'hsl(var(--clr-white))'}}>
-                    {stat.value}
-                  </div>
-                  <div className="text-sm md:text-base" style={{color: 'hsl(var(--clr-silver-700))'}}>
-                    {stat.label}
-                  </div>
+                  <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">{stat.value}</div>
+                  <div className="text-gray-300 text-sm md:text-base">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -112,7 +85,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Flagship Apps Section */}
+      {/* Featured Apps Section */}
       <section className="py-20 px-4">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
@@ -122,23 +95,15 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 
-              className="text-4xl md:text-5xl font-[800] mb-6"
-              style={{
-                background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}
-            >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Our Flagship Apps
             </h2>
-            <p className="text-lg max-w-3xl mx-auto" style={{color: 'hsl(var(--clr-silver))'}}>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Discover our most popular mobile applications, each designed to solve real-world problems and enhance your daily life.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {featuredApps.map((app, index) => (
               <motion.div 
                 key={app.name}
@@ -147,26 +112,24 @@ const Index = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card 
-                  className="h-full rounded-xl border transition-all duration-300 hover:scale-[1.02] focus-within:ring-2 focus-within:ring-offset-2"
-                  style={{
-                    background: 'hsl(var(--clr-navy-700))',
-                    borderColor: 'rgba(192,192,192,0.12)'
-                  }}
-                >
+                <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                   <CardHeader className="pb-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 p-2"
-                         style={{background: 'linear-gradient(135deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))'}}>
-                      {app.icon ? (
-                        <img src={app.icon} alt={app.name} className="w-full h-full object-cover rounded-lg" />
-                      ) : (
-                        <Smartphone className="w-6 h-6" style={{color: 'hsl(var(--clr-white))'}} />
+                    <div className="flex items-start justify-between mb-4">
+                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center`}>
+                        {app.icon ? (
+                          <img src={app.icon} alt={app.name} className="w-10 h-10 object-contain" />
+                        ) : (
+                          <Smartphone className="w-8 h-8 text-white" />
+                        )}
+                      </div>
+                      {app.comingSoon && (
+                        <Badge className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
+                          Coming Soon
+                        </Badge>
                       )}
                     </div>
-                    <CardTitle className="text-lg mb-2" style={{color: 'hsl(var(--clr-white))'}}>
-                      {app.name}
-                    </CardTitle>
-                    <div className="flex items-center gap-3 text-sm mb-3" style={{color: 'hsl(var(--clr-silver))'}}>
+                    <CardTitle className="text-2xl text-white mb-2">{app.name}</CardTitle>
+                    <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
                       {app.rating && (
                         <span className="flex items-center gap-1">
                           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -177,31 +140,22 @@ const Index = () => {
                         <Download className="w-4 h-4" />
                         {app.downloads}
                       </span>
+                      <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
+                        {app.category}
+                      </Badge>
                     </div>
-                    <Badge 
-                      variant="outline" 
-                      className="text-xs w-fit border"
-                      style={{
-                        borderColor: 'rgba(192,192,192,0.20)',
-                        color: 'hsl(var(--clr-silver-500))'
-                      }}
-                    >
-                      {app.category}
-                    </Badge>
                   </CardHeader>
                   <CardContent className="pt-0">
-                    <p className="text-sm mb-4 leading-relaxed" style={{color: 'hsl(var(--clr-silver))'}}>
+                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                       {app.description}
                     </p>
                     {app.features && (
                       <div className="mb-4">
-                        <h4 className="text-xs font-[600] uppercase tracking-wider mb-2" style={{color: 'hsl(var(--clr-silver-700))'}}>
-                          Key Features
-                        </h4>
+                        <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Key Features</h4>
                         <div className="space-y-1">
                           {app.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-xs" style={{color: 'hsl(var(--clr-silver))'}}>
-                              <div className="w-1 h-1 rounded-full" style={{background: 'hsl(var(--clr-accent-2))'}}></div>
+                            <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
+                              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
                               {feature}
                             </div>
                           ))}
@@ -210,17 +164,12 @@ const Index = () => {
                     )}
                     <Button 
                       size="sm" 
-                      className="w-full min-h-[44px] transition-opacity hover:opacity-90 focus:ring-2 focus:ring-offset-2"
-                      disabled={app.comingSoon}
+                      className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity`}
+                      disabled={app.comingSoon && !app.isDemo}
                       onClick={() => app.isDemo && (window.location.href = '/ai_assistant_app')}
-                      style={{
-                        background: app.comingSoon 
-                          ? 'hsl(var(--clr-silver-700))' 
-                          : 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))',
-                        color: 'hsl(var(--clr-white))'
-                      }}
                     >
-                      {app.comingSoon ? 'Coming Soon' : app.isDemo ? 'Try Demo' : 'Download'}
+                      {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Try Demo' : 'Download'}
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
                   </CardContent>
                 </Card>
@@ -230,15 +179,7 @@ const Index = () => {
           
           <div className="text-center mt-12">
             <Link to="/apps">
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="min-h-[44px] border transition-colors hover:bg-opacity-5 focus:ring-2 focus:ring-offset-2"
-                style={{
-                  borderColor: 'hsl(var(--clr-silver-500))',
-                  color: 'hsl(var(--clr-silver-500))'
-                }}
-              >
+              <Button variant="outline" size="lg" className="border-gray-500 text-gray-300 hover:bg-white/5">
                 View All Apps
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
@@ -248,7 +189,7 @@ const Index = () => {
       </section>
 
       {/* Why Choose StriveX */}
-      <section className="py-20 px-4" style={{background: 'hsl(var(--clr-navy-700))'}}>
+      <section className="py-20 px-4 bg-white/5">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -257,18 +198,10 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 
-              className="text-4xl md:text-5xl font-[800] mb-6"
-              style={{
-                background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}
-            >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Why Choose StriveX?
             </h2>
-            <p className="text-lg max-w-3xl mx-auto" style={{color: 'hsl(var(--clr-silver))'}}>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We're not just another app company. We're innovators building the future of mobile experiences.
             </p>
           </motion.div>
@@ -299,18 +232,11 @@ const Index = () => {
                 viewport={{ once: true }}
                 className="text-center"
               >
-                <div 
-                  className="w-16 h-16 mx-auto mb-6 rounded-2xl flex items-center justify-center"
-                  style={{background: 'linear-gradient(135deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))'}}
-                >
-                  <feature.icon className="w-8 h-8" style={{color: 'hsl(var(--clr-white))'}} />
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-[600] mb-4" style={{color: 'hsl(var(--clr-white))'}}>
-                  {feature.title}
-                </h3>
-                <p className="leading-relaxed" style={{color: 'hsl(var(--clr-silver))'}}>
-                  {feature.description}
-                </p>
+                <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
+                <p className="text-gray-300 leading-relaxed">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -326,44 +252,21 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 
-              className="text-4xl md:text-5xl font-[800] mb-6"
-              style={{
-                background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-accent-2)))',
-                WebkitBackgroundClip: 'text',
-                backgroundClip: 'text',
-                color: 'transparent'
-              }}
-            >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Ready to Transform Your Digital Life?
             </h2>
-            <p className="text-lg mb-8 max-w-2xl mx-auto" style={{color: 'hsl(var(--clr-silver))'}}>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join thousands of users who trust StriveX apps to enhance their daily routines and achieve their goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/apps">
-                <Button 
-                  size="lg" 
-                  className="min-h-[44px] px-8 py-4 text-lg rounded-full transition-transform hover:scale-[1.03] focus:ring-2 focus:ring-offset-2"
-                  style={{
-                    background: 'linear-gradient(90deg, hsl(var(--clr-accent-1)), hsl(var(--clr-silver-500)))',
-                    color: 'hsl(var(--clr-white))'
-                  }}
-                >
+                <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
                   Explore Our Apps
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button 
-                  variant="outline" 
-                  size="lg" 
-                  className="min-h-[44px] px-8 py-4 text-lg border transition-colors hover:bg-opacity-5 focus:ring-2 focus:ring-offset-2"
-                  style={{
-                    borderColor: 'hsl(var(--clr-silver-500))',
-                    color: 'hsl(var(--clr-silver-500))'
-                  }}
-                >
+                <Button variant="outline" size="lg" className="border-gray-500 text-gray-300 hover:bg-white/5 px-8 py-4 text-lg">
                   Get in Touch
                 </Button>
               </Link>
