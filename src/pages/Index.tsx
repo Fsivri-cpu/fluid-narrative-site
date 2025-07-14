@@ -58,7 +58,7 @@ const Index = () => {
               StriveX
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Future-Ready Apps, Made Simple</p>
-            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">Meet StriveX AI Solutions—the multi-app studio that turns cutting-edge AI into beautifully intuitive mobile tools. From wellness wins to productivity boosts, our apps help you live, work, and thrive smarter. Download once. Level up every day.</p>
+            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">Meet StriveX AI Solutions—the multi-app studio that turns cutting-edge AI into beautifully intuitive mobile tools. From wellness wins to productivity boosts, our apps help you live, work, and thrive smarter. </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link to="/apps">
                 <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
