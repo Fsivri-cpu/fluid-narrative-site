@@ -10,15 +10,16 @@ const Index = () => {
   const featuredApps = [
     {
       name: "GLP-1 Shot Tracker",
-      description: "Never miss a dose, track progress scientifically",
-      downloads: "Coming Soon",
+      description: "Track every GLP-1 shot, weight change and macro in one place. Smart dashboard for Ozempic®, Wegovy®, Mounjaro® & more.",
+      downloads: "2025",
       rating: null,
       category: "Health",
       gradient: "from-blue-500 to-blue-600",
-      comingSoon: true
+      comingSoon: true,
+      icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png"
     },
     {
-      name: "AI Assistant App",
+      name: "Professional AI Assistant App",
       description: "24/7 customer service AI that understands your business",
       downloads: "Try Demo",
       rating: 4.9,
@@ -30,10 +31,10 @@ const Index = () => {
   ];
 
   const stats = [
-    { label: "Apps in Development", value: "4+" },
-    { label: "Categories Covered", value: "3+" },
-    { label: "Countries Planned", value: "25+" },
-    { label: "Coming Soon", value: "2024" }
+    { label: "GLP-1 App Launch", value: "2025" },
+    { label: "AI Assistant", value: "Available" },
+    { label: "More Apps", value: "Soon" },
+    { label: "Global Reach", value: "25+" }
   ];
 
   return (
@@ -58,7 +59,7 @@ const Index = () => {
               We're a multi-app mobile studio building innovative applications across different categories to enhance your digital lifestyle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-              <Link to="/products">
+              <Link to="/apps">
                 <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
                   Explore Our Apps
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -120,7 +121,11 @@ const Index = () => {
                 <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
                   <CardHeader className="pb-4">
                     <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${app.gradient} flex items-center justify-center mb-4`}>
-                      <Smartphone className="w-6 h-6 text-white" />
+                      {app.icon ? (
+                        <img src={app.icon} alt={app.name} className="w-8 h-8 object-contain" />
+                      ) : (
+                        <Smartphone className="w-6 h-6 text-white" />
+                      )}
                     </div>
                     <CardTitle className="text-lg text-white mb-2">{app.name}</CardTitle>
                     <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
@@ -158,7 +163,7 @@ const Index = () => {
           </div>
           
           <div className="text-center mt-12">
-            <Link to="/products">
+            <Link to="/apps">
               <Button variant="outline" size="lg" className="border-gray-500 text-gray-300 hover:bg-white/5">
                 View All Apps
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -239,7 +244,7 @@ const Index = () => {
               Join thousands of users who trust StriveX apps to enhance their daily routines and achieve their goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/products">
+              <Link to="/apps">
                 <Button size="lg" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white px-8 py-4 text-lg">
                   Explore Our Apps
                   <ArrowRight className="w-5 h-5 ml-2" />
