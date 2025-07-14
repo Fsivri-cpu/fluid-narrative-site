@@ -57,13 +57,13 @@ const GLP1TrackerPrivacy = () => {
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
               Furkan Sivri ("we", "our", "us") owns and operates the <strong>GLP-1 Shot Tracker – Tirzepatide</strong> mobile application (the "App").
-              We are based in the Netherlands and publish the App worldwide. Your privacy matters to us: <strong>we never sell or rent your identifiable personal or health data.</strong>
+              We are based in the Netherlands and publish the App worldwide. <strong>We never sell or rent your identifiable personal or health data.</strong>
             </p>
           </section>
 
-          {/* Scope */}
+          {/* Scope & Age Limit */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">2. Scope</h2>
+            <h2 className="text-2xl font-semibold mb-4">2. Scope & Age Limit</h2>
             <p className="text-muted-foreground">
               This Policy covers data collected in the iOS and Android versions of the App and on strivex.ai.
               Minimum age to use the App is <strong>12 years</strong>.
@@ -85,12 +85,12 @@ const GLP1TrackerPrivacy = () => {
                 <tbody className="text-muted-foreground">
                   <tr>
                     <td className="border border-border p-3 font-semibold">Health & Wellness</td>
-                    <td className="border border-border p-3">GLP-1 injection logs (date, medication, dosage, NDC); symptoms & side-effects; weight; water intake; age; height; Apple Health / Google Health Connect activity; calorie intake*</td>
+                    <td className="border border-border p-3">GLP-1 injection logs (date, medication, dosage, NDC); symptoms & side-effects; weight; water intake; age; height; Apple Health / Google Health Connect activity; calorie intake <em>(Premium)</em></td>
                     <td className="border border-border p-3">Core tracking & analytics</td>
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Meal Photos (Opt-in)</td>
-                    <td className="border border-border p-3"><strong>User-taken images of food</strong> analysed via OpenAI Image API</td>
+                    <td className="border border-border p-3">User-taken food images → processed via <strong>OpenAI Image API</strong></td>
                     <td className="border border-border p-3">Visual food logging & calorie estimation</td>
                   </tr>
                   <tr>
@@ -116,34 +116,31 @@ const GLP1TrackerPrivacy = () => {
                 </tbody>
               </table>
             </div>
-            <p className="text-sm text-muted-foreground mt-4">
-              * Calorie intake logging is a Premium feature.
-            </p>
             <p className="text-muted-foreground mt-4">
               We <strong>do not</strong> collect GPS, contacts, or government-ID numbers.
             </p>
           </section>
 
-          {/* Collection Methods */}
+          {/* How We Collect */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">4. Collection Methods</h2>
+            <h2 className="text-2xl font-semibold mb-4">4. How We Collect</h2>
             <p className="text-muted-foreground">
-              • Manual input • Photo uploads (camera / gallery, user permission) • Apple Health / Health Connect (opt-in) • Pharmacy integrations (with consent) • Automatic telemetry
+              • Manual input • Camera / gallery photo uploads (user permission) • Apple Health / Health Connect (opt-in) • Pharmacy integrations (with consent) • Automatic telemetry
               <br />
-              All traffic is encrypted with TLS 1.2+.
+              All traffic is TLS 1.2+ encrypted.
             </p>
           </section>
 
-          {/* How We Use Your Data */}
+          {/* How We Use Data */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">5. How We Use Your Data</h2>
+            <h2 className="text-2xl font-semibold mb-4">5. How We Use Data</h2>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Deliver and improve core tracking features</li>
-              <li>• Send dosage reminders and motivational or promotional push messages</li>
+              <li>• Deliver and improve tracking features</li>
+              <li>• Send dosage reminders, motivational nudges & occasional promotions</li>
               <li>• Unlock Premium tiers (Weekly / Lifetime / Yearly) via RevenueCat & Superwall</li>
-              <li>• Perform product analytics (Firebase, Mixpanel, Statsig)</li>
-              <li>• <strong>Process meal photos with OpenAI Image API</strong> to estimate nutritional content (images are sent to OpenAI servers, processed transiently, and not stored by OpenAI)</li>
-              <li>• Internal research using de-identified, aggregated statistics (never re-identifiable, never sold)</li>
+              <li>• Product analytics (Firebase, Mixpanel, Statsig)</li>
+              <li>• <strong>Process meal photos through OpenAI Image API</strong> to estimate nutrition (images are processed transiently and not stored by OpenAI)</li>
+              <li>• Internal research with <strong>de-identified, aggregated statistics</strong> (never re-identifiable, never sold)</li>
             </ul>
           </section>
 
@@ -160,7 +157,7 @@ const GLP1TrackerPrivacy = () => {
                 </thead>
                 <tbody className="text-muted-foreground">
                   <tr>
-                    <td className="border border-border p-3 font-semibold">Firebase + Crashlytics</td>
+                    <td className="border border-border p-3 font-semibold">Firebase (+ Crashlytics)</td>
                     <td className="border border-border p-3">Back-end, auth, crash reports</td>
                   </tr>
                   <tr>
@@ -177,7 +174,7 @@ const GLP1TrackerPrivacy = () => {
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Mixpanel</td>
-                    <td className="border border-border p-3">Product analytics (non-health)</td>
+                    <td className="border border-border p-3">Product analytics</td>
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">AppsFlyer</td>
@@ -197,17 +194,17 @@ const GLP1TrackerPrivacy = () => {
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold"><strong>OpenAI Image API</strong></td>
-                    <td className="border border-border p-3"><strong>Food-photo recognition & nutrition estimation</strong></td>
+                    <td className="border border-border p-3">Food-photo recognition & calorie estimation</td>
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Google Analytics (web)</td>
-                    <td className="border border-border p-3">Basic site traffic</td>
+                    <td className="border border-border p-3">Basic traffic stats</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-muted-foreground mt-4">
-              All vendors are bound by contracts that forbid selling or re-identifying data.
+              All vendors are contractually barred from selling or re-identifying data.
             </p>
           </section>
 
@@ -227,7 +224,7 @@ const GLP1TrackerPrivacy = () => {
                   <tr>
                     <td className="border border-border p-3 font-semibold">iOS</td>
                     <td className="border border-border p-3">Private iCloud DB</td>
-                    <td className="border border-border p-3">Apple-managed (EU residency)</td>
+                    <td className="border border-border p-3">Apple-managed (EU)</td>
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Android</td>
@@ -236,21 +233,21 @@ const GLP1TrackerPrivacy = () => {
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Meal Photos</td>
-                    <td className="border border-border p-3">Encrypted in same store as other app data; <strong>OpenAI sees only transient copies</strong></td>
+                    <td className="border border-border p-3">Encrypted alongside other app data • transient copy to OpenAI</td>
                     <td className="border border-border p-3">—</td>
                   </tr>
                   <tr>
                     <td className="border border-border p-3 font-semibold">Web</td>
-                    <td className="border border-border p-3">Google Analytics (aggregated only)</td>
+                    <td className="border border-border p-3">Google Analytics (aggregated)</td>
                     <td className="border border-border p-3">—</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <p className="text-muted-foreground">
-              Encryption at rest: AES-256. Annual HIPAA/GDPR risk assessments and third-party pen-tests.
+              Encryption at rest = AES-256. Annual HIPAA/GDPR risk assessments & third-party pen-tests.
               <br />
-              <strong>Retention:</strong> Data is wiped 30 days after you delete your account; de-identified aggregates may be kept indefinitely.
+              <strong>Retention:</strong> Identifiable data is erased 30 days after you delete your account; de-identified aggregates may be kept indefinitely.
             </p>
           </section>
 
@@ -258,7 +255,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">8. Your Rights</h2>
             <p className="text-muted-foreground">
-              Access, correct, delete, or export your data → <strong>Settings › Data Controls</strong> or email <strong>support@strivexai.co</strong>. Requests fulfilled within 30 days.
+              Access, correct, delete, or export data → <strong>Settings › Data Controls</strong> or email <strong>support@strivexai.co</strong>. We respond within 30 days.
             </p>
           </section>
 
@@ -266,7 +263,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">9. Children</h2>
             <p className="text-muted-foreground">
-              The App is <strong>not directed to children under 12</strong>. We do not knowingly collect data from them.
+              The App is <strong>not directed to children under 12</strong>. We do not knowingly collect their data.
             </p>
           </section>
 
@@ -274,7 +271,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">10. Notifications & Promotions</h2>
             <p className="text-muted-foreground">
-              We send shot reminders, habit nudges, and occasional promo offers. Manage or disable any time in <strong>Settings › Notifications</strong>.
+              Manage or disable reminders & promo pushes any time in <strong>Settings › Notifications</strong>.
             </p>
           </section>
 
@@ -282,7 +279,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">11. International Transfers</h2>
             <p className="text-muted-foreground">
-              Data may be processed in the US or EU. We rely on Standard Contractual Clauses and equivalent safeguards for cross-border transfers.
+              Data may be processed in the US or EU; safeguarded by Standard Contractual Clauses or equivalent measures.
             </p>
           </section>
 
@@ -290,7 +287,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">12. Changes</h2>
             <p className="text-muted-foreground">
-              We may update this Policy. Material updates are announced in-app; continued use means acceptance.
+              Material changes appear in-app. Continued use = acceptance of the updated Policy.
             </p>
           </section>
 
@@ -298,9 +295,9 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">13. Contact</h2>
             <p className="text-muted-foreground">
-              Email <strong>support@strivexai.co</strong> or mail:
+              Email <strong>support@strivexai.co</strong> or write to:
               <br />
-              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, The Netherlands.
+              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>
