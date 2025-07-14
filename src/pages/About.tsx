@@ -159,9 +159,7 @@ const About = () => {
                   <CardTitle className="text-white">Seamless Design</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300">
-                    We work closely with our customers and team members to achieve the best results.
-                  </p>
+                  <p className="text-gray-300">We pair beautiful visuals with intuitive UX so every interaction feels effortless and engaging.</p>
                 </CardContent>
               </Card>
             </motion.div>
