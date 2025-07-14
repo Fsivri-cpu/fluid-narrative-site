@@ -271,11 +271,17 @@ const Index = () => {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg" className="border-gray-500 text-white hover:bg-white/5 hover:text-white px-8 py-4 text-lg">
-                  Get in Touch
-                </Button>
-              </Link>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-gray-500 text-white hover:bg-white/5 hover:text-white px-8 py-4 text-lg"
+                onClick={() => {
+                  const footerSection = document.querySelector('footer');
+                  footerSection?.scrollIntoView({ behavior: 'smooth' });
+                }}
+              >
+                Get in Touch
+              </Button>
             </div>
           </motion.div>
         </div>
