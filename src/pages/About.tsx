@@ -93,7 +93,7 @@ const About = () => {
           }} viewport={{
             once: true
           }}>
-              <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="StriveX Team" className="rounded-lg shadow-xl w-full" />
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="StriveX AI Solutions Team Collaboration" className="rounded-lg shadow-xl w-full" />
             </motion.div>
           </div>
         </div>
