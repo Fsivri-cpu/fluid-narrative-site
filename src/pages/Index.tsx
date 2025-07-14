@@ -11,42 +11,29 @@ const Index = () => {
     {
       name: "GLP-1 Shot Tracker",
       description: "Never miss a dose, track progress scientifically",
-      downloads: "10K+",
-      rating: 4.8,
+      downloads: "Coming Soon",
+      rating: null,
       category: "Health",
-      gradient: "from-blue-500 to-blue-600"
+      gradient: "from-blue-500 to-blue-600",
+      comingSoon: true
     },
     {
-      name: "Calorie Tracker",
-      description: "AI-powered nutrition tracking and meal planning",
-      downloads: "25K+",
-      rating: 4.6,
-      category: "Health",
-      gradient: "from-green-500 to-emerald-600"
-    },
-    {
-      name: "Sun Exposure Tracker",
-      description: "Smart tanning with UV alerts and vitamin D insights",
-      downloads: "8K+",
-      rating: 4.7,
-      category: "Health",
-      gradient: "from-orange-500 to-amber-600"
-    },
-    {
-      name: "AI Wellness Assistant",
-      description: "24/7 personal wellness coach and habit tracker",
-      downloads: "15K+",
+      name: "AI Assistant App",
+      description: "24/7 customer service AI that understands your business",
+      downloads: "Try Demo",
       rating: 4.9,
-      category: "Lifestyle",
-      gradient: "from-purple-500 to-violet-600"
+      category: "Business",
+      gradient: "from-purple-500 to-violet-600",
+      comingSoon: false,
+      isDemo: true
     }
   ];
 
   const stats = [
-    { label: "Total Downloads", value: "58K+" },
-    { label: "Active Users", value: "42K+" },
-    { label: "App Categories", value: "4+" },
-    { label: "Countries", value: "25+" }
+    { label: "Apps in Development", value: "4+" },
+    { label: "Categories Covered", value: "3+" },
+    { label: "Countries Planned", value: "25+" },
+    { label: "Coming Soon", value: "2024" }
   ];
 
   return (
@@ -79,7 +66,7 @@ const Index = () => {
               </Link>
               <Link to="/ai_assistant_app">
                 <Button variant="outline" size="lg" className="border-gray-500 text-gray-300 hover:bg-white/5 px-8 py-4 text-lg">
-                  Try AI Assistant
+                  Try AI Assistant Demo
                 </Button>
               </Link>
             </div>
@@ -137,10 +124,12 @@ const Index = () => {
                     </div>
                     <CardTitle className="text-lg text-white mb-2">{app.name}</CardTitle>
                     <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
-                      <span className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        {app.rating}
-                      </span>
+                      {app.rating && (
+                        <span className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          {app.rating}
+                        </span>
+                      )}
                       <span className="flex items-center gap-1">
                         <Download className="w-4 h-4" />
                         {app.downloads}
@@ -157,8 +146,10 @@ const Index = () => {
                     <Button 
                       size="sm" 
                       className={`w-full bg-gradient-to-r ${app.gradient} hover:opacity-90 transition-opacity`}
+                      disabled={app.comingSoon}
+                      onClick={() => app.isDemo && (window.location.href = '/ai_assistant_app')}
                     >
-                      Download
+                      {app.comingSoon ? 'Coming Soon' : app.isDemo ? 'Try Demo' : 'Download'}
                     </Button>
                   </CardContent>
                 </Card>

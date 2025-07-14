@@ -14,50 +14,57 @@ const Products = () => {
       description: "Never miss a dose, track progress scientifically with your GLP-1 medication management.",
       features: ["Dose Reminders", "Progress Tracking", "Medical Reports", "Side Effect Monitor"],
       category: "Health & Fitness",
-      downloads: "10K+",
-      rating: 4.8,
-      comingSoon: false,
+      downloads: "Soon",
+      rating: null,
+      comingSoon: true,
       primaryColor: "from-blue-500 to-blue-600"
     },
     {
       id: 2,
-      name: "Calorie Tracker",
-      subtitle: "Smart Nutrition",
-      description: "Log food in seconds with AI-powered recognition, get macro insights and personalized recipes.",
-      features: ["AI Food Recognition", "Macro Tracking", "Recipe Suggestions", "Meal Planning"],
-      category: "Health & Fitness",
-      downloads: "25K+",
-      rating: 4.6,
+      name: "AI Assistant App",
+      subtitle: "Virtual Support",
+      description: "24/7 AI-powered customer service assistant that understands your business needs.",
+      features: ["Smart Conversations", "Knowledge Base", "Multi-language", "24/7 Available"],
+      category: "Business",
+      downloads: "Available",
+      rating: 4.9,
       comingSoon: false,
-      primaryColor: "from-green-500 to-emerald-600"
+      primaryColor: "from-purple-500 to-violet-600",
+      isDemo: true
     },
     {
       id: 3,
-      name: "Sun Exposure Tracker",
-      subtitle: "Safe Tanning",
-      description: "Tan smarter with real-time UV alerts, vitamin D insights, and personalized sun safety.",
-      features: ["UV Index Alerts", "Vitamin D Tracking", "Skin Type Analysis", "Tan Planning"],
+      name: "Calorie Tracker",
+      subtitle: "Smart Nutrition",
+      description: "AI-powered nutrition tracking and meal planning for a healthier lifestyle.",
+      features: ["AI Food Recognition", "Macro Tracking", "Recipe Suggestions", "Meal Planning"],
       category: "Health & Fitness",
-      downloads: "8K+",
-      rating: 4.7,
-      comingSoon: false,
-      primaryColor: "from-orange-500 to-amber-600"
+      downloads: "Soon",
+      rating: null,
+      comingSoon: true,
+      primaryColor: "from-green-500 to-emerald-600"
     },
     {
       id: 4,
-      name: "AI Wellness Assistant",
-      subtitle: "Personal Coach",
-      description: "24/7 chat-based wellness coach that adapts to your lifestyle and nudges better habits.",
-      features: ["Personalized Coaching", "Habit Tracking", "Goal Setting", "Progress Analytics"],
-      category: "Lifestyle",
-      downloads: "15K+",
-      rating: 4.9,
-      comingSoon: false,
-      primaryColor: "from-purple-500 to-violet-600"
+      name: "Sun Exposure Tracker",
+      subtitle: "Safe Tanning",
+      description: "Smart tanning with real-time UV alerts and vitamin D insights for safe sun exposure.",
+      features: ["UV Index Alerts", "Vitamin D Tracking", "Skin Type Analysis", "Tan Planning"],
+      category: "Health & Fitness",
+      downloads: "Soon",
+      rating: null,
+      comingSoon: true,
+      primaryColor: "from-orange-500 to-amber-600"
     }
   ];
 
-  const categories = ["All", "Health & Fitness", "Lifestyle", "Productivity"];
+  const categories = ["All", "Health & Fitness", "Business"];
+
+  const handleAppClick = (app: any) => {
+    if (app.isDemo) {
+      window.location.href = '/ai_assistant_app';
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white">
@@ -114,10 +121,12 @@ const Products = () => {
                     <CardTitle className="text-2xl text-white mb-1">{app.name}</CardTitle>
                     <p className="text-gray-400 text-sm mb-3">{app.subtitle}</p>
                     <div className="flex items-center gap-4 text-sm text-gray-400">
-                      <span className="flex items-center gap-1">
-                        <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                        {app.rating}
-                      </span>
+                      {app.rating && (
+                        <span className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          {app.rating}
+                        </span>
+                      )}
                       <span className="flex items-center gap-1">
                         <Download className="w-4 h-4" />
                         {app.downloads}
@@ -145,14 +154,17 @@ const Products = () => {
                     <div className="flex gap-3">
                       <Button 
                         className={`flex-1 bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity`}
-                        disabled={app.comingSoon}
+                        disabled={app.comingSoon && !app.isDemo}
+                        onClick={() => handleAppClick(app)}
                       >
-                        {app.comingSoon ? 'Notify Me' : 'Download App'}
+                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Try Demo' : 'Download App'}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
-                      <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/5">
-                        Learn More
-                      </Button>
+                      {!app.comingSoon && (
+                        <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-white/5">
+                          Learn More
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

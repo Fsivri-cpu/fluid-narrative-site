@@ -68,7 +68,6 @@ const Navbar = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/products', label: 'Apps' },
-    { path: '/ai_assistant_app', label: 'AI Assistant' },
     { path: '/about', label: 'About' },
     { path: '/contact', label: 'Contact' }
   ];
