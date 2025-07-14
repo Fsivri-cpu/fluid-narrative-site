@@ -40,7 +40,6 @@ const GLP1TrackerTerms = () => {
             GLP-1 Shot Tracker – Tirzepatide
           </h2>
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-            <span><strong>Effective Date:</strong> 14 Jul 2025</span>
             <span><strong>Last Updated:</strong> 14 Jul 2025</span>
           </div>
         </motion.div>
@@ -52,164 +51,149 @@ const GLP1TrackerTerms = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto space-y-12"
         >
-          {/* Introduction */}
+          {/* Acceptance */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
+            <h2 className="text-2xl font-semibold mb-4">1. Acceptance</h2>
             <p className="text-muted-foreground">
-              These Terms and Conditions ("Terms") govern your use of the <strong>GLP-1 Shot Tracker – Tirzepatide</strong> mobile application (the "App") 
-              operated by Furkan Sivri ("we", "our", "us"). By accessing or using our App, you agree to be bound by these Terms.
+              These Terms govern your use of the <strong>GLP-1 Shot Tracker – Tirzepatide</strong> mobile application ("App") provided by <strong>Furkan Sivri</strong>. 
+              Installing or using the App means you agree to these Terms. If you disagree, delete the App.
             </p>
           </section>
 
-          {/* Acceptance of Terms */}
+          {/* Accounts & Eligibility */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">2. Acceptance of Terms</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• By downloading, installing, or using the App, you accept and agree to be bound by these Terms</li>
-              <li>• If you do not agree to these Terms, you may not use the App</li>
-              <li>• We reserve the right to modify these Terms at any time with notice through the App</li>
-              <li>• Continued use of the App after changes constitutes acceptance of updated Terms</li>
+            <h2 className="text-2xl font-semibold mb-4">2. Accounts & Eligibility</h2>
+            <p className="text-muted-foreground mb-4">Age 12 + only.</p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• iOS: account optional; data stays in your iCloud.</li>
+              <li>• Android: Google Sign-In required for sync.</li>
             </ul>
+            <p className="text-muted-foreground mt-4">
+              Keep credentials confidential; you're responsible for all activity on your account.
+            </p>
           </section>
 
-          {/* Eligibility */}
+          {/* Subscriptions & Billing */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">3. Eligibility</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• You must be at least <strong>12 years old</strong> to use the App</li>
-              <li>• If you are under 18, you must have parental or guardian consent</li>
-              <li>• You must provide accurate and complete information when using the App</li>
-              <li>• You are responsible for maintaining the confidentiality of your account</li>
-            </ul>
+            <h2 className="text-2xl font-semibold mb-4">3. Subscriptions & Billing</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-border">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="border border-border p-3 text-left">Plan</th>
+                    <th className="border border-border p-3 text-left">Billing</th>
+                    <th className="border border-border p-3 text-left">Includes</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted-foreground">
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Free</td>
+                    <td className="border border-border p-3">–</td>
+                    <td className="border border-border p-3">1 injection <strong>or</strong> symptom entry per day, water & weight logs</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Weekly</td>
+                    <td className="border border-border p-3">Every 7 days</td>
+                    <td className="border border-border p-3">Unlimited entries, food logging (incl. meal-photo analysis), drug-level graph, Apple Health sync, priority support</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Lifetime</td>
+                    <td className="border border-border p-3">One-time payment</td>
+                    <td className="border border-border p-3">All Weekly features + all future premium updates</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold"><em>(Optional)</em> Yearly</td>
+                    <td className="border border-border p-3">Every 12 months</td>
+                    <td className="border border-border p-3">Same as Weekly, discounted</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p className="text-muted-foreground mt-4">
+              Upgrade, switch, or cancel in your store's <strong>Subscriptions</strong> panel. Remaining Weekly time stays active until expiry.
+            </p>
           </section>
 
           {/* Permitted Use */}
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">4. Permitted Use</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• The App is for personal, non-commercial use only</li>
-              <li>• You may track your GLP-1 injections, symptoms, and related health data</li>
-              <li>• You may use Premium features if you have a valid subscription</li>
-              <li>• You agree to use the App only for lawful purposes and in accordance with these Terms</li>
-            </ul>
+            <p className="text-muted-foreground">
+              Use the App only for lawful, personal wellness tracking. No scraping, hacking, reverse-engineering, or offensive content.
+            </p>
           </section>
 
-          {/* Prohibited Use */}
+          {/* User Content & Image Processing */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">5. Prohibited Use</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• You may not reverse engineer, decompile, or disassemble the App</li>
-              <li>• You may not use the App for any illegal or unauthorized purpose</li>
-              <li>• You may not share your account credentials with others</li>
-              <li>• You may not attempt to bypass any security measures or access restrictions</li>
-              <li>• You may not use the App to store false or misleading health information</li>
-            </ul>
+            <h2 className="text-2xl font-semibold mb-4">5. User Content & Image Processing</h2>
+            <p className="text-muted-foreground">
+              You may upload meal photos for nutrition estimation. <strong>You confirm you have rights to these images and grant us a licence to process them solely via OpenAI Image API for food recognition and calorie estimation.</strong> We do not use your images for ads or unrelated AI training.
+            </p>
           </section>
 
-          {/* Medical Disclaimer */}
+          {/* Health Disclaimer */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">6. Medical Disclaimer</h2>
-            <div className="space-y-4 text-muted-foreground">
-              <p>
-                <strong>IMPORTANT:</strong> This App is for informational and tracking purposes only. It is not intended to replace professional medical advice, diagnosis, or treatment.
-              </p>
-              <ul className="space-y-2 mt-4">
-                <li>• Always consult your healthcare provider before making any changes to your medication regimen</li>
-                <li>• The App's suggestions and reminders are not medical advice</li>
-                <li>• In case of medical emergency, contact emergency services immediately</li>
-                <li>• We are not responsible for any medical decisions made based on App data</li>
-              </ul>
-            </div>
+            <h2 className="text-2xl font-semibold mb-4">6. Health Disclaimer</h2>
+            <p className="text-muted-foreground">
+              The App is <strong>not a medical device</strong> and does <strong>not</strong> provide medical advice. Always consult a healthcare professional before altering treatment.
+            </p>
           </section>
 
-          {/* Subscriptions & Payments */}
+          {/* Privacy */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">7. Subscriptions & Payments</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• Premium features require a paid subscription (Weekly, Yearly, or Lifetime)</li>
-              <li>• Subscriptions are processed through Apple App Store or Google Play Store</li>
-              <li>• Subscriptions auto-renew unless cancelled before the renewal date</li>
-              <li>• Refunds are subject to Apple's and Google's respective policies</li>
-              <li>• We may change subscription prices with 30 days notice</li>
-            </ul>
+            <h2 className="text-2xl font-semibold mb-4">7. Privacy</h2>
+            <p className="text-muted-foreground">
+              Your data is handled as described in our <strong>Privacy Policy</strong>. By using the App you consent to that processing.
+            </p>
           </section>
 
           {/* Intellectual Property */}
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">8. Intellectual Property</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• All App content, features, and functionality remain our intellectual property</li>
-              <li>• You retain ownership of the health data you input into the App</li>
-              <li>• Our algorithms, UI/UX design, and code are proprietary and protected by law</li>
-              <li>• You may not copy, distribute, or create derivative works of the App</li>
-            </ul>
+            <p className="text-muted-foreground">
+              All code, graphics, and trademarks belong to Furkan Sivri. You retain ownership of content you submit but grant us a licence to use it solely to operate and improve the service.
+            </p>
           </section>
 
-          {/* Data & Privacy */}
+          {/* Updates & Termination */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">9. Data & Privacy</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• Your use of the App is also governed by our Privacy Policy</li>
-              <li>• We implement industry-standard security measures to protect your data</li>
-              <li>• Health data is encrypted and stored securely</li>
-              <li>• We never sell your personal or health data to third parties</li>
-              <li>• You can request data deletion through Settings › Data Controls</li>
-            </ul>
-          </section>
-
-          {/* Disclaimers */}
-          <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">10. Disclaimers</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• The App is provided "as is" without warranties of any kind</li>
-              <li>• We do not guarantee uninterrupted or error-free service</li>
-              <li>• You use the App at your own risk and discretion</li>
-              <li>• We are not liable for any damages arising from your use of the App</li>
-              <li>• Apple Health and Google Health Connect integrations depend on third-party services</li>
-            </ul>
+            <h2 className="text-2xl font-semibold mb-4">9. Updates & Termination</h2>
+            <p className="text-muted-foreground">
+              We may update or discontinue features anytime. You agree to install updates. We may terminate access for Terms violations; upon termination you must delete the App.
+            </p>
           </section>
 
           {/* Limitation of Liability */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">11. Limitation of Liability</h2>
-            <p className="text-muted-foreground mb-4">
-              To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, 
-              consequential, or punitive damages, including but not limited to loss of profits, data, or other intangible losses.
-            </p>
+            <h2 className="text-2xl font-semibold mb-4">10. Limitation of Liability</h2>
             <p className="text-muted-foreground">
-              Our total liability shall not exceed the amount you paid for Premium features in the 12 months preceding the claim.
+              To the fullest extent permitted by law, we are not liable for indirect, incidental, or consequential damages. Total liability will not exceed the amount you paid for the App.
             </p>
           </section>
 
-          {/* Termination */}
+          {/* Governing Law & Jurisdiction */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">12. Termination</h2>
-            <ul className="space-y-3 text-muted-foreground">
-              <li>• You may delete your account at any time through the App settings</li>
-              <li>• We may suspend or terminate your access for Terms violations</li>
-              <li>• Upon termination, your right to use the App will cease immediately</li>
-              <li>• Data deletion follows our Privacy Policy retention schedule</li>
-            </ul>
+            <h2 className="text-2xl font-semibold mb-4">11. Governing Law & Jurisdiction</h2>
+            <p className="text-muted-foreground">
+              These Terms are governed by Dutch law. Disputes are subject to the courts of Amsterdam, NL. <strong>You waive any right to participate in class-action proceedings.</strong>
+            </p>
           </section>
 
-          {/* Governing Law */}
+          {/* Changes */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">13. Governing Law</h2>
+            <h2 className="text-2xl font-semibold mb-4">12. Changes</h2>
             <p className="text-muted-foreground">
-              These Terms are governed by the laws of the Netherlands. Any disputes will be resolved in the courts of the Netherlands.
+              Material changes appear in-app. Continued use = acceptance of the updated Terms.
             </p>
           </section>
 
           {/* Contact */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">14. Contact</h2>
-            <p className="text-muted-foreground mb-4">
-              If you have any questions about these Terms & Conditions, please contact us:
+            <h2 className="text-2xl font-semibold mb-4">13. Contact</h2>
+            <p className="text-muted-foreground">
+              Email <strong>support@strivexai.co</strong> or mail:
+              <br />
+              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
-            <div className="space-y-2 text-muted-foreground">
-              <p>Email: <strong>support@strivexai.co</strong></p>
-              <p>Mail: Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, The Netherlands</p>
-            </div>
           </section>
         </motion.div>
       </div>
