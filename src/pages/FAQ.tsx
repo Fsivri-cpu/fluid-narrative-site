@@ -132,7 +132,7 @@ const FAQ = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <div className="text-muted-foreground">
-                <strong>Email:</strong> support@strivex.ai
+                <strong>Email:</strong> support@strivexai.co
               </div>
             </div>
           </motion.div>
