@@ -112,7 +112,7 @@ const Index = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group">
+                <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group flex flex-col">
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between mb-4">
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center`}>
@@ -145,32 +145,37 @@ const Index = () => {
                       </Badge>
                     </div>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                      {app.description}
-                    </p>
-                    {app.features && (
-                      <div className="mb-4">
-                        <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Key Features</h4>
-                        <div className="space-y-1">
-                          {app.features.map((feature, idx) => (
-                            <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
-                              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                              {feature}
-                            </div>
-                          ))}
+                  <CardContent className="pt-0 flex flex-col flex-grow">
+                    <div className="flex-grow">
+                      <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                        {app.description}
+                      </p>
+                      {app.features && (
+                        <div className="mb-4">
+                          <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Key Features</h4>
+                          <div className="space-y-1">
+                            {app.features.map((feature, idx) => (
+                              <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
+                                <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                                {feature}
+                              </div>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                    )}
-                    <Button 
-                      size="sm" 
-                      className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon && !app.isDemo ? 'text-gray-400' : 'text-white'}`}
-                      disabled={app.comingSoon && !app.isDemo}
-                      onClick={() => app.isDemo && (window.location.href = '/ai_assistant_app')}
-                    >
-                      {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Learn More' : 'Download'}
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Button>
+                      )}
+                    </div>
+                    
+                    <div className="mt-auto">
+                      <Button 
+                        size="sm" 
+                        className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon && !app.isDemo ? 'text-gray-400' : 'text-white'}`}
+                        disabled={app.comingSoon && !app.isDemo}
+                        onClick={() => app.isDemo && (window.location.href = '/ai_assistant_app')}
+                      >
+                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Learn More' : 'Download'}
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
