@@ -13,6 +13,9 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Products from "./pages/Products";
 import AIAssistantApp from "./pages/AIAssistantApp";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsConditions from "./pages/TermsConditions";
+import FAQ from "./pages/FAQ";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +36,9 @@ const App = () => (
                 <Route path="ai_assistant_app" element={<AIAssistantApp />} />
                 <Route path="get-started" element={<Services />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="privacy-policy" element={<PrivacyPolicy />} />
+                <Route path="terms-conditions" element={<TermsConditions />} />
+                <Route path="faq" element={<FAQ />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
