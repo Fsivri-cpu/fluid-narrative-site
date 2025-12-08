@@ -18,6 +18,8 @@ import GLP1TrackerPrivacy from "./pages/privacy/GLP1Tracker";
 import GLP1TrackerTerms from "./pages/terms/GLP1Tracker";
 import FAQ from "./pages/FAQ";
 import Cookies from "./pages/Cookies";
+import Jabsy from "./pages/apps/Jabsy";
+import Sunny from "./pages/apps/Sunny";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -43,6 +45,8 @@ const App = () => (
                 <Route path="terms-conditions/:appSlug" element={<GLP1TrackerTerms />} />
                 <Route path="faq" element={<FAQ />} />
                 <Route path="cookies" element={<Cookies />} />
+                <Route path="apps/jabsy" element={<Jabsy />} />
+                <Route path="apps/sunny" element={<Sunny />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
