@@ -14,7 +14,7 @@ const Index = () => {
       features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Privacy First"],
       downloads: "100+",
       rating: 5.0,
-      category: "Health",
+      category: "Health & Fitness · Lifestyle",
       comingSoon: false,
       primaryColor: "from-blue-500 to-blue-600",
       icon: "/lovable-uploads/glp1-tracker-icon.png",
@@ -26,7 +26,7 @@ const Index = () => {
       features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis"],
       downloads: "Coming Soon",
       rating: null,
-      category: "Health & Fitness",
+      category: "Weather · Lifestyle",
       comingSoon: true,
       primaryColor: "from-orange-400 to-orange-600",
       icon: "/lovable-uploads/sunny-ai-icon.png"
