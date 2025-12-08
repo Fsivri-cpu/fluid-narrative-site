@@ -28,7 +28,7 @@ const SunnyTerms = () => {
               className="w-16 h-16 rounded-2xl"
             />
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold">Terms & Conditions</h1>
+              <h1 className="text-4xl md:text-5xl font-bold">Terms of Use</h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground">
                 Sunny – UV & Tanning Tracker
               </h2>
@@ -36,8 +36,7 @@ const SunnyTerms = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-            <span><strong>Effective Date:</strong> 08 Dec 2025</span>
-            <span><strong>Last Updated:</strong> 08 Dec 2025</span>
+            <span><strong>Last Updated:</strong> December 2025</span>
           </div>
         </motion.div>
 
@@ -48,148 +47,129 @@ const SunnyTerms = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto space-y-12"
         >
-          {/* Acceptance */}
+          {/* Acceptance of Terms */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">1. Acceptance</h2>
+            <h2 className="text-2xl font-semibold mb-4">1. Acceptance of Terms</h2>
             <p className="text-muted-foreground">
-              These Terms govern your use of the <strong>Sunny – UV & Tanning Tracker</strong> mobile application ("App") provided by <strong>StriveX</strong>.
-              Installing or using the App means you agree to these Terms. If you disagree, delete the App.
+              By downloading or using Sunny, you agree to these Terms and our Privacy Policy. If you do not agree, please discontinue use of the App.
             </p>
           </section>
 
-          {/* Accounts & Eligibility */}
+          {/* Description of Service */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">2. Accounts & Eligibility</h2>
-            <p className="text-muted-foreground mb-4">Age 13+ only.</p>
+            <h2 className="text-2xl font-semibold mb-4">2. Description of Service</h2>
+            <p className="text-muted-foreground mb-4">Sunny provides:</p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• iOS: account optional; data stays in your iCloud.</li>
-              <li>• Android: Google Sign-In optional for sync.</li>
+              <li>• UV Index insights using Apple WeatherKit</li>
+              <li>• Personalized tanning guidance</li>
+              <li>• AI-based skin-tone analysis</li>
+              <li>• Sun-safety reminders and notifications</li>
             </ul>
             <p className="text-muted-foreground mt-4">
-              Keep credentials confidential; you're responsible for all activity on your account.
-            </p>
-          </section>
-
-          {/* Subscriptions & Billing */}
-          <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">3. Subscriptions & Billing</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-border">
-                <thead>
-                  <tr className="bg-muted">
-                    <th className="border border-border p-3 text-left">Plan</th>
-                    <th className="border border-border p-3 text-left">Billing</th>
-                    <th className="border border-border p-3 text-left">Includes</th>
-                  </tr>
-                </thead>
-                <tbody className="text-muted-foreground">
-                  <tr>
-                    <td className="border border-border p-3 font-semibold">Free</td>
-                    <td className="border border-border p-3">–</td>
-                    <td className="border border-border p-3">Basic UV tracking, daily exposure limits, skin type profile</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-semibold">Weekly</td>
-                    <td className="border border-border p-3">Every 7 days</td>
-                    <td className="border border-border p-3">Unlimited tracking, detailed analytics, progress photos, personalized recommendations</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-semibold">Lifetime</td>
-                    <td className="border border-border p-3">One-time payment</td>
-                    <td className="border border-border p-3">All Premium features + all future updates</td>
-                  </tr>
-                  <tr>
-                    <td className="border border-border p-3 font-semibold"><em>(Optional)</em> Yearly</td>
-                    <td className="border border-border p-3">Every 12 months</td>
-                    <td className="border border-border p-3">Same as Weekly, discounted</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-muted-foreground mt-4">
-              Upgrade, switch, or cancel in your store's <strong>Subscriptions</strong> panel.
-            </p>
-          </section>
-
-          {/* Permitted Use */}
-          <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">4. Permitted Use</h2>
-            <p className="text-muted-foreground">
-              Use the App only for lawful, personal UV and tanning tracking. No scraping, hacking, reverse-engineering, or offensive content.
-            </p>
-          </section>
-
-          {/* User Content */}
-          <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">5. User Content</h2>
-            <p className="text-muted-foreground">
-              You may upload progress photos and notes. <strong>You confirm you have rights to these images and grant us a licence to process them solely to operate the service.</strong> We do not use your images for ads or unrelated purposes.
+              Sunny is for informational purposes only.
             </p>
           </section>
 
           {/* Health Disclaimer */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">6. Health Disclaimer</h2>
+            <h2 className="text-2xl font-semibold mb-4">3. Health Disclaimer</h2>
             <p className="text-muted-foreground">
-              The App is <strong>not a medical device</strong> and does <strong>not</strong> provide medical advice. UV exposure recommendations are for informational purposes only. Always consult a dermatologist for skin health concerns and follow sun safety guidelines from health authorities.
+              Sunny does not provide medical advice, diagnosis, or treatment. It cannot assess skin cancer risk or determine safe medical exposure levels. Always consult a healthcare professional for medical questions or skin concerns.
             </p>
           </section>
 
-          {/* Privacy */}
+          {/* User Obligations */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">7. Privacy</h2>
-            <p className="text-muted-foreground">
-              Your data is handled as described in our <strong>Privacy Policy</strong>. By using the App you consent to that processing.
+            <h2 className="text-2xl font-semibold mb-4">4. User Obligations</h2>
+            <p className="text-muted-foreground mb-4">You agree not to:</p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Upload harmful, illegal, or abusive content</li>
+              <li>• Misuse or attempt to reverse-engineer the App</li>
+              <li>• Provide false information that impacts recommendations</li>
+              <li>• Exploit the photo analysis feature</li>
+            </ul>
+          </section>
+
+          {/* Subscriptions & Billing */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">5. Subscriptions & Billing</h2>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Certain features require a paid subscription</li>
+              <li>• Payments are handled via Apple In-App Purchases</li>
+              <li>• Subscription renewals and cancellations must be managed in your Apple ID settings</li>
+              <li>• Refund decisions are determined solely by Apple</li>
+            </ul>
+          </section>
+
+          {/* Third-Party Services */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">6. Third-Party Services</h2>
+            <p className="text-muted-foreground mb-4">Sunny uses third-party services including:</p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• RevenueCat</li>
+              <li>• Superwall</li>
+              <li>• Mixpanel</li>
+              <li>• Firebase Analytics</li>
+              <li>• AppsFlyer</li>
+              <li>• Apple WeatherKit</li>
+              <li>• OpenAI</li>
+            </ul>
+            <p className="text-muted-foreground mt-4">
+              Your use of Sunny constitutes acceptance of their respective terms.
             </p>
           </section>
 
           {/* Intellectual Property */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">8. Intellectual Property</h2>
+            <h2 className="text-2xl font-semibold mb-4">7. Intellectual Property</h2>
             <p className="text-muted-foreground">
-              All code, graphics, and trademarks belong to Furkan Sivri. You retain ownership of content you submit but grant us a licence to use it solely to operate and improve the service.
-            </p>
-          </section>
-
-          {/* Updates & Termination */}
-          <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">9. Updates & Termination</h2>
-            <p className="text-muted-foreground">
-              We may update or discontinue features anytime. You agree to install updates. We may terminate access for Terms violations; upon termination you must delete the App.
+              All branding, design, features, and content in Sunny belong to the Sunny team. You may not copy, distribute, or reproduce materials without permission.
             </p>
           </section>
 
           {/* Limitation of Liability */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">10. Limitation of Liability</h2>
-            <p className="text-muted-foreground">
-              To the fullest extent permitted by law, we are not liable for indirect, incidental, or consequential damages including skin damage from sun exposure. Total liability will not exceed the amount you paid for the App.
+            <h2 className="text-2xl font-semibold mb-4">8. Limitation of Liability</h2>
+            <p className="text-muted-foreground mb-4">
+              Sunny is provided "as is," without warranties of any kind. We do not guarantee:
+            </p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Accuracy of weather or UV Index data</li>
+              <li>• Accuracy of AI skin analysis</li>
+              <li>• Continuous, error-free operation</li>
+            </ul>
+            <p className="text-muted-foreground mt-4 mb-4">We are not responsible for:</p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Sunburn or skin damage</li>
+              <li>• Misuse of tanning guidelines</li>
+              <li>• Any medical or cosmetic outcome</li>
+            </ul>
+            <p className="text-muted-foreground mt-4 font-semibold">
+              Use of the App is at your own risk.
             </p>
           </section>
 
-          {/* Governing Law & Jurisdiction */}
+          {/* Governing Law */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">11. Governing Law & Jurisdiction</h2>
+            <h2 className="text-2xl font-semibold mb-4">9. Governing Law</h2>
             <p className="text-muted-foreground">
-              These Terms are governed by Dutch law. Disputes are subject to the courts of Amsterdam, NL. <strong>You waive any right to participate in class-action proceedings.</strong>
+              These Terms are governed by the laws of the jurisdiction where the company is established.
             </p>
           </section>
 
-          {/* Changes */}
+          {/* Termination */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">12. Changes</h2>
+            <h2 className="text-2xl font-semibold mb-4">10. Termination</h2>
             <p className="text-muted-foreground">
-              Material changes appear in-app. Continued use = acceptance of the updated Terms.
+              We may suspend or terminate access if you violate these Terms.
             </p>
           </section>
 
           {/* Contact */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">13. Contact</h2>
+            <h2 className="text-2xl font-semibold mb-4">11. Contact</h2>
             <p className="text-muted-foreground">
-              Email <strong>support@strivexai.co</strong> or mail:
-              <br />
-              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              For support or inquiries, email: <strong>info@strivexai.co</strong>
             </p>
           </section>
         </motion.div>

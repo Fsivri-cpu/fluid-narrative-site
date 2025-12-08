@@ -36,8 +36,7 @@ const SunnyPrivacy = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-            <span><strong>Effective Date:</strong> 08 Dec 2025</span>
-            <span><strong>Last Updated:</strong> 08 Dec 2025</span>
+            <span><strong>Last Updated:</strong> December 2025</span>
           </div>
         </motion.div>
 
@@ -46,139 +45,159 @@ const SunnyPrivacy = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto space-y-12 prose prose-lg dark:prose-invert max-w-none"
+          className="max-w-4xl mx-auto space-y-12"
         >
           {/* Introduction */}
           <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
-              Sunny ("we", "us", or "our") provides personalized tanning guidance, UV index insights, and skin-safety tools. This Privacy Policy explains how we collect, use, and protect your information.
+              Sunny ("we", "our", "the App") provides UV index tracking, tanning insights, and AI-powered skin analysis. This Privacy Policy explains how we collect, use, disclose, and protect your personal information.
+            </p>
+            <p className="text-muted-foreground mt-4">
+              By using Sunny, you agree to the practices described in this Policy.
             </p>
           </section>
 
           {/* Information We Collect */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">1. Information We Collect</h2>
+            <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
             
-            <h3 className="text-xl font-medium mt-6 mb-3">1.1 Personal Information You Provide</h3>
+            <h3 className="text-xl font-medium mt-6 mb-3">2.1 Information You Provide</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• <strong>Skin profile information:</strong> skin tone, tanning goals, sensitivity.</li>
-              <li>• <strong>Optional account data:</strong> email (if account or subscription linking is required).</li>
+              <li>• Skin profile information (skin tone, tanning preferences, sensitivity)</li>
+              <li>• Optional account information such as email (if account creation is enabled)</li>
+              <li>• Photos uploaded for skin analysis</li>
             </ul>
 
-            <h3 className="text-xl font-medium mt-6 mb-3">1.2 Photos You Provide for Skin Analysis</h3>
+            <h3 className="text-xl font-medium mt-6 mb-3">2.2 Photos & AI Processing</h3>
+            <p className="text-muted-foreground mb-2">If you upload a photo for skin analysis:</p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• You may upload a facial photo for AI-based skin tone estimation.</li>
-              <li>• <strong>Photos are never stored on our servers.</strong></li>
-              <li>• The image is processed via an OpenAI API call triggered through a secured Supabase Edge Function, and then immediately discarded.</li>
-              <li>• We do not retain, save, sell, or train models on your photos.</li>
+              <li>• The image is processed through an OpenAI model via a secure Supabase Edge Function</li>
+              <li>• Photos are not stored, retained, or used for training</li>
+              <li>• The App does not save photos on external servers</li>
             </ul>
 
-            <h3 className="text-xl font-medium mt-6 mb-3">1.3 Automatically Collected Data</h3>
+            <h3 className="text-xl font-medium mt-6 mb-3">2.3 Automatically Collected Information</h3>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• <strong>Location (approximate or precise)</strong> — Used only for delivering WeatherKit UV Index information.</li>
-              <li>• <strong>Device data</strong> — app version, device model, performance logs.</li>
+              <li>• Location data (precise or approximate) used to retrieve UV Index through Apple WeatherKit</li>
+              <li>• Device details such as model, OS version, app version, performance data</li>
+              <li>• Usage analytics and interaction events</li>
             </ul>
 
-            <h3 className="text-xl font-medium mt-6 mb-3">1.4 Analytics & Attribution Data</h3>
-            <p className="text-muted-foreground mb-4">We use the following third-party services:</p>
+            <h3 className="text-xl font-medium mt-6 mb-3">2.4 Third-Party Analytics & Attribution</h3>
+            <p className="text-muted-foreground mb-2">We use:</p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• <strong>RevenueCat</strong> – Subscription status validation & purchase history.</li>
-              <li>• <strong>Superwall</strong> – Paywall interactions and purchase events.</li>
-              <li>• <strong>Mixpanel</strong> – Product analytics (anonymous usage events).</li>
-              <li>• <strong>Firebase Analytics</strong> – General analytics and crash reporting.</li>
-              <li>• <strong>AppsFlyer</strong> – Attribution, install source analysis, campaign measurement.</li>
+              <li>• Mixpanel</li>
+              <li>• Firebase Analytics</li>
+              <li>• AppsFlyer</li>
+              <li>• RevenueCat</li>
+              <li>• Superwall</li>
+            </ul>
+            <p className="text-muted-foreground mt-4 mb-2">These services may collect:</p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Device identifiers</li>
+              <li>• App usage events</li>
+              <li>• Attribution data</li>
+              <li>• Funnel interactions (paywall, subscription, onboarding)</li>
             </ul>
             <p className="text-muted-foreground mt-4">
-              These services may collect: app usage data, device information, in-app event data (e.g., paywall views, feature usage), attribution identifiers.
-            </p>
-            <p className="text-muted-foreground mt-2">
-              We do not collect or store sensitive personal information through these services.
+              We do not share sensitive personal data with these services.
             </p>
           </section>
 
-          {/* How We Use Your Data */}
+          {/* How We Use Your Information */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">2. How We Use Your Data</h2>
+            <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
             <p className="text-muted-foreground mb-4">We use collected information to:</p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• provide personalized tanning plans,</li>
-              <li>• deliver UV Index and weather conditions via WeatherKit,</li>
-              <li>• improve app performance,</li>
-              <li>• analyze feature usage,</li>
-              <li>• manage subscriptions and paywalls,</li>
-              <li>• ensure account security,</li>
-              <li>• process skin-tone analysis.</li>
+              <li>• Provide personalized tanning recommendations</li>
+              <li>• Deliver real-time UV Index through Apple WeatherKit</li>
+              <li>• Improve app performance and user experience</li>
+              <li>• Process subscription status</li>
+              <li>• Analyze product usage</li>
+              <li>• Perform AI skin-tone evaluation</li>
             </ul>
             <p className="text-muted-foreground mt-4 font-semibold">
-              We never sell your personal data.
+              We never sell your personal information.
             </p>
           </section>
 
-          {/* Third-Party Services */}
+          {/* How We Share Your Information */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">3. Third-Party Services</h2>
-            
-            <h3 className="text-xl font-medium mt-6 mb-3">3.1 Apple WeatherKit</h3>
-            <p className="text-muted-foreground">
-              Used to retrieve accurate UV Index and weather data based on your location. WeatherKit usage is governed by Apple's terms.
-            </p>
-
-            <h3 className="text-xl font-medium mt-6 mb-3">3.2 OpenAI (Skin Analysis API)</h3>
-            <p className="text-muted-foreground">
-              Your photo is sent securely to OpenAI through a Supabase Edge Function. Photos are discarded after processing and not used for training.
-            </p>
-
-            <h3 className="text-xl font-medium mt-6 mb-3">3.3 RevenueCat / Superwall / Mixpanel / Firebase / AppsFlyer</h3>
-            <p className="text-muted-foreground mb-4">Used for analytics, attribution, and subscription management.</p>
+            <h2 className="text-2xl font-semibold mb-4">4. How We Share Your Information</h2>
+            <p className="text-muted-foreground mb-4">Information may be shared only with:</p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">RevenueCat Privacy Policy</a></li>
-              <li>• <a href="https://superwall.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Superwall Privacy Policy</a></li>
-              <li>• <a href="https://mixpanel.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Mixpanel Privacy Policy</a></li>
-              <li>• <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Firebase Privacy Policy</a></li>
-              <li>• <a href="https://www.appsflyer.com/legal/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AppsFlyer Privacy Policy</a></li>
-            </ul>
-          </section>
-
-          {/* Data Storage & Security */}
-          <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">4. Data Storage & Security</h2>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• We follow industry-standard encryption and security practices.</li>
-              <li>• Photos are not stored.</li>
-              <li>• Analytics and subscription data are stored securely by their respective providers.</li>
-            </ul>
-          </section>
-
-          {/* Your Rights */}
-          <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">5. Your Rights</h2>
-            <p className="text-muted-foreground mb-4">
-              Depending on your region (EU/EEA, UK, California), you may request:
-            </p>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• access to your data,</li>
-              <li>• deletion of your data,</li>
-              <li>• correction of your information,</li>
-              <li>• opt-out of analytics tracking where applicable.</li>
+              <li>• Service providers listed above</li>
+              <li>• OpenAI (solely for processing photos)</li>
+              <li>• Apple WeatherKit (for weather/UV data fetching)</li>
             </ul>
             <p className="text-muted-foreground mt-4">
-              You may contact us at: <strong>support@sunnyapp.ai</strong>
+              We do not share information for advertising or marketing sale purposes.
+            </p>
+          </section>
+
+          {/* Data Retention */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">5. Data Retention</h2>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Photos are immediately deleted after analysis</li>
+              <li>• Analytics data is retained by third-party providers per their policies</li>
+              <li>• Subscription data is retained by RevenueCat as required for purchase validation</li>
+            </ul>
+          </section>
+
+          {/* Data Security */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">6. Data Security</h2>
+            <p className="text-muted-foreground">
+              We use industry-standard security practices to protect your data. While no method is 100% secure, we take reasonable steps to safeguard your information.
+            </p>
+          </section>
+
+          {/* Your Rights & Choices */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">7. Your Rights & Choices</h2>
+            <p className="text-muted-foreground mb-4">Depending on your location, you may request:</p>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>• Access to your information</li>
+              <li>• Deletion of your data</li>
+              <li>• Correction of inaccurate information</li>
+              <li>• Opt-out of certain analytics</li>
+            </ul>
+            <p className="text-muted-foreground mt-4">
+              To submit a request: <strong>info@strivexai.co</strong>
+            </p>
+          </section>
+
+          {/* International Data Transfers */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">8. International Data Transfers</h2>
+            <p className="text-muted-foreground">
+              Your information may be processed in regions outside your country, including the U.S. We rely on applicable safeguards to comply with data protection laws.
             </p>
           </section>
 
           {/* Children's Privacy */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">6. Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold mb-4">9. Children's Privacy</h2>
             <p className="text-muted-foreground">
-              Sunny is not intended for children under 13.
+              Sunny is not intended for users under 13. We do not knowingly collect information from children.
             </p>
           </section>
 
           {/* Changes to This Policy */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">7. Changes to This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4">10. Changes to This Policy</h2>
             <p className="text-muted-foreground">
-              We may update this policy from time to time. Continued use of the app means acceptance of the updated terms.
+              We may update this Privacy Policy periodically. Updated versions will be posted within the App or on our website.
+            </p>
+          </section>
+
+          {/* Contact */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">11. Contact</h2>
+            <p className="text-muted-foreground">
+              For questions or requests, email: <strong>info@strivexai.co</strong>
             </p>
           </section>
         </motion.div>
