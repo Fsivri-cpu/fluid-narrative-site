@@ -16,6 +16,8 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import GLP1TrackerPrivacy from "./pages/privacy/GLP1Tracker";
 import GLP1TrackerTerms from "./pages/terms/GLP1Tracker";
+import SunnyPrivacy from "./pages/privacy/Sunny";
+import SunnyTerms from "./pages/terms/Sunny";
 import FAQ from "./pages/FAQ";
 import Cookies from "./pages/Cookies";
 import Jabsy from "./pages/apps/Jabsy";
@@ -47,6 +49,8 @@ const App = () => (
                 <Route path="cookies" element={<Cookies />} />
                 <Route path="apps/jabsy" element={<Jabsy />} />
                 <Route path="apps/sunny" element={<Sunny />} />
+                <Route path="privacy-policy/sunny" element={<SunnyPrivacy />} />
+                <Route path="terms-conditions/sunny" element={<SunnyTerms />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>
