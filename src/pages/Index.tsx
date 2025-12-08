@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 const Index = () => {
   const featuredApps = [
     {
-      name: "GLP-1 Shot Tracker",
+      name: "Jabsy - GLP1 Shot Tracker",
       description: "Track every GLP-1 shot, weight change and macro in one place. Smart dashboard for Ozempic®, Wegovy®, Mounjaro® & more.",
       features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Privacy First"],
       downloads: "2025",
