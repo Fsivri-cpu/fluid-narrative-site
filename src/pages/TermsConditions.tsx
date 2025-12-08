@@ -9,6 +9,12 @@ const TermsConditions = () => {
       description: "Comprehensive terms covering app usage, medical disclaimers, and subscription policies.",
       icon: "/lovable-uploads/glp1-tracker-icon.png",
       slug: "glp-1-tracker"
+    },
+    {
+      name: "Sunny – UV & Tanning Tracker",
+      description: "Terms covering UV tracking features, health disclaimers, and subscription policies.",
+      icon: "/lovable-uploads/sunny-ai-icon.png",
+      slug: "sunny"
     }
   ];
 

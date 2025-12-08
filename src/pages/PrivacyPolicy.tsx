@@ -9,6 +9,12 @@ const PrivacyPolicy = () => {
       description: "Track your GLP-1 injections, symptoms, and health progress with secure data protection.",
       icon: "/lovable-uploads/glp1-tracker-icon.png",
       slug: "glp-1-tracker"
+    },
+    {
+      name: "Sunny – UV & Tanning Tracker",
+      description: "Track UV exposure and tanning sessions with on-device face processing for maximum privacy.",
+      icon: "/lovable-uploads/sunny-ai-icon.png",
+      slug: "sunny"
     }
   ];
 
