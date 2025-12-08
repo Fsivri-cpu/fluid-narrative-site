@@ -4,37 +4,47 @@ import { Smartphone, Download, Star, ArrowRight } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from 'react-router-dom';
+
 const Products = () => {
-  const apps = [{
-    id: 1,
-    name: "GLP-1 Shot Tracker",
-    subtitle: "Tirzepatide",
-    description: "Track every GLP-1 shot, weight change and macro in one place. Whether your doctor prescribed Ozempic®, Wegovy®, Mounjaro®, Zepbound®, compounded Semaglutide or Tirzepatide, our smart dashboard keeps your weekly dose on schedule and your progress crystal-clear.",
-    features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Protein & Nutrition Monitor", "Side-Effect Journal", "Privacy First"],
-    category: "Health & Fitness",
-    downloads: "2025",
-    rating: null,
-    comingSoon: true,
-    primaryColor: "from-blue-500 to-blue-600",
-    icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png"
-  }, {
-    id: 2,
-    name: "Professional AI Assistant App",
-    subtitle: "Virtual Support",
-    description: "24/7 AI-powered customer service assistant that understands your business needs.",
-    features: ["Smart Conversations", "Knowledge Base", "Multi-language", "24/7 Available"],
-    category: "Business",
-    downloads: "Available",
-    rating: 4.9,
-    comingSoon: false,
-    primaryColor: "from-purple-500 to-violet-600",
-    isDemo: true
-  }];
-  const categories = ["All", "Health & Fitness", "Business"];
-  const handleAppClick = (app: any) => {
-    if (app.isDemo) {
-      window.location.href = '/ai_assistant_app';
+  const navigate = useNavigate();
+  
+  const apps = [
+    {
+      id: 1,
+      name: "Jabsy - GLP1 Shot Tracker",
+      subtitle: "Track your GLP-1 journey",
+      description: "Track your GLP-1 shots and weight loss journey with Jabsy. Whether you're using Ozempic®, Wegovy®, Mounjaro®, Zepbound®, Semaglutide or Tirzepatide, Jabsy keeps your weekly injections on schedule and your progress crystal-clear.",
+      features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Nutrition Monitor", "Side-Effect Journal", "Privacy First"],
+      category: "Health & Fitness · Lifestyle",
+      downloads: "100+",
+      rating: 5.0,
+      comingSoon: false,
+      primaryColor: "from-blue-500 to-blue-600",
+      icon: "/lovable-uploads/glp1-tracker-icon.png",
+      slug: "jabsy",
+      appStoreLink: "https://apps.apple.com/tr/app/jabsy-glp1-shot-tracker/id6748824853"
+    },
+    {
+      id: 2,
+      name: "Sunny: UV & Tanning",
+      subtitle: "Tan Smarter. Glow Safely.",
+      description: "Sunny is a smart UV and tanning assistant that helps you achieve a beautiful tan while keeping your skin protected. Get personalized tanning plans, real-time UV Index updates, sun-safety reminders, and skin insights — all in one app.",
+      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis", "Sun Safety Guidance", "Track Your Progress"],
+      category: "Weather · Lifestyle",
+      downloads: "Coming Soon",
+      rating: null,
+      comingSoon: true,
+      primaryColor: "from-orange-400 to-orange-600",
+      icon: "/lovable-uploads/sunny-ai-icon.png",
+      slug: "sunny"
     }
+  ];
+
+  const categories = ["All", "Health & Fitness", "Weather", "Lifestyle"];
+
+  const handleAppClick = (app: any) => {
+    navigate(`/apps/${app.slug}`);
   };
   return <div className="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white">
       {/* Hero Section */}
@@ -92,15 +102,22 @@ const Products = () => {
                     </div>
                     <CardTitle className="text-2xl text-white mb-1">{app.name}</CardTitle>
                     <p className="text-gray-400 text-sm mb-3">{app.subtitle}</p>
-                    <div className="flex items-center gap-4 text-sm text-gray-400">
-                      {app.rating}
+                    <div className="flex items-center gap-4 text-sm text-gray-400 flex-wrap">
+                      {app.rating && (
+                        <span className="flex items-center gap-1">
+                          <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                          {app.rating}
+                        </span>
+                      )}
                       <span className="flex items-center gap-1">
                         <Download className="w-4 h-4" />
                         {app.downloads}
                       </span>
-                      <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
-                        {app.category}
-                      </Badge>
+                      {app.category.split(' · ').map((cat, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs border-gray-600 text-gray-300">
+                          {cat}
+                        </Badge>
+                      ))}
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0 flex flex-col flex-grow">
@@ -120,8 +137,12 @@ const Products = () => {
                     </div>
                     
                     <div className="mt-auto">
-                      <Button className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon && !app.isDemo ? 'text-gray-400' : 'text-white'}`} disabled={app.comingSoon && !app.isDemo} onClick={() => handleAppClick(app)}>
-                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Learn More' : 'Download App'}
+                      <Button 
+                        className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon ? 'opacity-70' : ''}`} 
+                        disabled={app.comingSoon} 
+                        onClick={() => handleAppClick(app)}
+                      >
+                        {app.comingSoon ? 'Coming Soon' : 'Learn More'}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
