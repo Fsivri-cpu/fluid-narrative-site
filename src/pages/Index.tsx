@@ -12,12 +12,13 @@ const Index = () => {
       name: "Jabsy - GLP1 Shot Tracker",
       description: "Track every GLP-1 shot, weight change and macro in one place. Smart dashboard for Ozempic®, Wegovy®, Mounjaro® & more.",
       features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Privacy First"],
-      downloads: "2025",
+      downloads: "New",
       rating: null,
       category: "Health",
-      comingSoon: true,
+      comingSoon: false,
       primaryColor: "from-blue-500 to-blue-600",
-      icon: "/lovable-uploads/glp1-tracker-icon.png"
+      icon: "/lovable-uploads/glp1-tracker-icon.png",
+      appStoreLink: "https://apps.apple.com/tr/app/jabsy-glp1-shot-tracker/id6748824853"
     },
     {
       name: "Professional AI Assistant App",
@@ -171,9 +172,15 @@ const Index = () => {
                         size="sm" 
                         className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon && !app.isDemo ? 'text-gray-400' : 'text-white'}`}
                         disabled={app.comingSoon && !app.isDemo}
-                        onClick={() => app.isDemo && (window.location.href = '/ai_assistant_app')}
+                        onClick={() => {
+                          if (app.appStoreLink) {
+                            window.open(app.appStoreLink, '_blank');
+                          } else if (app.isDemo) {
+                            window.location.href = '/ai_assistant_app';
+                          }
+                        }}
                       >
-                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.isDemo ? 'Learn More' : 'Download'}
+                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.appStoreLink ? 'Download on App Store' : app.isDemo ? 'Learn More' : 'Download'}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
