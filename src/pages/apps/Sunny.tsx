@@ -108,11 +108,11 @@ const Sunny = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center"
             >
-              <div className="w-64 h-[500px] bg-gradient-to-br from-orange-400/20 to-orange-600/20 rounded-[3rem] border border-orange-500/30 flex items-center justify-center">
+              <div className="w-64 md:w-72 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-orange-500/30 border border-orange-500/20">
                 <img 
-                  src="/lovable-uploads/sunny-ai-icon.png" 
-                  alt="Sunny App" 
-                  className="w-32 h-32 rounded-2xl"
+                  src="/lovable-uploads/sunny-hero-screenshot.png" 
+                  alt="Sunny App Screenshot" 
+                  className="w-full h-auto"
                 />
               </div>
             </motion.div>
