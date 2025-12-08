@@ -142,9 +142,11 @@ const Index = () => {
                         <Download className="w-4 h-4" />
                         {app.downloads}
                       </span>
-                      <Badge variant="outline" className="text-xs border-gray-600 text-gray-300">
-                        {app.category}
-                      </Badge>
+                      {app.category.split(' · ').map((cat, idx) => (
+                        <Badge key={idx} variant="outline" className="text-xs border-gray-600 text-gray-300">
+                          {cat}
+                        </Badge>
+                      ))}
                     </div>
                   </CardHeader>
                   <CardContent className="pt-0 flex flex-col flex-grow">
