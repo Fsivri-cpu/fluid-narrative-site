@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Smartphone, Code, Zap, Users, ArrowRight, Download, Star } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -18,7 +18,8 @@ const Index = () => {
       comingSoon: false,
       primaryColor: "from-blue-500 to-blue-600",
       icon: "/lovable-uploads/glp1-tracker-icon.png",
-      appStoreLink: "https://apps.apple.com/tr/app/jabsy-glp1-shot-tracker/id6748824853"
+      appStoreLink: "https://apps.apple.com/tr/app/jabsy-glp1-shot-tracker/id6748824853",
+      slug: "jabsy"
     },
     {
       name: "Sunny: UV & Tanning",
@@ -29,7 +30,8 @@ const Index = () => {
       category: "Weather · Lifestyle",
       comingSoon: true,
       primaryColor: "from-orange-400 to-orange-600",
-      icon: "/lovable-uploads/sunny-ai-icon.png"
+      icon: "/lovable-uploads/sunny-ai-icon.png",
+      slug: "sunny"
     }
   ];
 
@@ -114,7 +116,10 @@ const Index = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group flex flex-col">
+                <Card 
+                  className="h-full bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300 group flex flex-col cursor-pointer"
+                  onClick={() => window.location.href = `/apps/${app.slug}`}
+                >
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between mb-4">
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center`}>
