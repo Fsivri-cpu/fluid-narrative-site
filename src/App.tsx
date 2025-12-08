@@ -42,10 +42,10 @@ const App = () => (
                 <Route path="ai_assistant_app" element={<AIAssistantApp />} />
                 <Route path="contact" element={<Contact />} />
                 <Route path="privacy-policy" element={<PrivacyPolicy />} />
-                <Route path="privacy-policy/jabsy" element={<GLP1TrackerPrivacy />} />
+                <Route path="privacy-policy/glp-1-tracker" element={<GLP1TrackerPrivacy />} />
                 <Route path="privacy-policy/sunny" element={<SunnyPrivacy />} />
                 <Route path="terms-conditions" element={<TermsConditions />} />
-                <Route path="terms-conditions/jabsy" element={<GLP1TrackerTerms />} />
+                <Route path="terms-conditions/glp-1-tracker" element={<GLP1TrackerTerms />} />
                 <Route path="terms-conditions/sunny" element={<SunnyTerms />} />
                 <Route path="faq" element={<FAQ />} />
                 <Route path="cookies" element={<Cookies />} />
