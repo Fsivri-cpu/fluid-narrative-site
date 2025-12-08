@@ -8,7 +8,7 @@ const TermsConditions = () => {
       name: "Jabsy – GLP-1 Shot Tracker",
       description: "Comprehensive terms covering app usage, medical disclaimers, and subscription policies.",
       icon: "/lovable-uploads/glp1-tracker-icon.png",
-      slug: "glp-1-tracker"
+      slug: "jabsy"
     },
     {
       name: "Sunny – UV & Tanning Tracker",
