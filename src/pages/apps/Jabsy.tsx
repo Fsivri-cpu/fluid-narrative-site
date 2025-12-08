@@ -99,11 +99,11 @@ const Jabsy = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center"
             >
-              <div className="w-64 h-[500px] bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-[3rem] border border-blue-500/30 flex items-center justify-center">
+              <div className="w-64 md:w-72 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-blue-500/30 border border-blue-500/20">
                 <img 
-                  src="/lovable-uploads/glp1-tracker-icon.png" 
-                  alt="Jabsy App" 
-                  className="w-32 h-32 rounded-2xl"
+                  src="/lovable-uploads/jabsy-hero-screenshot.png" 
+                  alt="Jabsy App Screenshot" 
+                  className="w-full h-auto"
                 />
               </div>
             </motion.div>
