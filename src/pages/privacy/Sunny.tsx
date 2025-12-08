@@ -36,7 +36,8 @@ const SunnyPrivacy = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-            <span><strong>Last Updated:</strong> December 2025</span>
+            <span><strong>Effective Date:</strong> 08 Dec 2025</span>
+            <span><strong>Last Updated:</strong> 08 Dec 2025</span>
           </div>
         </motion.div>
 
@@ -45,7 +46,7 @@ const SunnyPrivacy = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto space-y-12"
+          className="max-w-4xl mx-auto space-y-12 prose prose-lg dark:prose-invert max-w-none"
         >
           {/* Introduction */}
           <section className="bg-card rounded-lg p-8 border border-border">
@@ -61,54 +62,47 @@ const SunnyPrivacy = () => {
           {/* Information We Collect */}
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">2. Information We Collect</h2>
-            
-            <h3 className="text-xl font-medium mt-6 mb-3">2.1 Information You Provide</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• Skin profile information (skin tone, tanning preferences, sensitivity)</li>
-              <li>• Optional account information such as email (if account creation is enabled)</li>
-              <li>• Photos uploaded for skin analysis</li>
-            </ul>
-
-            <h3 className="text-xl font-medium mt-6 mb-3">2.2 Photos & AI Processing</h3>
-            <p className="text-muted-foreground mb-2">If you upload a photo for skin analysis:</p>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• The image is processed through an OpenAI model via a secure Supabase Edge Function</li>
-              <li>• Photos are not stored, retained, or used for training</li>
-              <li>• The App does not save photos on external servers</li>
-            </ul>
-
-            <h3 className="text-xl font-medium mt-6 mb-3">2.3 Automatically Collected Information</h3>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• Location data (precise or approximate) used to retrieve UV Index through Apple WeatherKit</li>
-              <li>• Device details such as model, OS version, app version, performance data</li>
-              <li>• Usage analytics and interaction events</li>
-            </ul>
-
-            <h3 className="text-xl font-medium mt-6 mb-3">2.4 Third-Party Analytics & Attribution</h3>
-            <p className="text-muted-foreground mb-2">We use:</p>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• Mixpanel</li>
-              <li>• Firebase Analytics</li>
-              <li>• AppsFlyer</li>
-              <li>• RevenueCat</li>
-              <li>• Superwall</li>
-            </ul>
-            <p className="text-muted-foreground mt-4 mb-2">These services may collect:</p>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• Device identifiers</li>
-              <li>• App usage events</li>
-              <li>• Attribution data</li>
-              <li>• Funnel interactions (paywall, subscription, onboarding)</li>
-            </ul>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-border">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="border border-border p-3 text-left">Category</th>
+                    <th className="border border-border p-3 text-left">Examples</th>
+                    <th className="border border-border p-3 text-left">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted-foreground">
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Information You Provide</td>
+                    <td className="border border-border p-3">Skin profile (skin tone, tanning preferences, sensitivity); optional email for account</td>
+                    <td className="border border-border p-3">Personalization & account linking</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Photos & AI Processing</td>
+                    <td className="border border-border p-3">Facial photos for skin analysis → processed via <strong>OpenAI API</strong> through Supabase Edge Function</td>
+                    <td className="border border-border p-3">AI skin-tone estimation (not stored)</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Automatic Data</td>
+                    <td className="border border-border p-3">Location (for UV Index via Apple WeatherKit); device model, OS, app version, performance logs</td>
+                    <td className="border border-border p-3">UV delivery & debugging</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Analytics & Attribution</td>
+                    <td className="border border-border p-3">Device identifiers, app usage events, funnel interactions (paywall, onboarding)</td>
+                    <td className="border border-border p-3">Product analytics & attribution</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-muted-foreground mt-4">
-              We do not share sensitive personal data with these services.
+              We do not share sensitive personal data with analytics services.
             </p>
           </section>
 
           {/* How We Use Your Information */}
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">3. How We Use Your Information</h2>
-            <p className="text-muted-foreground mb-4">We use collected information to:</p>
             <ul className="space-y-2 text-muted-foreground">
               <li>• Provide personalized tanning recommendations</li>
               <li>• Deliver real-time UV Index through Apple WeatherKit</li>
@@ -117,8 +111,8 @@ const SunnyPrivacy = () => {
               <li>• Analyze product usage</li>
               <li>• Perform AI skin-tone evaluation</li>
             </ul>
-            <p className="text-muted-foreground mt-4 font-semibold">
-              We never sell your personal information.
+            <p className="text-muted-foreground mt-4">
+              <strong>We never sell your personal information.</strong>
             </p>
           </section>
 
@@ -127,8 +121,8 @@ const SunnyPrivacy = () => {
             <h2 className="text-2xl font-semibold mb-4">4. How We Share Your Information</h2>
             <p className="text-muted-foreground mb-4">Information may be shared only with:</p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Service providers listed above</li>
-              <li>• OpenAI (solely for processing photos)</li>
+              <li>• Service providers listed below</li>
+              <li>• OpenAI (solely for processing photos – not stored or used for training)</li>
               <li>• Apple WeatherKit (for weather/UV data fetching)</li>
             </ul>
             <p className="text-muted-foreground mt-4">
@@ -136,9 +130,54 @@ const SunnyPrivacy = () => {
             </p>
           </section>
 
+          {/* Third-Party Services */}
+          <section className="bg-card rounded-lg p-8 border border-border">
+            <h2 className="text-2xl font-semibold mb-4">5. Third-Party Services</h2>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-border">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="border border-border p-3 text-left">Service</th>
+                    <th className="border border-border p-3 text-left">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted-foreground">
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Mixpanel</td>
+                    <td className="border border-border p-3">Product analytics</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Firebase Analytics</td>
+                    <td className="border border-border p-3">General analytics & crash reporting</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">AppsFlyer</td>
+                    <td className="border border-border p-3">Attribution & campaign measurement</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">RevenueCat</td>
+                    <td className="border border-border p-3">Subscriptions & payments</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Superwall</td>
+                    <td className="border border-border p-3">Paywall management</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Apple WeatherKit</td>
+                    <td className="border border-border p-3">UV Index & weather data</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold"><strong>OpenAI API</strong></td>
+                    <td className="border border-border p-3">Skin-tone analysis (photos discarded after processing)</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
           {/* Data Retention */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">5. Data Retention</h2>
+            <h2 className="text-2xl font-semibold mb-4">6. Data Retention</h2>
             <ul className="space-y-2 text-muted-foreground">
               <li>• Photos are immediately deleted after analysis</li>
               <li>• Analytics data is retained by third-party providers per their policies</li>
@@ -148,7 +187,7 @@ const SunnyPrivacy = () => {
 
           {/* Data Security */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">6. Data Security</h2>
+            <h2 className="text-2xl font-semibold mb-4">7. Data Security</h2>
             <p className="text-muted-foreground">
               We use industry-standard security practices to protect your data. While no method is 100% secure, we take reasonable steps to safeguard your information.
             </p>
@@ -156,7 +195,7 @@ const SunnyPrivacy = () => {
 
           {/* Your Rights & Choices */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">7. Your Rights & Choices</h2>
+            <h2 className="text-2xl font-semibold mb-4">8. Your Rights & Choices</h2>
             <p className="text-muted-foreground mb-4">Depending on your location, you may request:</p>
             <ul className="space-y-2 text-muted-foreground">
               <li>• Access to your information</li>
@@ -171,7 +210,7 @@ const SunnyPrivacy = () => {
 
           {/* International Data Transfers */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">8. International Data Transfers</h2>
+            <h2 className="text-2xl font-semibold mb-4">9. International Data Transfers</h2>
             <p className="text-muted-foreground">
               Your information may be processed in regions outside your country, including the U.S. We rely on applicable safeguards to comply with data protection laws.
             </p>
@@ -179,15 +218,15 @@ const SunnyPrivacy = () => {
 
           {/* Children's Privacy */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">9. Children's Privacy</h2>
+            <h2 className="text-2xl font-semibold mb-4">10. Children's Privacy</h2>
             <p className="text-muted-foreground">
-              Sunny is not intended for users under 13. We do not knowingly collect information from children.
+              Sunny is <strong>not intended for users under 13</strong>. We do not knowingly collect information from children.
             </p>
           </section>
 
           {/* Changes to This Policy */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">10. Changes to This Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4">11. Changes to This Policy</h2>
             <p className="text-muted-foreground">
               We may update this Privacy Policy periodically. Updated versions will be posted within the App or on our website.
             </p>
@@ -195,9 +234,11 @@ const SunnyPrivacy = () => {
 
           {/* Contact */}
           <section className="bg-card rounded-lg p-8 border border-border">
-            <h2 className="text-2xl font-semibold mb-4">11. Contact</h2>
+            <h2 className="text-2xl font-semibold mb-4">12. Contact</h2>
             <p className="text-muted-foreground">
-              For questions or requests, email: <strong>info@strivexai.co</strong>
+              Email <strong>info@strivexai.co</strong> or write to:
+              <br />
+              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>
