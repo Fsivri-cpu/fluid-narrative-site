@@ -1,30 +1,28 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-
 const GLP1TrackerTerms = () => {
-  return (
-    <div className="min-h-screen bg-background text-foreground">
+  return <div className="min-h-screen bg-background text-foreground">
       <div className="container mx-auto px-4 py-8 pt-24">
 
         {/* Main heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="mb-12"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6,
+        delay: 0.1
+      }} className="mb-12">
           <Link to="/apps/jabsy" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors">
             <ArrowLeft className="w-4 h-4" />
             Back to Jabsy
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <img 
-              src="/lovable-uploads/glp1-tracker-icon.png" 
-              alt="Jabsy" 
-              className="w-16 h-16 rounded-2xl"
-            />
+            <img src="/lovable-uploads/glp1-tracker-icon.png" alt="Jabsy" className="w-16 h-16 rounded-2xl" />
             <div>
               <h1 className="text-4xl md:text-5xl font-bold">
                 Terms & Conditions
@@ -36,18 +34,22 @@ const GLP1TrackerTerms = () => {
           </div>
           
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-            <span><strong>Effective Date:</strong> 08 Dec 2025</span>
+            <span><strong>Effective Date:</strong>Effective Date: 14 July 2025</span>
             <span><strong>Last Updated:</strong> 08 Dec 2025</span>
           </div>
         </motion.div>
 
         {/* Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto space-y-12"
-        >
+        <motion.div initial={{
+        opacity: 0,
+        y: 30
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 0.6,
+        delay: 0.2
+      }} className="max-w-4xl mx-auto space-y-12">
           {/* Acceptance */}
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance</h2>
@@ -194,8 +196,6 @@ const GLP1TrackerTerms = () => {
           </section>
         </motion.div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default GLP1TrackerTerms;
