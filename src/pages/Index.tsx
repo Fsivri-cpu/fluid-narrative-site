@@ -37,8 +37,8 @@ const Index = () => {
 
   const stats = [
     { label: "App Launch", value: "2025" },
-    { label: "AI Assistant", value: "Available" },
-    { label: "More Apps", value: "Soon" },
+    { label: "App Rating", value: "5.0" },
+    { label: "Active Users", value: "500+" },
     { label: "Global Reach", value: "25+" }
   ];
 
