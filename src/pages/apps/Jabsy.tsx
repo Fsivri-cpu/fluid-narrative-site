@@ -6,6 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const Jabsy = () => {
+  const screenshots = [
+    { src: "/lovable-uploads/jabsy-screenshot-1.png", alt: "Track Your GLP-1 Journey" },
+    { src: "/lovable-uploads/jabsy-screenshot-2.png", alt: "Remember Your Transformation" },
+    { src: "/lovable-uploads/jabsy-screenshot-3.png", alt: "Snap & Log Meals in Seconds" },
+    { src: "/lovable-uploads/jabsy-screenshot-4.png", alt: "Never Miss a Dose" },
+    { src: "/lovable-uploads/jabsy-screenshot-5.png", alt: "Manage Side Effects" },
+    { src: "/lovable-uploads/jabsy-screenshot-6.png", alt: "See Your Daily Progress" },
+  ];
+
   const features = [
     {
       icon: Bell,
@@ -133,6 +142,45 @@ const Jabsy = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-gray-400">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Screenshots Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">App Preview</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Take a look at Jabsy's intuitive interface and powerful tracking features.
+            </p>
+          </motion.div>
+
+          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+            {screenshots.map((screenshot, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex-shrink-0 snap-center"
+              >
+                <div className="w-72 md:w-80 rounded-3xl overflow-hidden shadow-2xl shadow-blue-500/20 border border-blue-500/20">
+                  <img 
+                    src={screenshot.src} 
+                    alt={screenshot.alt}
+                    className="w-full h-auto"
+                  />
+                </div>
               </motion.div>
             ))}
           </div>
