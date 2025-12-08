@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 const TermsConditions = () => {
   const apps = [
     {
-      name: "GLP-1 Shot Tracker – Tirzepatide",
+      name: "Jabsy – GLP-1 Shot Tracker",
       description: "Comprehensive terms covering app usage, medical disclaimers, and subscription policies.",
-      icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png",
+      icon: "/lovable-uploads/glp1-tracker-icon.png",
       slug: "glp-1-tracker"
     }
   ];
