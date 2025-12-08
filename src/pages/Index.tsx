@@ -29,7 +29,8 @@ const Index = () => {
       category: "Business",
       comingSoon: false,
       primaryColor: "from-purple-500 to-violet-600",
-      isDemo: true
+      isDemo: true,
+      icon: "/lovable-uploads/sunny-ai-icon.png"
     }
   ];
 
