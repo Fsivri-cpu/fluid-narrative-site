@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
       name: "Jabsy – GLP-1 Shot Tracker",
       description: "Track your GLP-1 injections, symptoms, and health progress with secure data protection.",
       icon: "/lovable-uploads/glp1-tracker-icon.png",
-      slug: "jabsy"
+      slug: "glp-1-tracker"
     },
     {
       name: "Sunny – UV & Tanning Tracker",
