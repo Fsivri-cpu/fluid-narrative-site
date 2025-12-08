@@ -36,7 +36,7 @@ const GLP1TrackerTerms = () => {
           </div>
           
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-            <span><strong>Last Updated:</strong> 14 Jul 2025</span>
+            <span><strong>Last Updated:</strong> 08 Dec 2025</span>
           </div>
         </motion.div>
 
