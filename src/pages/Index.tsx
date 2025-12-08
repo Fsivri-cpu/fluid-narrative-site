@@ -21,15 +21,14 @@ const Index = () => {
       appStoreLink: "https://apps.apple.com/tr/app/jabsy-glp1-shot-tracker/id6748824853"
     },
     {
-      name: "Professional AI Assistant App",
-      description: "24/7 customer service AI that understands your business",
-      features: ["Smart Conversations", "Knowledge Base", "24/7 Available"],
-      downloads: "Available",
+      name: "Sunny: UV & Tanning",
+      description: "Tan smarter, glow safely. Personalized tanning plans, real-time UV Index, sun-safety reminders, and skin insights — all in one app.",
+      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis"],
+      downloads: "Coming Soon",
       rating: null,
-      category: "Business",
-      comingSoon: false,
-      primaryColor: "from-purple-500 to-violet-600",
-      isDemo: true,
+      category: "Health & Fitness",
+      comingSoon: true,
+      primaryColor: "from-orange-400 to-orange-600",
       icon: "/lovable-uploads/sunny-ai-icon.png"
     }
   ];
@@ -171,17 +170,15 @@ const Index = () => {
                     <div className="mt-auto">
                       <Button 
                         size="sm" 
-                        className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon && !app.isDemo ? 'text-gray-400' : 'text-white'}`}
-                        disabled={app.comingSoon && !app.isDemo}
+                        className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon ? 'opacity-70' : ''}`}
+                        disabled={app.comingSoon}
                         onClick={() => {
                           if (app.appStoreLink) {
                             window.open(app.appStoreLink, '_blank');
-                          } else if (app.isDemo) {
-                            window.location.href = '/ai_assistant_app';
                           }
                         }}
                       >
-                        {app.comingSoon && !app.isDemo ? 'Coming Soon' : app.appStoreLink ? 'Download on App Store' : app.isDemo ? 'Learn More' : 'Download'}
+                        {app.comingSoon ? 'Coming Soon' : app.appStoreLink ? 'Download on App Store' : 'Download'}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
