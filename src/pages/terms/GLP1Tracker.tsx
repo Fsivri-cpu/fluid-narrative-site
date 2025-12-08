@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 
 const GLP1TrackerTerms = () => {
   return (
@@ -12,12 +14,27 @@ const GLP1TrackerTerms = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="mb-12"
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-2">
-            Terms & Conditions
-          </h1>
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-4">
-            GLP-1 Shot Tracker – Tirzepatide
-          </h2>
+          <Link to="/apps/jabsy" className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Jabsy
+          </Link>
+          
+          <div className="flex items-center gap-4 mb-6">
+            <img 
+              src="/lovable-uploads/glp1-tracker-icon.png" 
+              alt="Jabsy" 
+              className="w-16 h-16 rounded-2xl"
+            />
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold">
+                Terms & Conditions
+              </h1>
+              <h2 className="text-xl md:text-2xl text-muted-foreground">
+                Jabsy – GLP-1 Shot Tracker
+              </h2>
+            </div>
+          </div>
+          
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
             <span><strong>Last Updated:</strong> 14 Jul 2025</span>
           </div>
@@ -34,7 +51,7 @@ const GLP1TrackerTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance</h2>
             <p className="text-muted-foreground">
-              These Terms govern your use of the <strong>GLP-1 Shot Tracker – Tirzepatide</strong> mobile application ("App") provided by <strong>Furkan Sivri</strong>. 
+              These Terms govern your use of the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application ("App") provided by <strong>StriveX</strong>. 
               Installing or using the App means you agree to these Terms. If you disagree, delete the App.
             </p>
           </section>
