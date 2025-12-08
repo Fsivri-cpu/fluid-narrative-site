@@ -17,7 +17,7 @@ const Index = () => {
       category: "Health",
       comingSoon: true,
       primaryColor: "from-blue-500 to-blue-600",
-      icon: "/lovable-uploads/ccdf075f-0bc4-4639-bc55-4d295b215b3e.png"
+      icon: "/lovable-uploads/glp1-tracker-icon.png"
     },
     {
       name: "Professional AI Assistant App",
