@@ -36,7 +36,8 @@ const SunnyTerms = () => {
           </div>
 
           <div className="flex flex-wrap gap-4 text-sm text-muted-foreground mb-8">
-            <span><strong>Last Updated:</strong> December 2025</span>
+            <span><strong>Effective Date:</strong> 08 Dec 2025</span>
+            <span><strong>Last Updated:</strong> 08 Dec 2025</span>
           </div>
         </motion.div>
 
@@ -66,7 +67,7 @@ const SunnyTerms = () => {
               <li>• Sun-safety reminders and notifications</li>
             </ul>
             <p className="text-muted-foreground mt-4">
-              Sunny is for informational purposes only.
+              Sunny is for <strong>informational purposes only</strong>.
             </p>
           </section>
 
@@ -74,7 +75,7 @@ const SunnyTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">3. Health Disclaimer</h2>
             <p className="text-muted-foreground">
-              Sunny does not provide medical advice, diagnosis, or treatment. It cannot assess skin cancer risk or determine safe medical exposure levels. Always consult a healthcare professional for medical questions or skin concerns.
+              Sunny does <strong>not</strong> provide medical advice, diagnosis, or treatment. It cannot assess skin cancer risk or determine safe medical exposure levels. Always consult a healthcare professional for medical questions or skin concerns.
             </p>
           </section>
 
@@ -105,15 +106,46 @@ const SunnyTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">6. Third-Party Services</h2>
             <p className="text-muted-foreground mb-4">Sunny uses third-party services including:</p>
-            <ul className="space-y-2 text-muted-foreground">
-              <li>• RevenueCat</li>
-              <li>• Superwall</li>
-              <li>• Mixpanel</li>
-              <li>• Firebase Analytics</li>
-              <li>• AppsFlyer</li>
-              <li>• Apple WeatherKit</li>
-              <li>• OpenAI</li>
-            </ul>
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-border">
+                <thead>
+                  <tr className="bg-muted">
+                    <th className="border border-border p-3 text-left">Service</th>
+                    <th className="border border-border p-3 text-left">Purpose</th>
+                  </tr>
+                </thead>
+                <tbody className="text-muted-foreground">
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">RevenueCat</td>
+                    <td className="border border-border p-3">Subscriptions & payments</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Superwall</td>
+                    <td className="border border-border p-3">Paywall management</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Mixpanel</td>
+                    <td className="border border-border p-3">Product analytics</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Firebase Analytics</td>
+                    <td className="border border-border p-3">Analytics & crash reporting</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">AppsFlyer</td>
+                    <td className="border border-border p-3">Attribution analytics</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">Apple WeatherKit</td>
+                    <td className="border border-border p-3">UV Index & weather data</td>
+                  </tr>
+                  <tr>
+                    <td className="border border-border p-3 font-semibold">OpenAI</td>
+                    <td className="border border-border p-3">AI skin analysis</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <p className="text-muted-foreground mt-4">
               Your use of Sunny constitutes acceptance of their respective terms.
             </p>
@@ -144,8 +176,8 @@ const SunnyTerms = () => {
               <li>• Misuse of tanning guidelines</li>
               <li>• Any medical or cosmetic outcome</li>
             </ul>
-            <p className="text-muted-foreground mt-4 font-semibold">
-              Use of the App is at your own risk.
+            <p className="text-muted-foreground mt-4">
+              <strong>Use of the App is at your own risk.</strong>
             </p>
           </section>
 
@@ -169,7 +201,9 @@ const SunnyTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">11. Contact</h2>
             <p className="text-muted-foreground">
-              For support or inquiries, email: <strong>info@strivexai.co</strong>
+              Email <strong>info@strivexai.co</strong> or write to:
+              <br />
+              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>
