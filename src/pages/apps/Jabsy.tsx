@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Star, Download, Shield, Bell, TrendingDown, Smartphone } from 'lucide-react';
+import { ArrowLeft, Star, Download, Shield, Bell, TrendingDown, Apple, ClipboardList, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -19,22 +19,27 @@ const Jabsy = () => {
     {
       icon: Bell,
       title: "Shot Planner & Reminders",
-      description: "Never miss a dose with smart reminders and injection site rotation tracking."
+      description: "Log each GLP-1 shot with site rotation, time-zone auto-shift and missed-dose alerts."
     },
     {
       icon: TrendingDown,
       title: "Weight-Loss Insights",
-      description: "Track your progress with detailed charts, trends, and personalized insights."
+      description: "BMI, % change and streaks turn raw numbers into motivating trends; add before/after photos for clarity."
     },
     {
-      icon: Shield,
+      icon: Apple,
+      title: "Nutrition Monitor",
+      description: "Track protein, fiber, water and calories; sync workouts, steps and heart rate with Apple Health."
+    },
+    {
+      icon: ClipboardList,
+      title: "Side-Effect Journal",
+      description: "Tag nausea, fatigue or cravings so patterns are easier to spot and share with your doctor."
+    },
+    {
+      icon: Lock,
       title: "Privacy First",
-      description: "All your health data stays on your device. No cloud uploads, no tracking."
-    },
-    {
-      icon: Smartphone,
-      title: "Smart Dashboard",
-      description: "Everything you need in one place: shots, weight, macros, and more."
+      description: "On-device encryption + iCloud backup; zero ads, zero data brokers. Your health data stays yours."
     }
   ];
 
@@ -80,7 +85,7 @@ const Jabsy = () => {
               </div>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Track every GLP-1 shot, weight change and macro in one place. Smart dashboard for Ozempic®, Wegovy®, Mounjaro® & more.
+                Track your GLP-1 shots and weight loss journey with Jabsy. Whether you're using Ozempic®, Wegovy®, Mounjaro®, Zepbound®, Semaglutide or Tirzepatide, Jabsy keeps your weekly injections on schedule and your progress crystal-clear.
               </p>
               
               <Button 
