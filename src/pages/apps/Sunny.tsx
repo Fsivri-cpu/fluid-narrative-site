@@ -242,6 +242,21 @@ const Sunny = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Legal Links */}
+      <section className="py-8 px-4 border-t border-white/10">
+        <div className="container mx-auto max-w-4xl">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+            <Link to="/privacy-policy/sunny" className="hover:text-white transition-colors">
+              Privacy Policy
+            </Link>
+            <span className="text-gray-600">•</span>
+            <Link to="/terms-conditions/sunny" className="hover:text-white transition-colors">
+              Terms & Conditions
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
