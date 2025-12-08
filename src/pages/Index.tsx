@@ -135,8 +135,11 @@ const Index = () => {
                         </Badge>
                       )}
                     </div>
-                    <CardTitle className="text-2xl text-white mb-2">{app.name}</CardTitle>
-                    <div className="flex items-center gap-3 text-sm text-gray-400 mb-3">
+                    <CardTitle className="text-2xl text-white mb-1">{app.name}</CardTitle>
+                    <p className="text-gray-400 text-sm mb-3">
+                      {app.name.includes('Jabsy') ? 'Track your GLP-1 journey' : 'Tan Smarter. Glow Safely.'}
+                    </p>
+                    <div className="flex items-center gap-4 text-sm text-gray-400 flex-wrap">
                       {app.rating && (
                         <span className="flex items-center gap-1">
                           <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
@@ -156,36 +159,34 @@ const Index = () => {
                   </CardHeader>
                   <CardContent className="pt-0 flex flex-col flex-grow">
                     <div className="flex-grow">
-                      <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                      <p className="text-gray-300 mb-6 leading-relaxed">
                         {app.description}
                       </p>
-                      {app.features && (
-                        <div className="mb-4">
-                          <h4 className="text-xs font-medium text-gray-400 uppercase tracking-wider mb-2">Key Features</h4>
-                          <div className="space-y-1">
-                            {app.features.map((feature, idx) => (
-                              <div key={idx} className="flex items-center gap-2 text-xs text-gray-300">
-                                <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
-                                {feature}
-                              </div>
-                            ))}
-                          </div>
+                      <div className="space-y-3 mb-6">
+                        <h4 className="text-sm font-medium text-gray-400 uppercase tracking-wider">Key Features</h4>
+                        <div className="grid grid-cols-2 gap-2">
+                          {app.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                              {feature}
+                            </div>
+                          ))}
                         </div>
-                      )}
+                      </div>
                     </div>
                     
                     <div className="mt-auto">
                       <Button 
-                        size="sm" 
                         className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white ${app.comingSoon ? 'opacity-70' : ''}`}
                         disabled={app.comingSoon}
-                        onClick={() => {
-                          if (app.appStoreLink) {
-                            window.open(app.appStoreLink, '_blank');
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          if (!app.comingSoon) {
+                            window.location.href = `/apps/${app.slug}`;
                           }
                         }}
                       >
-                        {app.comingSoon ? 'Coming Soon' : app.appStoreLink ? 'Download on App Store' : 'Download'}
+                        {app.comingSoon ? 'Coming Soon' : 'Learn More'}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
