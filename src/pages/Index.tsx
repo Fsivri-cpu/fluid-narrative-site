@@ -10,8 +10,8 @@ const Index = () => {
   const featuredApps = [
     {
       name: "Jabsy - GLP1 Shot Tracker",
-      description: "Track every GLP-1 shot, weight change and macro in one place. Smart dashboard for Ozempic®, Wegovy®, Mounjaro® & more.",
-      features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Privacy First"],
+      description: "Track your GLP-1 shots and weight loss journey with Jabsy. Whether you're using Ozempic®, Wegovy®, Mounjaro®, Zepbound®, Semaglutide or Tirzepatide, Jabsy keeps your weekly injections on schedule and your progress crystal-clear.",
+      features: ["Shot Planner & Reminders", "Weight-Loss Insights", "Nutrition Monitor", "Side-Effect Journal", "Privacy First"],
       downloads: "100+",
       rating: 5.0,
       category: "Health & Fitness · Lifestyle",
@@ -23,8 +23,8 @@ const Index = () => {
     },
     {
       name: "Sunny: UV & Tanning",
-      description: "Tan smarter, glow safely. Personalized tanning plans, real-time UV Index, sun-safety reminders, and skin insights — all in one app.",
-      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis"],
+      description: "Sunny is a smart UV and tanning assistant that helps you achieve a beautiful tan while keeping your skin protected. Get personalized tanning plans, real-time UV Index updates, sun-safety reminders, and skin insights — all in one app.",
+      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis", "Sun Safety Guidance", "Track Your Progress"],
       downloads: "Coming Soon",
       rating: null,
       category: "Weather · Lifestyle",
