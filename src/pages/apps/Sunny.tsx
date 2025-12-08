@@ -6,6 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const Sunny = () => {
+  const screenshots = [
+    { src: "/lovable-uploads/sunny-screenshot-1.png", alt: "Sun-kissed without the risk" },
+    { src: "/lovable-uploads/sunny-screenshot-2.png", alt: "Perfect tan - My Journey" },
+    { src: "/lovable-uploads/sunny-screenshot-3.png", alt: "Custom routine" },
+    { src: "/lovable-uploads/sunny-screenshot-4.png", alt: "Smart UV tracking" },
+    { src: "/lovable-uploads/sunny-screenshot-5.png", alt: "Tan safely settings" },
+  ];
+
   const features = [
     {
       icon: Sun,
@@ -108,6 +116,45 @@ const Sunny = () => {
                 />
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Screenshots Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">App Preview</h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Take a look at Sunny's beautiful interface and powerful features.
+            </p>
+          </motion.div>
+
+          <div className="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide">
+            {screenshots.map((screenshot, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex-shrink-0 snap-center"
+              >
+                <div className="w-72 md:w-80 rounded-3xl overflow-hidden shadow-2xl shadow-orange-500/20 border border-orange-500/20">
+                  <img 
+                    src={screenshot.src} 
+                    alt={screenshot.alt}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
