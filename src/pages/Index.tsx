@@ -181,12 +181,12 @@ const Index = () => {
                         disabled={app.comingSoon}
                         onClick={(e) => {
                           e.stopPropagation();
-                          if (!app.comingSoon) {
-                            window.location.href = `/apps/${app.slug}`;
+                          if (app.appStoreLink) {
+                            window.open(app.appStoreLink, '_blank');
                           }
                         }}
                       >
-                        {app.comingSoon ? 'Coming Soon' : 'Learn More'}
+                        {app.comingSoon ? 'Coming Soon' : app.appStoreLink ? 'Download on App Store' : 'Learn More'}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Button>
                     </div>
