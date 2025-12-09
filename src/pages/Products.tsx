@@ -145,12 +145,25 @@ const Products = () => {
                     </div>
                     
                     <div className="mt-auto">
-                      <Button 
-                        className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white`}
-                      >
-                        {app.comingSoon ? 'Coming Soon' : 'Learn More'}
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
+                      {app.appStoreLink ? (
+                        <Button 
+                          className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white`}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            window.open(app.appStoreLink, '_blank');
+                          }}
+                        >
+                          Download on App Store
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      ) : (
+                        <Button 
+                          className={`w-full bg-gradient-to-r ${app.primaryColor} hover:opacity-90 transition-opacity text-white`}
+                        >
+                          {app.comingSoon ? 'Coming Soon' : 'Learn More'}
+                          <ArrowRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
