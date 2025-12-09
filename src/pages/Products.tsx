@@ -136,7 +136,7 @@ const Products = () => {
                         <div className="grid grid-cols-2 gap-2">
                           {app.features.map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                              <div className="w-1.5 h-1.5 bg-blue-400 rounded-full"></div>
+                              <div className={`w-1.5 h-1.5 rounded-full ${app.slug === 'sunny' ? 'bg-orange-400' : 'bg-blue-400'}`}></div>
                               {feature}
                             </div>
                           ))}
