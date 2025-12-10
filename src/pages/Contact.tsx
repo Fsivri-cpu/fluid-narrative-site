@@ -63,7 +63,7 @@ const Contact = () => {
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
                         <p className="text-gray-300">
-                          Vinkenburgstraat 2A, 3512 AB - Utrecht / The Netherlands
+                          İzmir Teknoloji Üssü, Gülbahçe, İçmeler Caddesi, 35433 Urla/İzmir, Türkiye
                         </p>
                       </div>
                     </div>
