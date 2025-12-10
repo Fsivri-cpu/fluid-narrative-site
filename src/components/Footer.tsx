@@ -64,12 +64,12 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="mt-1 mr-2 h-5 w-5 text-blue-300 flex-shrink-0" />
-                <span className="text-gray-300">İzmir Teknoloji Üssü, Gülbahçe, İçmeler Caddesi, 35433 Urla/İzmir, Türkiye</span>
+                <span className="text-gray-300">Vinkenburgstraat 2A, 3512 AB - Utrecht / The Netherlands</span>
               </li>
               
               <li className="flex items-center">
                 <Mail className="mr-2 h-5 w-5 text-blue-300 flex-shrink-0" />
-                <span className="text-gray-300">info@strivexai.co</span>
+                <span className="text-gray-300">info@vibepps.com</span>
               </li>
             </ul>
           </div>

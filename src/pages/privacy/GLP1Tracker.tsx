@@ -56,7 +56,7 @@ const GLP1TrackerPrivacy = () => {
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
               Vibepps Dijital Hizmetler A.Ş. ("we", "our", "us") owns and operates the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application (the "App").
-              We are based in Turkey and publish the App worldwide. <strong>We never sell or rent your identifiable personal or health data.</strong>
+              We are based in the Netherlands and publish the App worldwide. <strong>We never sell or rent your identifiable personal or health data.</strong>
             </p>
           </section>
 
@@ -64,7 +64,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">2. Scope & Age Limit</h2>
             <p className="text-muted-foreground">
-              This Policy covers data collected in the iOS and Android versions of the App and on strivexai.co.
+              This Policy covers data collected in the iOS and Android versions of the App and on vibepps.com.
               Minimum age to use the App is <strong>12 years</strong>.
             </p>
           </section>
@@ -254,7 +254,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">8. Your Rights</h2>
             <p className="text-muted-foreground">
-              Access, correct, delete, or export data → <strong>Settings › Data Controls</strong> or email <strong>support@strivexai.co</strong>. We respond within 30 days.
+              Access, correct, delete, or export data → <strong>Settings › Data Controls</strong> or email <strong>support@vibepps.com</strong>. We respond within 30 days.
             </p>
           </section>
 
@@ -294,9 +294,9 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">13. Contact</h2>
             <p className="text-muted-foreground">
-              Email <strong>support@strivexai.co</strong> or write to:
+              Email <strong>support@vibepps.com</strong> or write to:
               <br />
-              Vibepps Dijital Hizmetler A.Ş., İzmir Teknoloji Üssü, Gülbahçe, İçmeler Caddesi, 35433 Urla/İzmir, Türkiye.
+              Vibepps Dijital Hizmetler A.Ş., Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>

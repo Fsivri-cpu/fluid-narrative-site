@@ -77,7 +77,7 @@ const About = () => {
           }}>
               <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-300">
-                <p>Vibepps began as a shared vision between Furkan & Gizem—two product-obsessed technologists who believed everyday life could be simpler, smarter, and more human with the right apps. After years of refining AI-driven mobile products and scaling complex digital projects, they founded Vibepps in İzmir's thriving tech hub in 2025 to turn that vision into reality.</p>
+                <p>Vibepps began as a shared vision between Furkan & Gizem—two product-obsessed technologists who believed everyday life could be simpler, smarter, and more human with the right apps. After years of refining AI-driven mobile products and scaling complex digital projects, they relocated from Istanbul to the Netherlands' vibrant startup scene in 2025 to turn that vision into reality.</p>
                 <p>Today, the Vibepps team channels this joint expertise into a growing ecosystem of AI-powered apps that elevate health, productivity, and everything in between—proving that when curiosity meets craft, innovation scales one elegant app at a time.</p>
               </div>
             </motion.div>
