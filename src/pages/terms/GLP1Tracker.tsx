@@ -191,7 +191,7 @@ const GLP1TrackerTerms = () => {
             <p className="text-muted-foreground">
               Email <strong>support@vibepps.com</strong> or mail:
               <br />
-              Vibepps Dijital Hizmetler A.Ş., Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Vibepps Dijital Hizmetler A.Ş., İzmir Teknoloji Üssü, Gülbahçe, İçmeler Caddesi, 35433 Urla/İzmir, Türkiye.
             </p>
           </section>
         </motion.div>
