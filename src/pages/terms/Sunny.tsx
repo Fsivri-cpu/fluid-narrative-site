@@ -203,7 +203,7 @@ const SunnyTerms = () => {
             <p className="text-muted-foreground">
               Email <strong>info@strivexai.co</strong> or write to:
               <br />
-              Vibepps Dijital Hizmetler A.Ş., Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>

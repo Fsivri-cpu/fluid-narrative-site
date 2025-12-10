@@ -55,7 +55,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
-              Vibepps Dijital Hizmetler A.Ş. ("we", "our", "us") owns and operates the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application (the "App").
+              StriveX ("we", "our", "us") owns and operates the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application (the "App").
               We are based in the Netherlands and publish the App worldwide. <strong>We never sell or rent your identifiable personal or health data.</strong>
             </p>
           </section>
@@ -64,7 +64,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">2. Scope & Age Limit</h2>
             <p className="text-muted-foreground">
-              This Policy covers data collected in the iOS and Android versions of the App and on vibepps.com.
+              This Policy covers data collected in the iOS and Android versions of the App and on strivex.ai.
               Minimum age to use the App is <strong>12 years</strong>.
             </p>
           </section>
@@ -296,7 +296,7 @@ const GLP1TrackerPrivacy = () => {
             <p className="text-muted-foreground">
               Email <strong>support@strivexai.co</strong> or write to:
               <br />
-              Vibepps Dijital Hizmetler A.Ş., Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>

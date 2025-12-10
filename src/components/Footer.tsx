@@ -16,10 +16,10 @@ const Footer = () => {
           {/* Logo and Description */}
           <div className="space-y-4">
             <Link to="/" className="inline-block">
-              <img src="/lovable-uploads/ae9979cf-01be-41d9-a0d6-ec0fcbe768bd.png" alt="Vibepps Logo" className="h-12 bg-white p-1 rounded-md" />
+              <img src="/lovable-uploads/ae9979cf-01be-41d9-a0d6-ec0fcbe768bd.png" alt="StriveX Logo" className="h-12 bg-white p-1 rounded-md" />
             </Link>
             <p className="text-gray-300 text-sm">
-              From health to productivity, Vibepps delivers AI-driven apps that fit every need.
+              From health to productivity, StriveX delivers AI-driven apps that fit every need.
             </p>
           </div>
 
@@ -78,13 +78,13 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4 text-blue-300">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="https://x.com/vibepps" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
+              <a href="https://x.com/strivex_ai" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="Twitter">
                 <Twitter className="h-6 w-6" />
               </a>
-              <a href="https://www.instagram.com/vibepps/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/strivex.ai.solutions/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="Instagram">
                 <Instagram className="h-6 w-6" />
               </a>
-              <a href="https://www.linkedin.com/company/vibepps/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/company/strivex-ai-solutions/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-6 w-6" />
               </a>
             </div>
@@ -92,7 +92,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-6 text-sm text-gray-400 text-center">
-          <p>© 2025 Vibepps Dijital Hizmetler A.Ş. All rights reserved.</p>
+          <p>© 2025 StriveX AI Solutions. All rights reserved.</p>
         </div>
       </div>
     </footer>;
