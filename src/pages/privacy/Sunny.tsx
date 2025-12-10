@@ -204,7 +204,7 @@ const SunnyPrivacy = () => {
               <li>• Opt-out of certain analytics</li>
             </ul>
             <p className="text-muted-foreground mt-4">
-              To submit a request: <strong>info@strivexai.co</strong>
+              To submit a request: <strong>info@vibepps.com</strong>
             </p>
           </section>
 
@@ -236,9 +236,9 @@ const SunnyPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">12. Contact</h2>
             <p className="text-muted-foreground">
-              Email <strong>info@strivexai.co</strong> or write to:
+              Email <strong>info@vibepps.com</strong> or write to:
               <br />
-              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Vibepps Dijital Hizmetler A.Ş., Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>

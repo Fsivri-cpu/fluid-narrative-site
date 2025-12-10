@@ -54,7 +54,7 @@ const GLP1TrackerTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance</h2>
             <p className="text-muted-foreground">
-              These Terms govern your use of the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application ("App") provided by <strong>StriveX</strong>. 
+              These Terms govern your use of the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application ("App") provided by <strong>Vibepps Dijital Hizmetler A.Ş.</strong>. 
               Installing or using the App means you agree to these Terms. If you disagree, delete the App.
             </p>
           </section>
@@ -189,9 +189,9 @@ const GLP1TrackerTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">13. Contact</h2>
             <p className="text-muted-foreground">
-              Email <strong>support@strivexai.co</strong> or mail:
+              Email <strong>support@vibepps.com</strong> or mail:
               <br />
-              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Vibepps Dijital Hizmetler A.Ş., Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
           </section>
         </motion.div>
