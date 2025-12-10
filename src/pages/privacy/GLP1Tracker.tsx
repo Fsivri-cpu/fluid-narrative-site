@@ -56,7 +56,7 @@ const GLP1TrackerPrivacy = () => {
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
               Vibepps Dijital Hizmetler A.Ş. ("we", "our", "us") owns and operates the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application (the "App").
-              We are based in the Netherlands and publish the App worldwide. <strong>We never sell or rent your identifiable personal or health data.</strong>
+              We are based in Turkey and publish the App worldwide. <strong>We never sell or rent your identifiable personal or health data.</strong>
             </p>
           </section>
 
