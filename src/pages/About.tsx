@@ -54,7 +54,7 @@ const About = () => {
         }} transition={{
           duration: 0.5
         }}>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">About Us</h1>
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-4">About Us</h1>
             <p className="text-lg text-gray-300">Vibepps is an innovative multi-app studio that turns cutting-edge AI into intuitive mobile experiences—simplifying life, boosting productivity, and delighting users one intelligent app at a time.</p>
           </motion.div>
         </div>
@@ -75,7 +75,7 @@ const About = () => {
           }} viewport={{
             once: true
           }}>
-              <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Our Story</h2>
+              <h2 className="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-300">
                 <p>Vibepps began as a shared vision between Furkan & Gizem—two product-obsessed technologists who believed everyday life could be simpler, smarter, and more human with the right apps. After years of refining AI-driven mobile products and scaling complex digital projects, they founded Vibepps in İzmir's thriving tech hub in 2025 to turn that vision into reality.</p>
                 <p>Today, the Vibepps team channels this joint expertise into a growing ecosystem of AI-powered apps that elevate health, productivity, and everything in between—proving that when curiosity meets craft, innovation scales one elegant app at a time.</p>
@@ -113,7 +113,7 @@ const About = () => {
         }} viewport={{
           once: true
         }}>
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Our Values</h2>
+            <h2 className="text-3xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-4">Our Values</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               At Vibepps, we have core values that guide us in all our work.
             </p>

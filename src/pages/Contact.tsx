@@ -28,7 +28,7 @@ const Contact = () => {
         }} transition={{
           duration: 0.5
         }}>
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Contact</h1>
+            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-4">Contact</h1>
             <p className="text-lg text-gray-300">
               Get in touch with us for your questions or projects. We are happy to help you.
             </p>
@@ -50,7 +50,7 @@ const Contact = () => {
           }} transition={{
             duration: 0.5
           }}>
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Contact Information</h2>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <Card className="overflow-hidden bg-white/5 backdrop-blur-lg border-white/10 hover:bg-white/10 transition-all duration-300">
                   <CardContent className="p-0">
@@ -120,7 +120,7 @@ const Contact = () => {
             duration: 0.5,
             delay: 0.2
           }}>
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Send Us a Message</h2>
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent mb-6">Send Us a Message</h2>
               <Card className="bg-white/5 backdrop-blur-lg border-white/10">
                 <CardContent className="p-6">
                   <form onSubmit={handleSubmit} className="space-y-6">

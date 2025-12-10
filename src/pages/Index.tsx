@@ -99,7 +99,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight pb-2">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent leading-tight pb-2">
               Our Flagship Apps
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -226,7 +226,7 @@ const Index = () => {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight pb-2">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent leading-tight pb-2">
               Why Choose Vibepps?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -280,7 +280,7 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
               Ready to Transform Your Digital Life?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
