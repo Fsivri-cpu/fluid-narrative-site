@@ -84,7 +84,7 @@ export const translations = {
     'faq.q6': 'How do customers interact with my assistant?',
     'faq.a6': 'Your customers can either chat with your assistant directly through an embedded chatbox on your website, or access it via a personalized link — whichever you prefer.',
     'faq.q7': 'How can I get support if I need help?',
-    'faq.a7': "You can reach us 24/7 via live chat, email us at support@vibepps.com, or call our support line. We're always here to help.",
+    'faq.a7': "You can reach us 24/7 via live chat, email us at support@strivexai.co, or call our support line. We're always here to help.",
     'faq.q8': 'Can Vibepps be customized for my business needs?',
     'faq.a8': 'Absolutely. We offer tailored solutions and custom integrations for Enterprise clients. Please contact our sales team for more information.'
   },
@@ -156,7 +156,7 @@ export const translations = {
     'faq.q6': 'Hoe communiceren klanten met mijn assistent?',
     'faq.a6': 'Uw klanten kunnen direct chatten met uw assistent via een ingebedde chatbox op uw website, of deze benaderen via een gepersonaliseerde link — wat u maar prefereert.',
     'faq.q7': 'Hoe kan ik ondersteuning krijgen als ik hulp nodig heb?',
-    'faq.a7': 'U kunt ons 24/7 bereiken via live chat, e-mail ons op support@vibepps.com, of bel onze supportlijn. We staan altijd voor u klaar.',
+    'faq.a7': 'U kunt ons 24/7 bereiken via live chat, e-mail ons op support@strivexai.co, of bel onze supportlijn. We staan altijd voor u klaar.',
     'faq.q8': 'Kan Vibepps worden aangepast aan mijn zakelijke behoeften?',
     'faq.a8': 'Absoluut. We bieden op maat gemaakte oplossingen en aangepaste integraties voor Enterprise-klanten. Neem contact op met ons verkoopteam voor meer informatie.'
   }
