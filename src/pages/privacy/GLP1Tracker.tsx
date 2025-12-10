@@ -254,7 +254,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">8. Your Rights</h2>
             <p className="text-muted-foreground">
-              Access, correct, delete, or export data → <strong>Settings › Data Controls</strong> or email <strong>support@vibepps.com</strong>. We respond within 30 days.
+              Access, correct, delete, or export data → <strong>Settings › Data Controls</strong> or email <strong>support@strivexai.co</strong>. We respond within 30 days.
             </p>
           </section>
 
@@ -294,7 +294,7 @@ const GLP1TrackerPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">13. Contact</h2>
             <p className="text-muted-foreground">
-              Email <strong>support@vibepps.com</strong> or write to:
+              Email <strong>support@strivexai.co</strong> or write to:
               <br />
               Vibepps Dijital Hizmetler A.Ş., Zeijerveen 8, 1507 MC Zaandam, Netherlands.
             </p>
