@@ -55,11 +55,11 @@ const Index = () => {
           >
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent relative">
               <span className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-purple-400/20 blur-2xl -z-10"></span>
-              StriveX
+              Vibepps
             </h1>
             <p className="text-2xl md:text-3xl text-gray-300 mb-4 font-light">Future-Ready Apps, Crafted for You</p>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed text-center md:text-2xl">
-              StriveX blends cutting-edge AI with elegant design to elevate health, productivity, and every moment in between.
+              Vibepps blends cutting-edge AI with elegant design to elevate health, productivity, and every moment in between.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
               <Link to="/apps">
@@ -216,7 +216,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Choose StriveX */}
+      {/* Why Choose Vibepps */}
       <section className="py-24 px-4 bg-white/5">
         <div className="container mx-auto max-w-6xl">
           <motion.div 
@@ -227,7 +227,7 @@ const Index = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent leading-tight pb-2">
-              Why Choose StriveX?
+              Why Choose Vibepps?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We're not just another app company. We're innovators building the future of mobile experiences.
@@ -284,7 +284,7 @@ const Index = () => {
               Ready to Transform Your Digital Life?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of users who trust StriveX apps to enhance their daily routines and achieve their goals.
+              Join thousands of users who trust Vibepps apps to enhance their daily routines and achieve their goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link to="/apps">

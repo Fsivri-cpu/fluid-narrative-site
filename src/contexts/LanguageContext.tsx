@@ -25,7 +25,7 @@ export const translations = {
     'nav.contact': 'Contact',
     
     // Hero Section
-    'hero.title': 'Transform Your Customer Interactions with StriveX',
+    'hero.title': 'Transform Your Customer Interactions with Vibepps',
     'hero.subtitle': 'The AI assistant that understands your business',
     'hero.button1': 'Get Started',
     'hero.button2': 'Learn More',
@@ -44,7 +44,7 @@ export const translations = {
     
     // Case Studies
     'case.title': 'Success Stories',
-    'case.subtitle': 'See how businesses like yours are succeeding with StriveX',
+    'case.subtitle': 'See how businesses like yours are succeeding with Vibepps',
     
     // Experience Section
     'exp.title': 'Experience Giselle in Action',
@@ -70,22 +70,22 @@ export const translations = {
     
     // FAQ Section
     'faq.title': 'Frequently Asked Questions',
-    'faq.subtitle': 'Find answers to common questions about StriveX and how it can help your business',
-    'faq.q1': 'Who can use StriveX?',
+    'faq.subtitle': 'Find answers to common questions about Vibepps and how it can help your business',
+    'faq.q1': 'Who can use Vibepps?',
     'faq.a1': 'Any business looking to automate customer support and capture customer data — from restaurants and e-commerce stores to service providers.',
-    'faq.q2': 'What makes StriveX different?',
-    'faq.a2': 'StriveX offers ultra-fast setup, a private knowledge base, real-time live chat notifications, and strong data privacy — all designed to help you operate more efficiently.',
-    'faq.q3': 'How does StriveX work?',
-    'faq.a3': 'Simply upload your business documents (such as FAQs, product catalogs, or menus), and StriveX will create an AI-powered assistant that can answer customer questions and collect valuable insights for you.',
-    'faq.q4': 'How can StriveX save me time?',
+    'faq.q2': 'What makes Vibepps different?',
+    'faq.a2': 'Vibepps offers ultra-fast setup, a private knowledge base, real-time live chat notifications, and strong data privacy — all designed to help you operate more efficiently.',
+    'faq.q3': 'How does Vibepps work?',
+    'faq.a3': 'Simply upload your business documents (such as FAQs, product catalogs, or menus), and Vibepps will create an AI-powered assistant that can answer customer questions and collect valuable insights for you.',
+    'faq.q4': 'How can Vibepps save me time?',
     'faq.a4': "Automate your repetitive daily tasks with your virtual assistant. You'll only be notified when human intervention is truly necessary — letting you focus on what matters most.",
-    'faq.q5': 'How can I set up StriveX?',
-    'faq.a5': 'StriveX can be integrated into your website within minutes. Alternatively, you can share a dedicated link with your customers for instant access.',
+    'faq.q5': 'How can I set up Vibepps?',
+    'faq.a5': 'Vibepps can be integrated into your website within minutes. Alternatively, you can share a dedicated link with your customers for instant access.',
     'faq.q6': 'How do customers interact with my assistant?',
     'faq.a6': 'Your customers can either chat with your assistant directly through an embedded chatbox on your website, or access it via a personalized link — whichever you prefer.',
     'faq.q7': 'How can I get support if I need help?',
-    'faq.a7': "You can reach us 24/7 via live chat, email us at support@strivex.com, or call our support line. We're always here to help.",
-    'faq.q8': 'Can StriveX be customized for my business needs?',
+    'faq.a7': "You can reach us 24/7 via live chat, email us at support@vibepps.com, or call our support line. We're always here to help.",
+    'faq.q8': 'Can Vibepps be customized for my business needs?',
     'faq.a8': 'Absolutely. We offer tailored solutions and custom integrations for Enterprise clients. Please contact our sales team for more information.'
   },
   nl: {
@@ -97,7 +97,7 @@ export const translations = {
     'nav.contact': 'Contact',
     
     // Hero Section
-    'hero.title': 'Transformeer Uw Klantinteracties met StriveX',
+    'hero.title': 'Transformeer Uw Klantinteracties met Vibepps',
     'hero.subtitle': 'De AI-assistent die uw bedrijf begrijpt',
     'hero.button1': 'Aan de Slag',
     'hero.button2': 'Meer Informatie',
@@ -116,7 +116,7 @@ export const translations = {
     
     // Case Studies
     'case.title': 'Succesverhalen',
-    'case.subtitle': 'Bekijk hoe bedrijven zoals het uwe succesvol zijn met StriveX',
+    'case.subtitle': 'Bekijk hoe bedrijven zoals het uwe succesvol zijn met Vibepps',
     
     // Experience Section
     'exp.title': 'Ervaar Giselle in Actie',
@@ -142,22 +142,22 @@ export const translations = {
     
     // FAQ Section
     'faq.title': 'Veelgestelde Vragen',
-    'faq.subtitle': 'Vind antwoorden op veelvoorkomende vragen over StriveX en hoe het uw bedrijf kan helpen',
-    'faq.q1': 'Wie kan StriveX gebruiken?',
+    'faq.subtitle': 'Vind antwoorden op veelvoorkomende vragen over Vibepps en hoe het uw bedrijf kan helpen',
+    'faq.q1': 'Wie kan Vibepps gebruiken?',
     'faq.a1': 'Elk bedrijf dat klantondersteuning wil automatiseren en klantgegevens wil vastleggen — van restaurants en webwinkels tot dienstverleners.',
-    'faq.q2': 'Wat maakt StriveX anders?',
-    'faq.a2': 'StriveX biedt ultrasnelle installatie, een privé kennisbank, real-time chat notificaties en sterke gegevensbescherming — allemaal ontworpen om u efficiënter te laten werken.',
-    'faq.q3': 'Hoe werkt StriveX?',
-    'faq.a3': "Upload simpelweg uw bedrijfsdocumenten (zoals FAQs, productcatalogi of menu's), en StriveX creëert een AI-gestuurde assistent die klantenvragen kan beantwoorden en waardevolle inzichten voor u kan verzamelen.",
-    'faq.q4': 'Hoe kan StriveX mij tijd besparen?',
+    'faq.q2': 'Wat maakt Vibepps anders?',
+    'faq.a2': 'Vibepps biedt ultrasnelle installatie, een privé kennisbank, real-time chat notificaties en sterke gegevensbescherming — allemaal ontworpen om u efficiënter te laten werken.',
+    'faq.q3': 'Hoe werkt Vibepps?',
+    'faq.a3': "Upload simpelweg uw bedrijfsdocumenten (zoals FAQs, productcatalogi of menu's), en Vibepps creëert een AI-gestuurde assistent die klantenvragen kan beantwoorden en waardevolle inzichten voor u kan verzamelen.",
+    'faq.q4': 'Hoe kan Vibepps mij tijd besparen?',
     'faq.a4': 'Automatiseer uw dagelijkse repetitieve taken met uw virtuele assistent. U wordt alleen gewaarschuwd wanneer menselijke tussenkomst echt nodig is — zodat u zich kunt concentreren op wat het belangrijkst is.',
-    'faq.q5': 'Hoe kan ik StriveX instellen?',
-    'faq.a5': 'StriveX kan binnen enkele minuten worden geïntegreerd in uw website. Als alternatief kunt u een speciale link delen met uw klanten voor directe toegang.',
+    'faq.q5': 'Hoe kan ik Vibepps instellen?',
+    'faq.a5': 'Vibepps kan binnen enkele minuten worden geïntegreerd in uw website. Als alternatief kunt u een speciale link delen met uw klanten voor directe toegang.',
     'faq.q6': 'Hoe communiceren klanten met mijn assistent?',
     'faq.a6': 'Uw klanten kunnen direct chatten met uw assistent via een ingebedde chatbox op uw website, of deze benaderen via een gepersonaliseerde link — wat u maar prefereert.',
     'faq.q7': 'Hoe kan ik ondersteuning krijgen als ik hulp nodig heb?',
-    'faq.a7': 'U kunt ons 24/7 bereiken via live chat, e-mail ons op support@strivex.com, of bel onze supportlijn. We staan altijd voor u klaar.',
-    'faq.q8': 'Kan StriveX worden aangepast aan mijn zakelijke behoeften?',
+    'faq.a7': 'U kunt ons 24/7 bereiken via live chat, e-mail ons op support@vibepps.com, of bel onze supportlijn. We staan altijd voor u klaar.',
+    'faq.q8': 'Kan Vibepps worden aangepast aan mijn zakelijke behoeften?',
     'faq.a8': 'Absoluut. We bieden op maat gemaakte oplossingen en aangepaste integraties voor Enterprise-klanten. Neem contact op met ons verkoopteam voor meer informatie.'
   }
 };

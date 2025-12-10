@@ -82,7 +82,7 @@ const Navbar = () => {
             <div className="bg-white/90 backdrop-blur-sm rounded-xl p-2 shadow-sm">
               <img 
                 src="/lovable-uploads/ae9979cf-01be-41d9-a0d6-ec0fcbe768bd.png" 
-                alt="StriveX Logo" 
+                alt="Vibepps Logo" 
                 className="h-8 md:h-10 w-auto object-contain"
               />
             </div>

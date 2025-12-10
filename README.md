@@ -1,9 +1,9 @@
 
-# StriveX Project
+# Vibepps Project
 
 ## Project info
 
-This is the codebase for the StriveX AI Assistant solution.
+This is the codebase for the Vibepps website.
 
 ## Technologies used in this project
 
