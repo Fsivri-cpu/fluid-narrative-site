@@ -32,12 +32,13 @@ const Products = () => {
       description: "Sunny is a smart UV and tanning assistant that helps you achieve a beautiful tan while keeping your skin protected. Get personalized tanning plans, real-time UV Index updates, sun-safety reminders, and skin insights — all in one app.",
       features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis", "Sun Safety Guidance", "Track Your Progress"],
       category: "Weather · Lifestyle",
-      downloads: "Coming Soon",
-      rating: null,
-      comingSoon: true,
+      downloads: "100+",
+      rating: 5.0,
+      comingSoon: false,
       primaryColor: "from-orange-400 to-orange-600",
       icon: "/lovable-uploads/sunny-ai-icon.png",
-      slug: "sunny"
+      slug: "sunny",
+      appStoreLink: "https://apps.apple.com/nl/app/sunny-uv-tanning-tracker/id6755535156?l=en-GB"
     }
   ];
 
