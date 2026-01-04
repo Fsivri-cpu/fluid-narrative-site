@@ -185,7 +185,7 @@ const SunnyTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">9. Governing Law</h2>
             <p className="text-muted-foreground">
-              These Terms are governed by the laws of the jurisdiction where the company is established.
+              These Terms are governed by Turkish law. Disputes are subject to the courts of İzmir, Turkey.
             </p>
           </section>
 
@@ -203,7 +203,7 @@ const SunnyTerms = () => {
             <p className="text-muted-foreground">
               Email <strong>info@strivexai.co</strong> or write to:
               <br />
-              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Strivex Dijital Hizmetler A.Ş., İzmir Teknoloji Üssü, Gülbahçe, İçmeler Caddesi, 35433 Urla/İzmir, Türkiye.
             </p>
           </section>
         </motion.div>

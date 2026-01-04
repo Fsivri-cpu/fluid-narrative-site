@@ -92,7 +92,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-12 pt-6 text-sm text-gray-400 text-center">
-          <p>© 2025 StriveX AI Solutions. All rights reserved.</p>
+          <p>© 2025 Strivex Dijital Hizmetler A.Ş. All rights reserved.</p>
         </div>
       </div>
     </footer>;

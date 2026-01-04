@@ -238,7 +238,7 @@ const SunnyPrivacy = () => {
             <p className="text-muted-foreground">
               Email <strong>info@strivexai.co</strong> or write to:
               <br />
-              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Strivex Dijital Hizmetler A.Ş., İzmir Teknoloji Üssü, Gülbahçe, İçmeler Caddesi, 35433 Urla/İzmir, Türkiye.
             </p>
           </section>
         </motion.div>
