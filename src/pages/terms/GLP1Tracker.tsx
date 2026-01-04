@@ -54,7 +54,7 @@ const GLP1TrackerTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance</h2>
             <p className="text-muted-foreground">
-              These Terms govern your use of the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application ("App") provided by <strong>StriveX</strong>. 
+              These Terms govern your use of the <strong>Jabsy – GLP-1 Shot Tracker</strong> mobile application ("App") provided by <strong>Strivex Dijital Hizmetler A.Ş.</strong>. 
               Installing or using the App means you agree to these Terms. If you disagree, delete the App.
             </p>
           </section>
@@ -149,7 +149,7 @@ const GLP1TrackerTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">8. Intellectual Property</h2>
             <p className="text-muted-foreground">
-              All code, graphics, and trademarks belong to Furkan Sivri. You retain ownership of content you submit but grant us a licence to use it solely to operate and improve the service.
+              All code, graphics, and trademarks belong to Strivex Dijital Hizmetler A.Ş. You retain ownership of content you submit but grant us a licence to use it solely to operate and improve the service.
             </p>
           </section>
 
@@ -173,7 +173,7 @@ const GLP1TrackerTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">11. Governing Law & Jurisdiction</h2>
             <p className="text-muted-foreground">
-              These Terms are governed by Dutch law. Disputes are subject to the courts of Amsterdam, NL. <strong>You waive any right to participate in class-action proceedings.</strong>
+              These Terms are governed by Turkish law. Disputes are subject to the courts of İzmir, Turkey. <strong>You waive any right to participate in class-action proceedings.</strong>
             </p>
           </section>
 
@@ -191,7 +191,7 @@ const GLP1TrackerTerms = () => {
             <p className="text-muted-foreground">
               Email <strong>support@strivexai.co</strong> or mail:
               <br />
-              Furkan Sivri, Zeijerveen 8, 1507 MC Zaandam, Netherlands.
+              Strivex Dijital Hizmetler A.Ş., İzmir Teknoloji Üssü, Gülbahçe, İçmeler Caddesi, 35433 Urla/İzmir, Türkiye.
             </p>
           </section>
         </motion.div>
