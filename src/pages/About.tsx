@@ -55,7 +55,7 @@ const About = () => {
           duration: 0.5
         }}>
             <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">About Us</h1>
-            <p className="text-lg text-gray-300">StriveX AI Solutions is an innovative multi-app studio that turns cutting-edge AI into intuitive mobile experiences—simplifying life, boosting productivity, and delighting users one intelligent app at a time.</p>
+            <p className="text-lg text-gray-300">Strivex Dijital Hizmetler A.Ş. is an innovative multi-app studio that turns cutting-edge AI into intuitive mobile experiences—simplifying life, boosting productivity, and delighting users one intelligent app at a time.</p>
           </motion.div>
         </div>
       </section>
@@ -77,8 +77,8 @@ const About = () => {
           }}>
               <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">Our Story</h2>
               <div className="space-y-4 text-gray-300">
-                <p>StriveX began as a shared vision between Furkan & Gizem—two product-obsessed technologists who believed everyday life could be simpler, smarter, and more human with the right apps. After years of refining AI-driven mobile products and scaling complex digital projects, they relocated from Istanbul to the Netherlands’ vibrant startup scene in 2025 to turn that vision into reality.</p>
-                <p>Today, the StriveX team channels this joint expertise into a growing ecosystem of AI-powered apps that elevate health, productivity, and everything in between—proving that when curiosity meets craft, innovation scales one elegant app at a time.</p>
+                <p>Strivex began as a shared vision between Furkan & Gizem—two product-obsessed technologists who believed everyday life could be simpler, smarter, and more human with the right apps. After years of refining AI-driven mobile products and scaling complex digital projects, they founded Strivex Dijital Hizmetler A.Ş. in İzmir, Turkey to turn that vision into reality.</p>
+                <p>Today, the Strivex team channels this joint expertise into a growing ecosystem of AI-powered apps that elevate health, productivity, and everything in between—proving that when curiosity meets craft, innovation scales one elegant app at a time.</p>
               </div>
             </motion.div>
             <motion.div className="md:w-1/2" initial={{
@@ -93,7 +93,7 @@ const About = () => {
           }} viewport={{
             once: true
           }}>
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="StriveX AI Solutions Team Collaboration" className="rounded-lg shadow-xl w-full" />
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80" alt="Strivex Dijital Hizmetler Team Collaboration" className="rounded-lg shadow-xl w-full" />
             </motion.div>
           </div>
         </div>
@@ -115,7 +115,7 @@ const About = () => {
         }}>
             <h2 className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4">Our Values</h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              At StriveX AI Solutions, we have core values that guide us in all our work.
+              At Strivex Dijital Hizmetler A.Ş., we have core values that guide us in all our work.
             </p>
           </motion.div>
           
