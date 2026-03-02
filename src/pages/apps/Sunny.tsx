@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Sun, MapPin, Shield, Camera, BarChart3, Globe } from 'lucide-react';
+import { ArrowLeft, Sun, MapPin, Shield, Camera, BarChart3, Globe, Download, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -78,9 +78,12 @@ const Sunny = () => {
               </div>
               
               <div className="flex items-center gap-3 mb-6 flex-wrap">
-                <Badge className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
-                  Coming Soon
-                </Badge>
+                <div className="flex items-center gap-1">
+                  <Star className="w-5 h-5 fill-yellow-400 text-yellow-400" />
+                  <span className="font-semibold">5.0</span>
+                </div>
+                <span className="text-gray-500">•</span>
+                <span className="text-gray-400">100+ Downloads</span>
                 <Badge variant="outline" className="border-cyan-500 text-cyan-400">Weather</Badge>
                 <Badge variant="outline" className="border-purple-500 text-purple-400">Lifestyle</Badge>
               </div>
@@ -93,13 +96,24 @@ const Sunny = () => {
                 Sunny is a smart UV and tanning assistant that helps you achieve a beautiful tan while keeping your skin protected. Get personalized tanning plans, real-time UV Index updates, sun-safety reminders, and skin insights — all in one app.
               </p>
               
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-white px-8 opacity-70"
-                disabled
-              >
-                Coming Soon
-              </Button>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-white px-8"
+                  onClick={() => window.open('https://apps.apple.com/nl/app/sunny-uv-tanning-tracker/id6755535156?l=en-GB', '_blank')}
+                >
+                  <Download className="w-5 h-5 mr-2" />
+                  Download on App Store
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 px-8"
+                  onClick={() => window.open('/blog/en', '_self')}
+                >
+                  Read Our Blog
+                </Button>
+              </div>
             </motion.div>
             
             <motion.div
@@ -227,18 +241,29 @@ const Sunny = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Get Ready to Glow
+              Start Your Tanning Journey Today
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Sunny is coming soon. Be the first to know when it launches.
+              Download Sunny and tan smarter with personalized UV tracking.
             </p>
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-white px-8 opacity-70"
-              disabled
-            >
-              Coming Soon
-            </Button>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-white px-8"
+                onClick={() => window.open('https://apps.apple.com/nl/app/sunny-uv-tanning-tracker/id6755535156?l=en-GB', '_blank')}
+              >
+                <Download className="w-5 h-5 mr-2" />
+                Download on App Store
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 px-8"
+                onClick={() => window.open('/blog/en', '_self')}
+              >
+                Read Our Blog
+              </Button>
+            </div>
           </motion.div>
         </div>
       </section>
