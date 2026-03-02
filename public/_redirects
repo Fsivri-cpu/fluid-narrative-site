@@ -1,3 +1,4 @@
 /blog    /blog/en    301
 /blog/*  https://strivex-sunny-blog.netlify.app/blog/:splat  200
+/blog-images/*  https://strivex-sunny-blog.netlify.app/blog-images/:splat  200
 /*    /index.html   200
