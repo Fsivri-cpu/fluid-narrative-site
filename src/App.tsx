@@ -25,6 +25,9 @@ import Cookies from "./pages/Cookies";
 import Jabsy from "./pages/apps/Jabsy";
 import Sunny from "./pages/apps/Sunny";
 import Niyyah from "./pages/apps/Niyyah";
+import Jelly from "./pages/apps/Jelly";
+import JellyPrivacy from "./pages/privacy/Jelly";
+import JellyTerms from "./pages/terms/Jelly";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -57,6 +60,9 @@ const App = () => (
                 <Route path="apps/niyyah" element={<Niyyah />} />
                 <Route path="privacy-policy/niyyah" element={<NiyyahPrivacy />} />
                 <Route path="terms-conditions/niyyah" element={<NiyyahTerms />} />
+                <Route path="apps/jelly" element={<Jelly />} />
+                <Route path="privacy-policy/jelly" element={<JellyPrivacy />} />
+                <Route path="terms-conditions/jelly" element={<JellyTerms />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>

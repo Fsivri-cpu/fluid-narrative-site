@@ -53,6 +53,22 @@ const Products = () => {
       primaryColor: "from-purple-500 to-purple-600",
       icon: "/lovable-uploads/niyyah-icon.png",
       slug: "niyyah",
+      appStoreLink: "https://apps.apple.com/nl/app/ramadan-tracker-for-women-2026/id6759404216?l=en-GB"
+    },
+    {
+      id: 4,
+      name: "Jelly - Sugar Companion",
+      subtitle: "Eat Better. Feel Better. Every Day.",
+      description: "Jelly is your personal sugar companion that helps you track sugar intake, log meals, stay hydrated, and build lasting healthy habits — all wrapped in a fun, motivating experience with a lovable mascot.",
+      features: ["Sugar & Calorie Tracking", "Curated Meal Plans", "Water Intake Tracker", "Streak System", "Progress Insights", "Personalized Goals"],
+      category: "Health & Fitness · Nutrition",
+      downloads: "100+",
+      rating: 5.0,
+      comingSoon: true,
+      primaryColor: "from-pink-500 to-rose-500",
+      icon: "/lovable-uploads/jelly-app-icon.png",
+      iconTransparent: true,
+      slug: "jelly",
       appStoreLink: ""
     }
   ];
@@ -109,13 +125,17 @@ const Products = () => {
                 >
                   <CardHeader className="pb-4">
                     <div className="flex items-start justify-between mb-4">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center mb-4`}>
-                        {app.icon ? (
-                          <img src={app.icon} alt={app.name} className="w-full h-full object-cover rounded-2xl" />
-                        ) : (
-                          <Smartphone className="w-8 h-8 text-white" />
-                        )}
-                      </div>
+                      {'iconTransparent' in app && app.iconTransparent ? (
+                        <img src={app.icon} alt={app.name} className="w-16 h-16 object-contain mb-4" />
+                      ) : (
+                        <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${app.primaryColor} flex items-center justify-center mb-4`}>
+                          {app.icon ? (
+                            <img src={app.icon} alt={app.name} className="w-full h-full object-cover rounded-2xl" />
+                          ) : (
+                            <Smartphone className="w-8 h-8 text-white" />
+                          )}
+                        </div>
+                      )}
                       {app.comingSoon && (
                         <Badge className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
                           Coming Soon
