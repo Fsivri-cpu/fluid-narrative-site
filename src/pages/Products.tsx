@@ -57,9 +57,9 @@ const Products = () => {
     },
     {
       id: 4,
-      name: "Jelly - Sugar Companion",
+      name: "Lolly: AI Food & Sugar Tracker",
       subtitle: "Eat Better. Feel Better. Every Day.",
-      description: "Jelly is your personal sugar companion that helps you track sugar intake, log meals, stay hydrated, and build lasting healthy habits — all wrapped in a fun, motivating experience with a lovable mascot.",
+      description: "Lolly is your personal AI food coach that helps you track sugar intake, log meals, stay hydrated, and build lasting healthy habits — all wrapped in a fun, motivating experience.",
       features: ["Sugar & Calorie Tracking", "Curated Meal Plans", "Water Intake Tracker", "Streak System", "Progress Insights", "Personalized Goals"],
       category: "Health & Fitness · Nutrition",
       downloads: "100+",
@@ -67,7 +67,6 @@ const Products = () => {
       comingSoon: true,
       primaryColor: "from-pink-500 to-rose-500",
       icon: "/lovable-uploads/jelly-app-icon.png",
-      iconTransparent: true,
       slug: "jelly",
       appStoreLink: ""
     }

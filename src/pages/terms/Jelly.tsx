@@ -18,20 +18,23 @@ const JellyTerms = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Jelly
+            Back to Lolly
           </Link>
 
           <div className="flex items-center gap-4 mb-6">
             <img
               src="/lovable-uploads/jelly-app-icon.png"
-              alt="Jelly"
+              alt="Lolly"
               className="w-16 h-16 rounded-2xl"
             />
             <div>
               <h1 className="text-4xl md:text-5xl font-bold">Terms & Conditions</h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground">
-                Jelly – Sugar Companion
+                Lolly: AI Food & Sugar Tracker
               </h2>
+              <p className="text-sm text-muted-foreground mt-1">
+                Bundle Identifier: com.strivexai.jellysugartracker
+              </p>
             </div>
           </div>
 
@@ -52,7 +55,7 @@ const JellyTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Acceptance</h2>
             <p className="text-muted-foreground">
-              These Terms govern your use of the <strong>Jelly – Sugar Companion</strong> mobile application ("App") provided by <strong>Strivex Dijital Hizmetler A.Ş.</strong>.
+              These Terms govern your use of the <strong>Lolly: AI Food & Sugar Tracker</strong> mobile application ("App") provided by <strong>Strivex Dijital Hizmetler A.Ş.</strong>.
               Installing or using the App means you agree to these Terms. If you disagree, delete the App.
             </p>
           </section>
@@ -61,14 +64,14 @@ const JellyTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">2. Eligibility</h2>
             <p className="text-muted-foreground">
-              Age 12+ only. All tracking data is stored locally on your device — no account is required to use Jelly.
+              Age 12+ only. All tracking data is stored locally on your device — no account is required to use Lolly.
             </p>
           </section>
 
           {/* Description of Service */}
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">3. Description of Service</h2>
-            <p className="text-muted-foreground mb-4">Jelly provides:</p>
+            <p className="text-muted-foreground mb-4">Lolly provides:</p>
             <ul className="space-y-2 text-muted-foreground">
               <li>• Daily sugar and calorie tracking with macro breakdown</li>
               <li>• Curated, personalised weekly meal plans</li>
@@ -77,7 +80,7 @@ const JellyTerms = () => {
               <li>• Nutritional insights and progress reporting</li>
             </ul>
             <p className="text-muted-foreground mt-4">
-              Jelly is for <strong>informational and motivational purposes only</strong>.
+              Lolly is for <strong>informational and motivational purposes only</strong>.
             </p>
           </section>
 
@@ -161,7 +164,7 @@ const JellyTerms = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">10. Limitation of Liability</h2>
             <p className="text-muted-foreground mb-4">
-              Jelly is provided "as is," without warranties of any kind. To the fullest extent permitted by law, we are not liable for indirect, incidental, or consequential damages. We are not responsible for:
+              Lolly is provided "as is," without warranties of any kind. To the fullest extent permitted by law, we are not liable for indirect, incidental, or consequential damages. We are not responsible for:
             </p>
             <ul className="space-y-2 text-muted-foreground">
               <li>• Accuracy of nutritional data in meal databases</li>

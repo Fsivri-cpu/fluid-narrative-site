@@ -6,6 +6,16 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
 const Jelly = () => {
+  const screenshots = [
+    { src: "/lovable-uploads/lolly-screenshot-1.jpg", alt: "Scan meals in seconds" },
+    { src: "/lovable-uploads/lolly-screenshot-2.jpg", alt: "Spot hidden sugars instantly" },
+    { src: "/lovable-uploads/lolly-hero-screenshot.png", alt: "Your healthy food coach" },
+    { src: "/lovable-uploads/lolly-screenshot-4.jpg", alt: "Stay balanced every day" },
+    { src: "/lovable-uploads/lolly-screenshot-5.jpg", alt: "Meals made for you" },
+    { src: "/lovable-uploads/lolly-screenshot-6.jpg", alt: "See your body change" },
+    { src: "/lovable-uploads/lolly-screenshot-7.jpg", alt: "Loved by thousands" },
+  ];
+
   const features = [
     {
       icon: Flame,
@@ -35,7 +45,7 @@ const Jelly = () => {
     {
       icon: Target,
       title: "Personalized Goals",
-      description: "Set custom targets for sugar, calories, macros, and hydration. Jelly adapts to your unique health profile and lifestyle."
+      description: "Set custom targets for sugar, calories, macros, and hydration. Lolly adapts to your unique health profile and lifestyle."
     }
   ];
 
@@ -58,12 +68,12 @@ const Jelly = () => {
               <div className="flex items-center gap-4 mb-6">
                 <img
                   src="/lovable-uploads/jelly-app-icon.png"
-                  alt="Jelly"
+                  alt="Lolly"
                   className="w-20 h-20 rounded-2xl"
                 />
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text text-transparent">
-                    Jelly - Sugar Companion
+                  <h1 className="text-4xl md:text-5xl font-bold leading-tight pb-1 bg-gradient-to-r from-pink-400 to-rose-500 bg-clip-text text-transparent">
+                    Lolly: AI Food & Sugar Tracker
                   </h1>
                 </div>
               </div>
@@ -83,7 +93,7 @@ const Jelly = () => {
               </h2>
 
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Jelly is your personal sugar companion that helps you track sugar intake, log meals, stay hydrated, and build lasting healthy habits — all wrapped in a fun, motivating experience.
+                Lolly is your personal AI food coach that helps you track sugar intake, log meals, stay hydrated, and build lasting healthy habits — all wrapped in a fun, motivating experience.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -103,19 +113,21 @@ const Jelly = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex justify-center"
             >
-              <img
-                src="/lovable-uploads/jelly-strawberry.png"
-                alt="Jelly Mascot"
-                className="w-72 md:w-80 drop-shadow-2xl"
-              />
+              <div className="w-64 md:w-72 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-pink-500/30 border border-pink-500/20">
+                <img
+                  src="/lovable-uploads/lolly-hero-screenshot.jpg"
+                  alt="Lolly App Screenshot"
+                  className="w-full h-auto"
+                />
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Mascot Showcase */}
-      <section className="py-16 px-4 overflow-hidden">
-        <div className="mx-auto max-w-6xl">
+      {/* Screenshots Section */}
+      <section className="py-20 px-4">
+        <div className="mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -123,30 +135,29 @@ const Jelly = () => {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Jelly</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">App Preview</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Your adorable, bouncy companion on the journey to healthier eating habits.
+              Take a look at Lolly's beautiful interface and powerful features.
             </p>
           </motion.div>
 
-          <div className="flex gap-8 justify-center flex-wrap">
-            {[
-              { src: "/lovable-uploads/jelly-habit.png", label: "Build Habits" },
-              { src: "/lovable-uploads/jelly-setgoals.png", label: "Set Goals" },
-              { src: "/lovable-uploads/jelly-streak.png", label: "Build Streaks" },
-            ].map((item, index) => (
+          <div className="flex gap-6 overflow-x-auto pb-8">
+            {screenshots.map((screenshot, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center gap-3"
+                className="flex-shrink-0"
               >
-                <div className="w-40 h-40 md:w-48 md:h-48 rounded-3xl bg-gradient-to-br from-pink-500/10 to-rose-500/10 border border-pink-500/20 flex items-center justify-center p-4 shadow-lg shadow-pink-500/10">
-                  <img src={item.src} alt={item.label} className="w-full h-full object-contain drop-shadow-lg" />
+                <div className="w-64 xl:w-72 rounded-3xl overflow-hidden shadow-2xl shadow-pink-500/20 border border-pink-500/20">
+                  <img
+                    src={screenshot.src}
+                    alt={screenshot.alt}
+                    className="w-full h-auto"
+                  />
                 </div>
-                <span className="text-gray-300 text-sm font-medium">{item.label}</span>
               </motion.div>
             ))}
           </div>
@@ -205,7 +216,7 @@ const Jelly = () => {
               <h2 className="text-2xl font-bold">Privacy First</h2>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Your health data stays on your device. Jelly never sells your personal information. All data is removed automatically when you delete the app.
+              Your health data stays on your device. Lolly never sells your personal information. All data is removed automatically when you delete the app.
             </p>
           </motion.div>
         </div>
@@ -224,7 +235,7 @@ const Jelly = () => {
               Start Your Healthy Journey Today
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Download Jelly and make every meal count toward a healthier you.
+              Download Lolly and make every meal count toward a healthier you.
             </p>
             <Button
               size="lg"

@@ -18,20 +18,23 @@ const JellyPrivacy = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Jelly
+            Back to Lolly
           </Link>
 
           <div className="flex items-center gap-4 mb-6">
             <img
               src="/lovable-uploads/jelly-app-icon.png"
-              alt="Jelly"
+              alt="Lolly"
               className="w-16 h-16 rounded-2xl"
             />
             <div>
               <h1 className="text-4xl md:text-5xl font-bold">Privacy Policy</h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground">
-                Jelly – Sugar Companion
+                Lolly: AI Food & Sugar Tracker
               </h2>
+              <p className="text-sm text-muted-foreground mt-1">
+                Bundle Identifier: com.strivexai.jellysugartracker
+              </p>
             </div>
           </div>
 
@@ -52,7 +55,7 @@ const JellyPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
-              Strivex Dijital Hizmetler A.Ş. ("we", "our", "us") owns and operates the <strong>Jelly – Sugar Companion</strong> mobile application (the "App").
+              Strivex Dijital Hizmetler A.Ş. ("we", "our", "us") owns and operates the <strong>Lolly: AI Food & Sugar Tracker</strong> mobile application (the "App").
               We are based in Turkey and publish the App worldwide. <strong>We never sell or rent your identifiable personal or health data.</strong>
             </p>
           </section>
@@ -111,7 +114,7 @@ const JellyPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">4. Local-First Storage</h2>
             <p className="text-muted-foreground">
-              Jelly follows a <strong>local-first</strong> approach. All your meal logs, sugar tracking data, water records, and streak progress are stored locally on your device.
+              Lolly follows a <strong>local-first</strong> approach. All your meal logs, sugar tracking data, water records, and streak progress are stored locally on your device.
               <strong> No server-side user database is required.</strong> Your data lives on your device and is not synced to external servers unless explicitly stated.
             </p>
           </section>
