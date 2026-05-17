@@ -11,9 +11,9 @@ const PrivacyPolicy = () => {
       slug: "glp-1-tracker"
     },
     {
-      name: "Sunny – UV & Tanning Tracker",
-      description: "Track UV exposure and tanning sessions with on-device face processing for maximum privacy.",
-      icon: "/lovable-uploads/sunny-ai-icon.png",
+      name: "Cabo – Tanning Tracker & SPF",
+      description: "Track UV exposure, SPF, and tanning sessions with on-device face processing for maximum privacy.",
+      icon: "/lovable-uploads/cabo-icon.png",
       slug: "sunny"
     },
     {
@@ -21,6 +21,18 @@ const PrivacyPolicy = () => {
       description: "Track your Ramadan journey with local-first data storage. Your fasting logs, intentions, and spiritual progress stay private on your device.",
       icon: "/lovable-uploads/niyyah-icon.png",
       slug: "niyyah"
+    },
+    {
+      name: "Lolly: AI Food & Sugar Tracker",
+      description: "Local-first nutrition, sugar and water tracking. Your meal logs and progress stay on your device.",
+      icon: "/lovable-uploads/jelly-app-icon.png",
+      slug: "jelly"
+    },
+    {
+      name: "Noa: Pray to Unlock Phone",
+      description: "Local-first daily ritual journal, reflections and prayer commitments. On-device Screen Time integration — your spiritual content never leaves your phone.",
+      icon: "/lovable-uploads/noa-icon.png",
+      slug: "noa"
     }
   ];
 

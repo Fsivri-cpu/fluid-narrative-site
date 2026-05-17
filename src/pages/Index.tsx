@@ -22,17 +22,17 @@ const Index = () => {
       slug: "jabsy"
     },
     {
-      name: "Sunny: UV & Tanning",
-      description: "Sunny is a smart UV and tanning assistant that helps you achieve a beautiful tan while keeping your skin protected. Get personalized tanning plans, real-time UV Index updates, sun-safety reminders, and skin insights — all in one app.",
-      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis", "Sun Safety Guidance", "Track Your Progress"],
+      name: "Cabo: Tanning Tracker & SPF",
+      description: "Cabo is your personal tanning coach — get a personalized SPF and tanning plan based on your skin, real-time UV Index updates, sunburn prevention reminders, vitamin D tracking, and on-device skin insights, all in one app.",
+      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis", "Sunburn Prevention", "Vitamin D Tracking"],
       downloads: "100+",
       rating: 5.0,
       category: "Weather · Lifestyle",
       comingSoon: false,
       primaryColor: "from-orange-400 to-orange-600",
-      icon: "/lovable-uploads/sunny-ai-icon.png",
+      icon: "/lovable-uploads/cabo-icon.png",
       slug: "sunny",
-      appStoreLink: "https://apps.apple.com/nl/app/sunny-uv-tanning-tracker/id6755535156?l=en-GB"
+      appStoreLink: "https://apps.apple.com/us/app/tanning-tracker-cabo-spf/id6755535156"
     },
     {
       name: "Niyyah - Ramadan Tracker",

@@ -28,6 +28,9 @@ import Niyyah from "./pages/apps/Niyyah";
 import Jelly from "./pages/apps/Jelly";
 import JellyPrivacy from "./pages/privacy/Jelly";
 import JellyTerms from "./pages/terms/Jelly";
+import Noa from "./pages/apps/Noa";
+import NoaPrivacy from "./pages/privacy/Noa";
+import NoaTerms from "./pages/terms/Noa";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -63,6 +66,9 @@ const App = () => (
                 <Route path="apps/jelly" element={<Jelly />} />
                 <Route path="privacy-policy/jelly" element={<JellyPrivacy />} />
                 <Route path="terms-conditions/jelly" element={<JellyTerms />} />
+                <Route path="apps/noa" element={<Noa />} />
+                <Route path="privacy-policy/noa" element={<NoaPrivacy />} />
+                <Route path="terms-conditions/noa" element={<NoaTerms />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
             </Routes>

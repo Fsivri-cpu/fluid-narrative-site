@@ -11,9 +11,9 @@ const TermsConditions = () => {
       slug: "glp-1-tracker"
     },
     {
-      name: "Sunny – UV & Tanning Tracker",
-      description: "Terms covering UV tracking features, health disclaimers, and subscription policies.",
-      icon: "/lovable-uploads/sunny-ai-icon.png",
+      name: "Cabo – Tanning Tracker & SPF",
+      description: "Terms covering UV and SPF tracking features, health disclaimers, and subscription policies.",
+      icon: "/lovable-uploads/cabo-icon.png",
       slug: "sunny"
     },
     {
@@ -21,6 +21,18 @@ const TermsConditions = () => {
       description: "Terms covering Ramadan tracking features, religious and health disclaimers, prayer time accuracy, and subscription policies.",
       icon: "/lovable-uploads/niyyah-icon.png",
       slug: "niyyah"
+    },
+    {
+      name: "Lolly: AI Food & Sugar Tracker",
+      description: "Terms covering nutrition tracking features, health disclaimers, and subscription policies.",
+      icon: "/lovable-uploads/jelly-app-icon.png",
+      slug: "jelly"
+    },
+    {
+      name: "Noa: Pray to Unlock Phone",
+      description: "Terms covering the daily ritual loop, Apple Screen Time integration, AI-generated devotional content disclaimers, and subscription policies.",
+      icon: "/lovable-uploads/noa-icon.png",
+      slug: "noa"
     }
   ];
 

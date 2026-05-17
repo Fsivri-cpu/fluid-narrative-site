@@ -7,18 +7,18 @@ import { Badge } from "@/components/ui/badge";
 
 const Sunny = () => {
   const screenshots = [
-    { src: "/lovable-uploads/sunny-screenshot-1.png", alt: "Sun-kissed without the risk" },
-    { src: "/lovable-uploads/sunny-screenshot-2.png", alt: "Perfect tan - My Journey" },
-    { src: "/lovable-uploads/sunny-screenshot-3.png", alt: "Custom routine" },
-    { src: "/lovable-uploads/sunny-screenshot-4.png", alt: "Smart UV tracking" },
-    { src: "/lovable-uploads/sunny-screenshot-5.png", alt: "Tan safely settings" },
+    { src: "/lovable-uploads/cabo-screenshot-1.jpg", alt: "Burn prevention reminders" },
+    { src: "/lovable-uploads/cabo-screenshot-2.jpg", alt: "Personalized tanning routine" },
+    { src: "/lovable-uploads/cabo-screenshot-3.jpg", alt: "Track your tanning progress" },
+    { src: "/lovable-uploads/cabo-screenshot-4.jpg", alt: "Smart UV timing" },
+    { src: "/lovable-uploads/cabo-screenshot-5.jpg", alt: "Vitamin D tracking" },
   ];
 
   const features = [
     {
       icon: Sun,
       title: "Personalized Tanning Plan",
-      description: "Sunny creates a tanning routine tailored to your skin tone, sensitivity, desired shade, and local UV conditions."
+      description: "Cabo creates a tanning routine tailored to your skin tone, sensitivity, desired shade, SPF level, and local UV conditions."
     },
     {
       icon: MapPin,
@@ -27,7 +27,7 @@ const Sunny = () => {
     },
     {
       icon: Shield,
-      title: "Sun Safety Guidance",
+      title: "Sunburn Prevention",
       description: "Get reminders to take breaks, reapply sunscreen, and avoid high-risk exposure times to reduce the risk of sunburn."
     },
     {
@@ -37,8 +37,8 @@ const Sunny = () => {
     },
     {
       icon: BarChart3,
-      title: "Track Your Progress",
-      description: "Follow your tanning progress with history logs, exposure tracking, and personalized insights each week."
+      title: "Vitamin D & Progress Tracking",
+      description: "Monitor your vitamin D exposure and follow your tanning progress with history logs and personalized weekly insights."
     },
     {
       icon: Globe,
@@ -64,16 +64,16 @@ const Sunny = () => {
               transition={{ duration: 0.6 }}
             >
               <div className="flex items-center gap-4 mb-6">
-                <img 
-                  src="/lovable-uploads/sunny-ai-icon.png" 
-                  alt="Sunny" 
+                <img
+                  src="/lovable-uploads/cabo-icon.png"
+                  alt="Cabo"
                   className="w-20 h-20 rounded-2xl"
                 />
                 <div>
                   <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-                    Sunny
+                    Cabo
                   </h1>
-                  <p className="text-gray-400">UV & Tanning Tracker</p>
+                  <p className="text-gray-400">Tanning Tracker & SPF</p>
                 </div>
               </div>
               
@@ -93,14 +93,14 @@ const Sunny = () => {
               </h2>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Sunny is a smart UV and tanning assistant that helps you achieve a beautiful tan while keeping your skin protected. Get personalized tanning plans, real-time UV Index updates, sun-safety reminders, and skin insights — all in one app.
+                Cabo is your personal tanning coach — get a personalized SPF and tanning plan based on your skin, real-time UV Index updates, sunburn prevention reminders, vitamin D tracking, and on-device skin insights, all in one app.
               </p>
-              
+
               <div className="flex flex-wrap gap-4">
                 <Button
                   size="lg"
                   className="bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-white px-8"
-                  onClick={() => window.open('https://apps.apple.com/nl/app/sunny-uv-tanning-tracker/id6755535156?l=en-GB', '_blank')}
+                  onClick={() => window.open('https://apps.apple.com/us/app/tanning-tracker-cabo-spf/id6755535156', '_blank')}
                 >
                   <Download className="w-5 h-5 mr-2" />
                   Download on App Store
@@ -123,9 +123,9 @@ const Sunny = () => {
               className="flex justify-center"
             >
               <div className="w-64 md:w-72 rounded-[2.5rem] overflow-hidden shadow-2xl shadow-orange-500/30 border border-orange-500/20">
-                <img 
-                  src="/lovable-uploads/sunny-hero-screenshot.png" 
-                  alt="Sunny App Screenshot" 
+                <img
+                  src="/lovable-uploads/cabo-hero-screenshot.jpg"
+                  alt="Cabo App Screenshot"
                   className="w-full h-auto"
                 />
               </div>
@@ -146,7 +146,7 @@ const Sunny = () => {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">App Preview</h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Take a look at Sunny's beautiful interface and powerful features.
+              Take a look at Cabo's beautiful interface and powerful features.
             </p>
           </motion.div>
 
@@ -225,7 +225,7 @@ const Sunny = () => {
               <h2 className="text-2xl font-bold">Privacy First</h2>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Sunny processes facial information only on your device. No biometric data is collected, uploaded, or shared. All data is removed automatically when you delete the app.
+              Cabo processes facial information only on your device. No biometric data is collected, uploaded, or shared. All data is removed automatically when you delete the app.
             </p>
           </motion.div>
         </div>
@@ -244,13 +244,13 @@ const Sunny = () => {
               Start Your Tanning Journey Today
             </h2>
             <p className="text-xl text-gray-400 mb-8">
-              Download Sunny and tan smarter with personalized UV tracking.
+              Download Cabo and tan smarter with personalized UV and SPF tracking.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button
                 size="lg"
                 className="bg-gradient-to-r from-orange-400 to-orange-600 hover:opacity-90 text-white px-8"
-                onClick={() => window.open('https://apps.apple.com/nl/app/sunny-uv-tanning-tracker/id6755535156?l=en-GB', '_blank')}
+                onClick={() => window.open('https://apps.apple.com/us/app/tanning-tracker-cabo-spf/id6755535156', '_blank')}
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download on App Store

@@ -27,18 +27,18 @@ const Products = () => {
     },
     {
       id: 2,
-      name: "Sunny: UV & Tanning",
+      name: "Cabo: Tanning Tracker & SPF",
       subtitle: "Tan Smarter. Glow Safely.",
-      description: "Sunny is a smart UV and tanning assistant that helps you achieve a beautiful tan while keeping your skin protected. Get personalized tanning plans, real-time UV Index updates, sun-safety reminders, and skin insights — all in one app.",
-      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis", "Sun Safety Guidance", "Track Your Progress"],
+      description: "Cabo is your personal tanning coach — get a personalized SPF and tanning plan based on your skin, real-time UV Index updates, sunburn prevention reminders, vitamin D tracking, and on-device skin insights, all in one app.",
+      features: ["Personalized Tanning Plan", "Real-Time UV Index", "On-Device Skin Analysis", "Sunburn Prevention", "Vitamin D Tracking", "Progress Insights"],
       category: "Weather · Lifestyle",
       downloads: "100+",
       rating: 5.0,
       comingSoon: false,
       primaryColor: "from-orange-400 to-orange-600",
-      icon: "/lovable-uploads/sunny-ai-icon.png",
+      icon: "/lovable-uploads/cabo-icon.png",
       slug: "sunny",
-      appStoreLink: "https://apps.apple.com/nl/app/sunny-uv-tanning-tracker/id6755535156?l=en-GB"
+      appStoreLink: "https://apps.apple.com/us/app/tanning-tracker-cabo-spf/id6755535156"
     },
     {
       id: 3,
@@ -64,10 +64,25 @@ const Products = () => {
       category: "Health & Fitness · Nutrition",
       downloads: "100+",
       rating: 5.0,
-      comingSoon: true,
+      comingSoon: false,
       primaryColor: "from-pink-500 to-rose-500",
       icon: "/lovable-uploads/jelly-app-icon.png",
       slug: "jelly",
+      appStoreLink: "https://apps.apple.com/us/app/sugar-tracker-lolly-ai-coach/id6760222140"
+    },
+    {
+      id: 5,
+      name: "Noa: Pray to Unlock Phone",
+      subtitle: "Earn your scroll time. Every day.",
+      description: "Noa turns mindless scrolling into intentional screen time. Earn access to distracting apps by completing four small daily rituals: a verse, a devotion, a reflection, and a prayer. Your dove companion grows with every ritual you complete.",
+      features: ["Daily Verse", "Devotional Reading", "Guided Reflection", "Daily Prayer", "Dove Companion", "Screen Time Unlock"],
+      category: "Lifestyle · Faith",
+      downloads: "New",
+      rating: null,
+      comingSoon: true,
+      primaryColor: "from-amber-500 to-amber-700",
+      icon: "/lovable-uploads/noa-icon.png",
+      slug: "noa",
       appStoreLink: ""
     }
   ];

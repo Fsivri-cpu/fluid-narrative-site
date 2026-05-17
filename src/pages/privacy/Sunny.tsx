@@ -18,19 +18,19 @@ const SunnyPrivacy = () => {
             className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
-            Back to Sunny
+            Back to Cabo
           </Link>
 
           <div className="flex items-center gap-4 mb-6">
             <img
-              src="/lovable-uploads/sunny-ai-icon.png"
-              alt="Sunny"
+              src="/lovable-uploads/cabo-icon.png"
+              alt="Cabo"
               className="w-16 h-16 rounded-2xl"
             />
             <div>
               <h1 className="text-4xl md:text-5xl font-bold">Privacy Policy</h1>
               <h2 className="text-xl md:text-2xl text-muted-foreground">
-                Sunny – UV & Tanning Tracker
+                Cabo – Tanning Tracker & SPF
               </h2>
             </div>
           </div>
@@ -52,10 +52,10 @@ const SunnyPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">1. Introduction</h2>
             <p className="text-muted-foreground">
-              Sunny ("we", "our", "the App") provides UV index tracking, tanning insights, and AI-powered skin analysis. This Privacy Policy explains how we collect, use, disclose, and protect your personal information.
+              Cabo ("we", "our", "the App") provides UV index tracking, SPF guidance, tanning insights, and AI-powered skin analysis. This Privacy Policy explains how we collect, use, disclose, and protect your personal information.
             </p>
             <p className="text-muted-foreground mt-4">
-              By using Sunny, you agree to the practices described in this Policy.
+              By using Cabo, you agree to the practices described in this Policy.
             </p>
           </section>
 
@@ -220,7 +220,7 @@ const SunnyPrivacy = () => {
           <section className="bg-card rounded-lg p-8 border border-border">
             <h2 className="text-2xl font-semibold mb-4">10. Children's Privacy</h2>
             <p className="text-muted-foreground">
-              Sunny is <strong>not intended for users under 13</strong>. We do not knowingly collect information from children.
+              Cabo is <strong>not intended for users under 13</strong>. We do not knowingly collect information from children.
             </p>
           </section>
 
